@@ -1,0 +1,61 @@
+name: Sync last version
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * *"
+
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Check Caddy version
+        run: |
+          if [ ! -e "caddy_ver.txt" ];then	
+          	touch caddy_ver.txt
+          fi
+          
+          version_new=$(curl -s https://api.github.com/repos/caddyserver/caddy/releases/latest | grep "tag_name" | cut -f4 -d "\"" | sed 's/^.//')
+          version_old=$(cat caddy_ver.txt)
+          
+          if [ "$version_old" != "$version_new" ];then
+            echo $version_new > caddy_ver.txt
+            sed -i "1s/.*/FROM caddy:$version_new-builder-alpine/" Dockerfile.caddy2
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "更新 Caddy Release 版本至 $version_new"
+            git push
+          else
+            echo "未检查到Caddy版本更新，已退出！"
+          fi
+          
+      - name: Check ZeroTierOne version
+        run: |
+          if [ ! -e "zerotier_ver.txt" ];then	
+          	touch zerotier_ver.txt
+          fi
+          
+          version_new=$(curl -s https://api.github.com/repos/zerotier/ZeroTierOne/releases/latest | grep "tag_name" | cut -f4 -d "\"")
+          version_old=$(cat zerotier_ver.txt)
+          
+          if [ "$version_old" != "$version_new" ];then
+            echo $version_new > zerotier_ver.txt
+            sed "s/[0-9].*[0-9]/$version_new/g" Dockerfile.zerotier
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "更新 ZeroTierOne Release 版本至 $version_new"
+            git push
+          else
+            echo "未检查到ZeroTierOne版本更新，已退出！"
+          fi
+
+      - name: Cleanup Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 2
