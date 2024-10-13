@@ -23,7 +23,7 @@ jobs:
           
           if [ "$version_old" != "$version_new" ];then
             echo $version_new > caddy_ver.txt
-            sed -i "1s/.*/FROM caddy:$version_new-builder-alpine/" Dockerfile.caddy2
+            sed -ri "s/[0-9]+\.[0-9]+\.[0-9]+/$version_new/g" Dockerfile.caddy2
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add .
@@ -44,7 +44,7 @@ jobs:
           
           if [ "$version_old" != "$version_new" ];then
             echo $version_new > zerotier_ver.txt
-            sed "s/[0-9].*[0-9]/$version_new/g" Dockerfile.zerotier
+            sed -ri "s/[0-9]+\.[0-9]+\.[0-9]+/$version_new/g" Dockerfile.zerotier
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add .
