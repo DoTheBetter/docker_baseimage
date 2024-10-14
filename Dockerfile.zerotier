@@ -6,8 +6,8 @@ FROM alpine:3.20 AS builder
 RUN apk upgrade --update \
 	&& apk add linux-headers cargo openssl-dev \
 	&& apk add make g++ \
-	&& wget https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.14.1.zip -O /zerotier.zip \
+	&& wget https://github.com/zerotier/ZeroTierOne/archive/refs/tags/.zip -O /zerotier.zip \
 	&& unzip /zerotier.zip -d / \
-	&& cd /ZeroTierOne-1.14.1 \
+	&& cd /ZeroTierOne- \
 	&& make \
 	&& make DESTDIR=/tmp/build install
