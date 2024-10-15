@@ -11,3 +11,12 @@ RUN apk upgrade --update \
 	&& cd /ZeroTierOne-1.14.1 \
 	&& make \
 	&& make DESTDIR=/tmp/build install
+
+#安装并显示版本信息
+RUN cp -r /tmp/build/usr/sbin/* /usr/sbin/ \
+	&& apk add --no-cache libgcc libstdc++ \		
+	&& mkdir -p /var/lib/zerotier-one \
+	&& echo "=========================================" \
+	&& echo "当前zerotier版本：" \
+	&& echo `zerotier-cli -v` \
+	&& echo "========================================="

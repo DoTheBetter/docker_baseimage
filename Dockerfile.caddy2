@@ -13,3 +13,9 @@ RUN xcaddy build \
 	--with github.com/caddy-dns/googleclouddns \
 	--with github.com/caddy-dns/namecheap \
 	--with github.com/caddy-dns/namesilo
+
+#安装并显示版本信息
+RUN echo "=========================================" \
+	&& echo "当前Caddy2版本：" \
+	&& echo `caddy version` \
+	&& echo "========================================="
