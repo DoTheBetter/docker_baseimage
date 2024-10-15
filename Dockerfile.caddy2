@@ -1,4 +1,4 @@
-FROM caddy:-builder-alpine
+FROM caddy:2.8.4-builder-alpine
 
 #https://github.com/docker-library/docs/tree/master/caddy
 RUN xcaddy build \

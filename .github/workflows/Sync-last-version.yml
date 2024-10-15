@@ -11,21 +11,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+    - name: Set up Git
+      run: |
+          git config --global user.name "DTB"
+          git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
         
       - name: Check Caddy version
         run: |
-          if [ ! -e "caddy_ver.txt" ];then	
+          set -e
+          if [ ! -e "caddy_ver.txt" ];then
           	touch caddy_ver.txt
           fi
-          
-          version_new=$(curl -s https://api.github.com/repos/caddyserver/caddy/releases/latest | grep "tag_name" | cut -f4 -d "\"" | sed 's/^.//')
+
           version_old=$(cat caddy_ver.txt)
-          
+          version_new=$(curl -s https://api.github.com/repos/caddyserver/caddy/releases/latest | grep "tag_name" | cut -f4 -d "\"" | sed 's/^.//')
+          echo "获取Release版本为 $version_new"
+          echo "当前旧版本为 $version_old"
+
+          if [ -z "$version_new" ]; then
+            echo "错误：获取新版本为空。"
+            version_new=$version_old
+          fi
+
           if [ "$version_old" != "$version_new" ];then
             echo $version_new > caddy_ver.txt
             sed -ri "s/[0-9]+\.[0-9]+\.[0-9]+/$version_new/g" Dockerfile.caddy2
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add .
             git commit -m "更新 Caddy Release 版本至 $version_new"
             git push
@@ -35,18 +46,24 @@ jobs:
           
       - name: Check ZeroTierOne version
         run: |
-          if [ ! -e "zerotier_ver.txt" ];then	
+          set -e
+          if [ ! -e "zerotier_ver.txt" ];then
           	touch zerotier_ver.txt
           fi
-          
+
+          version_old=$(cat zerotier_ver.txt)    
           version_new=$(curl -s https://api.github.com/repos/zerotier/ZeroTierOne/releases/latest | grep "tag_name" | cut -f4 -d "\"")
-          version_old=$(cat zerotier_ver.txt)
-          
+          echo "获取Release版本为 $version_new"
+          echo "当前旧版本为 $version_old"
+
+          if [ -z "$version_new" ]; then
+            echo "错误：获取新版本为空。"
+            version_new=$version_old
+          fi
+
           if [ "$version_old" != "$version_new" ];then
             echo $version_new > zerotier_ver.txt
             sed -ri "s/[0-9]+\.[0-9]+\.[0-9]+/$version_new/g" Dockerfile.zerotier
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add .
             git commit -m "更新 ZeroTierOne Release 版本至 $version_new"
             git push
