@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-    - name: Set up Git
-      run: |
+      - name: Set up Git
+        run: |
           git config --global user.name "DTB"
           git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
         
