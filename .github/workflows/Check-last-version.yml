@@ -1,4 +1,4 @@
-name: Sync last version
+name: Check last version
 
 on:
   workflow_dispatch:
