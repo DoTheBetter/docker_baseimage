@@ -67,6 +67,10 @@ jobs:
             git add .
             git commit -m "更新 ZeroTierOne Release 版本至 $version_new"
             git push
+
+            #写入事件
+            curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" -d '{"event_type":"zerotier-on-update"}' https://api.github.com/repos/DoTheBetter/docker_baseimage/dispatches
+
           else
             echo "未检查到ZeroTierOne版本更新，已退出！"
           fi
