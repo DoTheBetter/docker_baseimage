@@ -4,7 +4,10 @@ on:
   push:
     paths:
     - 'Dockerfile.caddy2'
-  workflow_dispatch:
+  workflow_dispatch:  # 允许手动触发
+  repository_dispatch:  # 允许事件类型为caddy2-on-update时被触发
+    types:
+      - caddy2-on-update
 
 jobs:
   job1:
