@@ -3,8 +3,11 @@ name: Docker baseimage：ZeroTierOne
 on:
   push:
     paths:
-    - 'Dockerfile.zerotier'
-  workflow_dispatch:
+      - 'Dockerfile.zerotier'
+  workflow_dispatch:  # 允许手动触发
+  repository_dispatch:  # 允许事件类型为zerotier-on-update时被触发
+    types:
+      - zerotier-on-update
 
 jobs:
   job1:
