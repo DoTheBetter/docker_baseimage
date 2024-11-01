@@ -12,7 +12,8 @@ RUN xcaddy build \
 	--with github.com/caddy-dns/godaddy \
 	--with github.com/caddy-dns/googleclouddns \
 	--with github.com/caddy-dns/namecheap \
-	--with github.com/caddy-dns/namesilo
+	--with github.com/caddy-dns/namesilo \
+	--with github.com/greenpau/caddy-git
 
 #安装并显示版本信息
 RUN echo "=========================================" \
