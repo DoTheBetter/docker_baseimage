@@ -3,11 +3,6 @@
 
 FROM golang:alpine
 
-RUN apk add --no-cache \
-	ca-certificates \
-	git \
-	libcap
-
 # 设置要构建的 Caddy 版本
 ENV CADDY_VERSION=v2.9.0
 # 将 xcaddy 配置为不清理构建后文件
@@ -15,11 +10,16 @@ ENV XCADDY_SKIP_CLEANUP=1
 # 将对生成的二进制文件运行sudo setcapcap_net_bind_service=+ep。将输出caddy二进制文件的功能设置为能够绑定到特权端口
 ENV XCADDY_SETCAP=1
 
+RUN apk add --no-cache \
+	ca-certificates \
+	git \
+	libcap
+
 RUN set -eux; \
 	go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest;
 
 RUN xcaddy build \
-    --output /usr/bin/caddy \
+	--output /usr/bin/caddy \
 	--with github.com/lucaslorentz/caddy-docker-proxy/v2 \
 	--with github.com/mholt/caddy-webdav \
 	--with github.com/porech/caddy-maxmind-geolocation \
