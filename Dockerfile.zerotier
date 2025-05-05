@@ -1,0 +1,22 @@
+FROM alpine:3.20 AS builder
+
+#编译ZeroTierOne
+#https://git.alpinelinux.org/aports/tree/community/zerotier-one?id=eab757ac9e60bc25cf5d0c5b07785b12e7a4bb04
+
+RUN apk upgrade --update \
+	&& apk add linux-headers cargo openssl-dev \
+	&& apk add make g++ \
+	&& wget https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.14.2.zip -O /zerotier.zip \
+	&& unzip /zerotier.zip -d / \
+	&& cd /ZeroTierOne-1.14.2 \
+	&& make \
+	&& make DESTDIR=/tmp/build install
+
+#安装并显示版本信息
+RUN cp -r /tmp/build/usr/sbin/* /usr/sbin/ \
+	&& apk add --no-cache libgcc libstdc++ \		
+	&& mkdir -p /var/lib/zerotier-one \
+	&& echo "=========================================" \
+	&& echo "当前zerotier版本：" \
+	&& echo `zerotier-cli -v` \
+	&& echo "========================================="
