@@ -255,6 +255,11 @@ jobs:
           git config --global pull.rebase false  # 明确合并策略
           git pull
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
       - name: Check versions
         id: version_check
         run: |
@@ -273,9 +278,9 @@ jobs:
           version_old_composeverter=$(grep "^composeverter=" "${{ env.version_file }}" | cut -d'=' -f2)
 
           # 获取最新版本
-          version_new_composerize=$(curl -s "https://api.github.com/repos/${{ env.repo1 }}/tags" | grep -m1 '"name":' | cut -f4 -d "\"")
-          version_new_decomposerize=$(curl -s "https://api.github.com/repos/${{ env.repo2 }}/tags" | grep -m1 '"name":' | cut -f4 -d "\"")
-          version_new_composeverter=$(curl -s "https://api.github.com/repos/${{ env.repo3 }}/tags" | grep -m1 '"name":' | cut -f4 -d "\"")
+          version_new_composerize=$(npm view composerize version)
+          version_new_decomposerize=$(npm view decomposerize version)
+          version_new_composeverter=$(npm view composeverter version)
 
           # 处理版本号格式
           if [ "${{ env.strip_v }}" = "true" ]; then
