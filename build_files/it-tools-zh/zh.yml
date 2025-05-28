@@ -1,0 +1,1385 @@
+home:
+  categories:
+    newestTools: '最新工具'
+    favoriteTools: '我的收藏'
+    allTools: '全部工具'
+    favoritesDndToolTip: '拖放重新排列收藏夹'
+  subtitle: '助力开发人员和 IT 工作者'
+  toggleMenu: '切换菜单'
+  home: '主页'
+  uiLib: 'UI 库'
+  support: '支持 IT 工具开发'
+  buyMeACoffee: '赞助'
+  follow:
+    title: '关注我们'
+    p1: '给我们 Star'
+    githubRepository: 'GitHub 仓库'
+    p2: '关注我们的'
+    twitterXAccount: 'IT-Tools X 账号'
+    thankYou: '感谢您的支持！'
+  nav:
+    github: 'GitHub 仓库'
+    githubRepository: 'GitHub 仓库'
+    twitterX: 'Twitter 账号'
+    twitterXAccount: 'IT-Tools X 账号'
+    about: '关于 IT-Tools'
+    aboutLabel: '关于'
+    darkMode: '深色模式'
+    lightMode: '浅色模式'
+    mode: '颜色模式'
+about:
+  content: >
+    # 关于 IT-Tools
+
+    IT-Tools 由 [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about) 用 ❤ 开发，汇集了对开发人员和 IT 从业者有用的工具。如果对您有帮助，请将其分享给您的朋友，并且添加到收藏夹中！
+
+    IT-Tools 永久免费且开源（GPL-3.0 许可证），但需要资金用于托管和续订域名。如果您想支持我的工作，并鼓励我添加更多工具，请考虑通过 [赞助我](https://www.buymeacoffee.com/cthmsst) 进行支持。
+
+    ## 技术
+
+    IT-Tools 采用 Vue.js（Vue 3）和 Naive UI 组件库开发，并由 Vercel 托管和持续部署。某些工具使用了第三方开源库，您可以在仓库的 [package.json](https://github.com/sharevb/it-tools/blob/main/package.json) 文件中找到完整的列表。
+
+    ## 发现了 Bug？缺少工具？
+
+    如果目前这里没有您需要的工具，并且您认为它可能有用，欢迎在 GitHub 仓库的 [issues](https://github.com/sharevb/it-tools/issues/new/choose) 中提交新增功能的请求。
+
+    如果您发现了 Bug，或者某些功能未能按预期工作，请在 GitHub 仓库的 [issues](https://github.com/sharevb/it-tools/issues/new/choose) 中提交错误报告。
+
+404:
+  notFound: '404 页面不存在'
+  sorry: '抱歉，该页面似乎不存在'
+  maybe: '也许缓存出现了一些问题，试试强制刷新页面？'
+  backHome: '返回主页'
+favoriteButton:
+  remove: '取消收藏'
+  add: '加入收藏'
+toolCard:
+  new: '新'
+search:
+  label: '搜索'
+tools:
+  categories:
+    favorite-tools: '我的收藏'
+    barcodes: '条形码'
+    cheatsheets: '速查表'
+    converters: '转换器'
+    crypto: '加密'
+    data: '数据'
+    datetime: '日期时间'
+    development: '开发'
+    docker: 'Docker'
+    forensic: '解析器'
+    gaming: '游戏'
+    generators: '生成器'
+    images: '图片'
+    json: 'JSON'
+    markdown: 'Markdown'
+    maths: '数学'
+    measurement: '测量'
+    network: '网络'
+    pdf: 'PDF'
+    physics: '物理'
+    text: '文本'
+    web: 'Web'
+    xml: 'XML'
+    yaml: 'YAML'
+
+#######################################
+### Barcodes
+  barcode-reader:
+    title: 条码阅读器
+    description: '读取条形码图像并解码其内容。'
+
+  barcode-generator:
+    title: 条码生成器
+    description: '生成各种类型的条形码。'
+
+  qr-code-decoder:
+    title: 二维码解码器
+    description: '解码二维码图像并获取其内容。'
+
+  qrcode-generator:
+    title: 二维码生成器
+    description: '生成包含URL或文本信息的二维码并下载，支持自定义背景和前景颜色。'
+
+  qr-contact-info-generator:
+    title: 联系人二维码生成器
+    description: '生成包含联系人信息的二维码并下载，支持自定义背景和前景颜色。'
+
+  wifi-qrcode-generator:
+    title: WiFi二维码生成器
+    description: '生成包含WiFi网络信息的二维码并下载，以快速连接到WiFi网络。'
+
+### Cheatsheets
+  css-selectors-memo:
+    title: CSS选择器速查表
+    description: 'CSS选择器的参考指南。'
+
+  common-regex-memo:
+    title: 常用正则表达式速查表
+    description: '常用正则表达式的快速参考指南。'
+
+  docker-memo:
+    title: Docker速查表
+    description: 'docker命令和用法的快速参考指南。'
+
+  git-semantic-commit-memo:
+    title: Git消息提交样式速查表
+    description: '使用特定的语义前缀提交git消息的快速参考指南。'
+
+  git-memo:
+    title: Git命令速查表
+    description: '常用git命令和用法的快速参考指南。'
+
+  jsonpath-memo:
+    title: JSONPath语法速查表
+    description: 'JSONPath语法和用法的快速参考指南。'
+
+  jq-memo:
+    title: JQ速查表
+    description: 'JQ命令和用法的快速参考指南。'
+
+  markdown-cheatsheet:
+    title: Markdown速查表
+    description: 'markdown语法和格式的快速参考指南。'
+
+  nano-memo:
+    title: Nano速查表
+    description: 'nano编辑器快捷键和命令的快速参考指南。'
+
+  regex-memo:
+    title: 正则表达式速查表
+    description: '正则表达式语法和模式的快速参考指南。'
+
+  xpath-memo:
+    title: XPath语法速查表
+    description: 'XPath语法和用法的快速参考指南。'
+
+### Converters
+  base64-hex-converter:
+    title: Base64与十六进制转换器
+    description: '将base64格式和十六进制数组进行互相转换。'
+
+  base64-file-converter:
+    title: Base64与文件转换器
+    description: '将base64格式和文件进行互相转换。'
+
+  base64-string-converter:
+    title: Base64与字符串转换器
+    description: '将base64格式和文本字符串之间进行互相转换。'
+
+  csv-to-data:
+    title: CSV转数据
+    description: '将CSV文件内容转换为JSON、YAML、CSV、SQL INSERT、XML 或 Markdown等格式。'
+
+  data-storage-unit-converter:
+    title: 数据存储单位转换器
+    description: '在不同的数据存储单位或传输单位之间进行转换。'
+
+  email-normalizer:
+    title: 邮箱地址规范化
+    description: '将电子邮件地址规范化为标准格式，以便于比较。可用于重复数据删除和数据清理。'
+
+  energy-computer:
+    title: 能耗和费用计算器
+    description: '计算设备或系统的能源消耗和成本。'
+
+  excel-to-data:
+    title: Excel转数据
+    description: '将Excel文件转换为JSON、YAML、CSV、SQL INSERT、XML 或 Markdown等格式。'
+
+  base-converter:
+    title: 整数基转换器
+    description: '在不同的基数（十进制、十六进制、二进制、八进制、base64…）之间转换数字。'
+
+  many-units-converter:
+    title: 多单位转换器
+    description: '在各种不同单位系统之间进行转换。'
+
+  properties-converter:
+    title: Properties转换器
+    description: '将Java的.properties文件与yaml进行互相转换。'
+
+  roman-numeral-converter:
+    title: 罗马数字转换器
+    description: '将罗马数字和阿拉伯数字进行互相转换。'
+
+  text-to-binary:
+    title: 文本转二进制
+    description: '将文本与UTF-8二进制格式进行互相转换。'
+
+  text-to-unicode:
+    title: 文本转Unicode
+    description: '将文本与unicode编码进行互相转换。'
+
+  torrent-to-magnet:
+    title: Torrent转磁力链接
+    description: '将Torrent文件转换为磁力链接URL。'
+
+  ulid-generator:
+    title: ULID生成器
+    description: '生成随机的通用唯一字典排序标识符（ULID）。'
+
+  unicode-to-java-entities:
+    title: Unicode转Java实体
+    description: '将Unicode字符与Java实体格式进行互相转换。'
+
+### Crypto
+  ansible-vault-crypt-decrypt:
+    title: Ansible Vault加密解密
+    description: '加密和解密Ansible Vault文件。'
+
+  bcrypt:
+    title: Bcrypt加密
+    description: '使用Bcrypt对文本字符串进行哈希和比较。Bcrypt是基于Blowfish密码的密码哈希函数。'
+
+  crc-calculator:
+    title: CRC计算器
+    description: '计算文本或文件CRC（CRC1、CRC8、CRC8 1-Wire、CRC8 DVB-S2、CRC16、CRC16 CCITT、CRC16 Modbus、CRC16 Kermit、CRC16 XModem、CRC24、CRC32、CRC32 MPEG-2、CRCJam）。'
+
+  csr-generator:
+    title: CSR生成器
+    description: '生成证书签名（PEM格式）。'
+
+  certificate-key-parser:
+    title: Certificate/Key parser
+    description: '解析和验证SSL证书和密钥。'
+
+  ecdsa-key-pair-generator:
+    title: ECDSA密钥对生成器
+    description: '生成新的随机ECDSA私钥和公钥（可选是否带密码）。'
+    
+  ed25519-key-pair-generator:
+    title: ED25519密钥对生成器
+    description: '生成新的随机ED25519私钥和公钥（可选是否带密码）。'
+    
+  encryption:
+    title: 加密/解密文本
+    description: '使用多种加密算法加密和解密文本。'
+
+  file-hasher:
+    title: 文件哈希计算器
+    description: '计算文件的哈希值。'
+
+  hash-text:
+    title: 文本哈希计算器
+    description: '使用哈希函数对文本字符串进行哈希处理：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3 或 RIPEMD160。'
+
+  hmac-generator:
+    title: HMAC生成器
+    description: '使用密钥和哈希函数计算消息身份验证代码（HMAC）。'
+
+  jwt-generator:
+    title: JWT生成器
+    description: 'JSON Web Token（JWT）令牌生成器和编辑器。'
+
+  jwt-parser:
+    title: JWT解析器
+    description: '解析JSON Web Token（JWT）并显示其内容。'
+
+  pgp-encryption:
+    title: PGP加密/解密
+    description: '使用PGP密钥加密和解密文本。'
+
+  pgp-key-pair-generator:
+    title: PGP密钥生成
+    description: '生成新的随机PGP私钥和公钥（可选是否带密码短语）'
+
+  paseto-encryption:
+    title: Paseto/Paserk Local
+    description: '使用附加数据的对称密钥身份验证生成本地密钥并加密/解密'
+
+  paseto-signing:
+    title: Paseto/Paserk Public/Private
+    description: '使用非对称密钥数字签名生成公钥/私钥对并签署/验证'
+
+  rsa-encryption:
+    title: RSA加密
+    description: '使用RSA算法进行加密和解密。'
+
+  rsa-key-pair-generator:
+    title: RSA密钥对生成器
+    description: '生成新的随机RSA私有和公有PEM证书密钥对。'
+
+  rsa-ecdsa-signing:
+    title: RSA/DSA/ECDSA签名
+    description: '使用RSA/DSA/ECDSA密钥对数据进行签名并验证签名。'
+
+  ssl-cert-converter:
+    title: SSL证书转换器
+    description: '转换不同格式的SSL证书。'
+
+  x509-certificate-generator:
+    title: X.509证书生成器
+    description: '生成自签名ssl/X.509证书。'
+
+### Data
+  bmi-calculator:
+    title: BMI计算器
+    description: '体重指数计算器（英制或公制单位）。'
+
+  currency-converter:
+    title: 货币转换器
+    description: '使用 https://github.com/fawazahmed0/exchange-api 转换货币值'
+
+  iban-validator-and-parser:
+    title: IBAN验证器和解析器
+    description: '验证和解析IBAN号码。检查IBAN是否有效，如果是QR-IBAN和IBAN友好格式，则获取国家/地区BBAN。'
+
+  ies-lighting-guidelines:
+    title: IES照明指南
+    description: '搜索照明工程学会（IES）当前的照度建议。'
+
+  isbn-validator-and-parser:
+    title: ISBN验证器和解析器
+    description: '验证和解析国际标准书号ISBN的信息。'
+
+  iso-3166-searcher:
+    title: ISO 3166国家代码搜索器
+    description: '搜索iso 3166标准中的国家代码。'
+
+  luhn-validator:
+    title: Luhn验证器
+    description: '检查和生成通过luhn校验算法验证的标识符密钥'
+
+  phone-parser-and-formatter:
+    title: 电话分析器和格式化程序
+    description: '解析、验证和格式化电话号码。获取有关电话号码的信息，例如国家/地区代码、类型等。伪造链接以在whatsapp和sms中发送消息。'
+
+  rmb-numbers:
+    title: 人民币大写转换器
+    description: '将数字金额转换为人民币大写格式。'
+
+  sla-calculator:
+    title: SLA计算器
+    description: '计算服务等级协议指标。'
+
+  software-licence-compatibility:
+    title: 软件许可证兼容性
+    description: '检查不同软件许可证之间的兼容性。'
+
+  unicode-search:
+    title: Unicode搜索
+    description: '在unicode字符中搜索'
+
+  vat-validator:
+    title: 增值税号验证器
+    description: '验证增值税识别号。'
+
+### Datetime
+  chronometer:
+    title: 计时器
+    description: '监控事物的持续时间。基本上是一种具有简单计时器功能的计时器。'
+
+  countdown:
+    title: 倒计时器
+    description: '设置倒计时并在时间到达时提醒。'
+
+  cron-alarm:
+    title: 日期闹钟
+    description: '基于具体时间和工作日的闹钟。'
+
+  date-duration-calculator:
+    title: 日期+时长计算器
+    description: '在特定日期上添加/减去时长。'
+
+  date-converter:
+    title: 日期时间转换器
+    description: '将日期和时间转换为各种不同的格式。'
+
+  days-calculator:
+    title: 天数计算器
+    description: '计算天数间隔、假期、差异、工作时间'
+
+  duration-calculator:
+    title: 持续时间计算器
+    description: '计算时间段之和。'
+
+  eta-calculator:
+    title: 'ETA计算器'
+    description: '一个ETA（预计到达时间）计算器，用于确定任务的大致结束时间，例如，文件下载的结束时间和持续时间。举个具体的例子，如果你在5分钟内洗了3个盘子，你有500个盘子要洗，那么你需要5个小时才能洗完它们。'
+
+  ical-parser:
+    title: Ical解析器
+    description: '解析ical/ics日历文件为事件显示。'
+
+  ical-generator:
+    title: Ical生成器
+    description: '为日历事件生成ical/ics文件。'
+
+  ttl-calculator:
+    title: TTL计算器
+    description: '将ttl与时间互相转换。'
+
+  time-alarm:
+    title: 时间闹钟
+    description: '基于当天具体时间的闹钟。'
+
+  timezone-converter:
+    title: 时区转换器
+    description: '将日期时间从一个时区转换到其他时区，并获取时区与国家的相关信息。'
+
+  week-number-converter:
+    title: 周数转换器
+    description: '在标准周数、月内周数和日期之间进行转换。'
+
+  ical-merger:
+    title: Ical合并器
+    description: '合并多个ical/ics日历文件为一个。'
+
+### Development
+  api-tester:
+    title: API测试工具
+    description: '测试HTTP API接口。'
+
+  code-highlighter:
+    title: 代码高亮工具
+    description: '使用Prism.js对代码进行语法高亮。'
+
+  curl-converter:
+    title: cURL转换器
+    description: '将cURL命令转换为不同编程语言的代码。'
+
+  data-faker:
+    title: 数据模拟器
+    description: '使用json模板生成模拟数据。'
+
+  hex-file-converter:
+    title: 十六进制与文件转换器
+    description: '在文件和十六进制格式之间转换。'
+
+  javascript-prettifier:
+    title: Javascript美化器
+    description: '美化javascript代码。'
+
+  js-unobfuscator:
+    title: Javascript反混淆/解包工具
+    description: 'webcrack是一个用于javascript逆向工程的工具。它可以对obfuscator.io进行反混淆，反压缩，转译，以及解包webpack/browserify，尽可能地还原原始源代码。'
+
+  jq-tester:
+    title: Jq/Jsonpath测试器
+    description: '测试jq/jsonpath表达式对json内容的处理。'
+
+  json-to-protobuf:
+    title: Json转Protobuf
+    description: '从json对象生成protobuf声明。'
+
+  json-to-sql-insert:
+    title: Json转Sql Insert
+    description: '将json数据转换为sql插入语句。'
+
+  json-to-typescript:
+    title: Json转Typescript
+    description: '将json数据转换为typescript类型定义。'
+
+  og-meta-generator:
+    title: Open Graph元数据生成器
+    description: '为您的网站生成开放式图形和社交html元标记。'
+    
+  pomodoro-timer:
+    title: 番茄计时器
+    description: '番茄工作法计时工具。'
+
+  quote-converter:
+    title: 单双引号转换器
+    description: '在单引号和双引号之间转换。'
+
+  sql-minifier:
+    title: Sql命令合并工具
+    description: '将多条sql查询命令合并为一条。'
+
+  sql-prettify:
+    title: Sql美化工具
+    description: '在线格式化和美化sql查询语句（支持各种sql语言）。'
+
+  stacktrace-prettier:
+    title: 堆栈跟踪美化工具
+    description: '高亮显示.net和js堆栈跟踪信息。'
+
+  string-escaper:
+    title: 字符串转义工具
+    description: '将字符串转义为各种代码语言版本。'
+
+### Docker
+  docker-compose-converter:
+    title: Docker Compose转换器
+    description: '将Docker Compose文件转换为不同格式。'
+
+  docker-compose-validator:
+    title: Docker Compose验证器
+    description: '验证Docker Compose文件。'
+
+  docker-compose-to-docker-run-converter:
+    title: Docker Compose到Docker Run转换器
+    description: '将docker compose内容转换为docker run命令。'
+
+  docker-compose-to-kubernetes:
+    title: Docker Compose到Kubernetes转换器
+    description: '将docker compose内容转换为kubernetes资源。'
+
+  docker-run-to-docker-compose-converter:
+    title: Docker Run到Docker Compose转换器
+    description: '将docker run命令转换为docker compose内容。'
+
+  docker-run-to-kubernetes:
+    title: Docker Run到Kubernetes转换器
+    description: '将docker run命令转换为kubernetes资源。'
+
+  traefik-compose-maker:
+    title: Traefik Docker Compose生成器
+    description: '生成带有traefik配置的docker compose文件。'
+
+### Forensic
+  ad-ldap-searcher:
+    title: Activedirectory Ldap属性搜索器
+    description: '在ldap属性和activedirectory ui的映射中搜索。'
+
+  bounce-parser:
+    title: 电子邮件退回解析器
+    description: '解析邮件退回消息以提取有用信息。'
+
+  cookies-parser:
+    title: Cookie解析器
+    description: '解析http cookie信息。'
+
+  dmarc-report-analyzer:
+    title: DMARC报告分析器
+    description: '分析DMARC报告。'
+
+  email-parser:
+    title: 电子邮件解析器
+    description: '从原始邮件内容中解析和提取信息。'
+
+  file-type:
+    title: 文件类型检测器
+    description: '识别文件的类型。'
+
+  floating-point-converter:
+    title: 浮点数转换器
+    description: '在十进制与ieee 754二进制浮点数格式之间转换。'
+
+  gzip-converter:
+    title: Gzip/Deflate转换器
+    description: '使用gzip/deflate工具解/压缩文本。'
+
+  hex-converter:
+    title: 十六进制编码器/解码器
+    description: '将十六进制缓冲区进行编码或解码。'
+
+  keycode-info:
+    title: 按键码信息
+    description: '显示任何按下的键盘按键代码、位置和修饰符等信息。'
+
+  mime-converter:
+    title: Mime编码转换器
+    description: '在mime编码和解码之间转换。'
+
+  mongo-objectid-converter:
+    title: Mongodb Objectid转换器
+    description: '在mongodb objectid和时间戳之间进行转换。'
+
+  outlook-parser:
+    title: Outlook Msg解析器
+    description: '解析outlook msg文件。'
+
+  safelink-decoder:
+    title: Outlook Safelink解码器
+    description: '解码outlook safelink链接。'
+
+  parquets-reader:
+    title: Parquet文件阅读器
+    description: '将parquet文件读取为json对象数组。'
+
+  smart-raw-converter:
+    title: Smart原始值转换器
+    description: '将smart原始值转换为人类可读格式。'
+
+  sensitive-data-masker:
+    title: 敏感数据掩码工具
+    description: '清理文本内容中的敏感数据（如日志）。'
+
+  sharepoint-decoder:
+    title: Sharepoint共享链接解码器
+    description: '将sharepoint.com共享链接解码为普通sharepoint链接。'
+
+  snowflake-id-extractor:
+    title: Snowflake Id提取器
+    description: '从snowflake id中提取时间戳、机器id和序列号。'
+
+  tcpdump-generator:
+    title: Tcpdump生成器
+    description: '生成tcpdump命令。'
+
+  url-parser:
+    title: Url解析器
+    description: '解析url各个组成部分。'
+
+### Gaming
+  card-picker:
+    title: 扑克牌生成器
+    description: '随机生成多张扑克牌。'
+
+  coin-flipper:
+    title: 硬币翻转器
+    description: '翻转硬币并获得随机结果。'
+
+  dice-roller:
+    title: 骰子投掷器
+    description: '模拟骰子投掷。'
+
+  fortune-wheel:
+    title: 幸运转盘
+    description: '模拟幸运转盘抽奖。'
+
+### Generators
+  bip39-generator:
+    title: Bip39密码生成器
+    description: '从现有或随机助记词生成bip39密码，或从密码中获取助记词。'
+
+  nanoid-generator:
+    title: Nanoid生成器
+    description: '为您的应用程序生成随机、唯一且url友好的id。'
+    uppercase: 大写字母
+    lowercase: 小写字母
+    numbers: 数字
+    symbols: 符号
+    excludeLookalikes: 排除相似字符
+    length: 长度
+    quantity: 数量
+    copied: NanoID已复制到剪贴板
+    button:
+      copy: 复制
+      refresh: 刷新
+
+  numeronym-generator:
+    title: Numeronym生成器
+    description: 'numeronym是用数字构成缩写的词。例如，i18n是internationalization的数字名词，其中18代表单词中第一个i和最后一个n之间的字母数。'
+
+  otp-generator:
+    title: OTP代码生成器
+    description: '生成并验证基于时间和基于事件的OTP（一次性密码），以进行多重身份验证。'
+
+  passphrase-generator:
+    title: 密码短语生成器
+    description: '生成随机易记的密码短语。'
+
+  pin-code-generator:
+    title: Pin码生成器
+    description: '生成唯一的pin（数字）码。'
+
+  token-generator:
+    title: Token生成器
+    description: '使用您想要的字符、大写或小写字母、数字和/或符号生成随机字符串。'
+    uppercase: '大写 (ABC...)'
+    lowercase: '小写 (abc...)'
+    numbers: '数字 (123...)'
+    symbols: '符号 (!-;...)'
+    length: '长度'
+    tokenPlaceholder: '令牌...'
+    copied: 复制到剪贴板
+    button:
+      copy: 复制
+      refresh: 刷新
+
+  uuid-converter:
+    title: Uuid转换器
+    description: '将带连字符和不带连字符的uuid转换为其他常见sql表示法。'
+    uuid: UUID
+    uuidhexupper: 十六进制表示法（大写）
+    uuidhexlower: 十六进制表示法（小写）
+    uuidversion: RFC 版本
+    input:
+      label: 您的输入
+      placeholder: 您的UUID（带或不带连字符）
+
+  uuid-generator:
+    title: UUIDs生成器
+    description: '通用唯一标识符 (UUID)是一个128位数字，用于标识计算机系统中的信息。可能的UUID数量为16^32，即2^128或约3.4x10^38（这是一个很大的数字！）。'
+
+### Images
+  camera-recorder:
+    title: 摄像头录制器
+    description: '使用摄像头录制视频或拍摄照片。'
+
+  heic-converter:
+    title: Heic转换器
+    description: '将heic图像转换为jpeg或png格式。'
+
+  ico-converter:
+    title: ICO/Png转换器
+    description: '在png/jpeg和ico格式之间转换。'
+
+  image-exif-reader:
+    title: 图像Exif读取器
+    description: '读取图像中的exif、iptc、xmp、gps和其他元数据、jpeg质量和其他信息。'
+
+  image-converter:
+    title: 图像格式转换器
+    description: '将图像从一种格式转换为另一种格式。'
+
+  image-resizer:
+    title: 图片尺寸调整器
+    description: '转换图像文件的宽度和高度，预览并以所需的格式（.jpg、.jpeg、.png、.bmp、.ico .svg）下载图像文件。'
+
+  potrace:
+    title: 图像转Svg (Potrace)
+    description: '将光栅图像转换为矢量svg。'
+
+  ocr-image:
+    title: 图像和Pdf文件OCR
+    description: '对图像或pdf执行ocr（tesseract）文字识别。'
+
+  remove-exif:
+    title: 移除Exif信息
+    description: '从jpeg文件中移除exif信息。'
+
+### JSON
+  csv-to-json:
+    title: CSV转JSON
+    description: '将CSV数据转换为JSON格式。'
+
+  javascript-to-json:
+    title: JS到JSON转换器
+    description: '使用此在线转换器将JavaScript对象转换为JSON。'
+
+  json-editor:
+    title: JSON编辑器
+    description: '编辑JSON内容。'
+
+  json-linter:
+    title: JSON检查器
+    description: '检查和校验JSON内容。'
+
+  json-diff:
+    title: JSON差异比较器
+    description: '比较两个JSON内容的差异。'
+
+  json-minify:
+    title: JSON压缩
+    description: '通过删除不必要的空格来缩小和压缩JSON。'
+
+  json-prettify:
+    title: JSON格式化工具
+    description: '将JSON字符串修饰为友好的可读格式。'
+
+  json-sort-master:
+    title: JSON排序大师
+    description: '按键和值对你的JSON进行排序。'
+
+  json-string-converter:
+    title: JSON字符串转换器
+    description: '将纯文本或JavaScript对象与JSON字符串互相转换。'
+
+  json-to-csharp:
+    title: JSON转C#
+    description: '将JSON数据转换为C#类型定义。'
+
+  json-to-csv:
+    title: JSON转CSV
+    description: '将JSON数据转换为CSV格式。'
+
+  json-to-go:
+    title: JSON转Go
+    description: '将JSON转换为Go结构体。'
+
+  json-to-javascript:
+    title: JSON转JS
+    description: '将JSON转换为JavaScript对象。'
+
+  json-to-java:
+    title: JSON转Java
+    description: '将JSON数据转换为Java类。'
+
+  json-to-toml:
+    title: JSON转TOML
+    description: '解析JSON并将其转换为TOML。'
+
+  json-to-ts:
+    title: JSON转TS
+    description: '解析JSON并将其转换为TS。'
+
+  json-to-yaml-converter:
+    title: JSON转YAML
+    description: '将JSON转换为YAML。'
+
+  json-to-object:
+    title: JSON转对象
+    description: '解析JSON并将其转换为Object。'
+
+  json-escaper:
+    title: JSON转义/反转义工具
+    description: '转义和反转义json字符串。'
+
+  json-size-analyzer:
+    title: JSON节点权重分析器
+    description: '分析JSON节点的相对权重。'
+
+  json-to-php:
+    title: JSON转PHP类
+    description: '从JSON生成PHP类。'
+
+  json-to-php-array:
+    title: JSON转PHP数组
+    description: '将JSON转换为PHP数组。'
+
+  json-to-python:
+    title: JSON转Python
+    description: '将JSON转换为Python类。'
+
+  json-to-sql-ddl:
+    title: JSON转SQL数据库表
+    description: '将JSON键值转换为SQL创建数据库表语句。'
+
+  json-to-schema:
+    title: JSON转Schema
+    description: '将JSON数据转换为JSON Schema、MySQL DDL、Mongoose Schema、Google BigQuery Schema或ClickHouse表结构。'
+
+  json-to-xml:
+    title: JSON转XML
+    description: '将JSON转换为XML。'
+
+  php-array-to-json:
+    title: PHP数组转JSON
+    description: '将PHP数组转换为JSON。'
+
+  toml-to-json:
+    title: TOML转JSON
+    description: '解析TOML并将其转换为JSON。'
+
+### Markdown
+  html-to-markdown:
+    title: HTML转Markdown
+    description: '将HTML转换为Markdown。'
+
+  markdown-editor:
+    title: Markdown编辑器
+    description: '简单的markdown编辑器。'
+
+  markdown-to-html:
+    title: Markdown转HTML
+    description: '将Markdown转换为HTML并允许打印（为PDF）。'
+
+  markdown-toc-generator:
+    title: Markdown目录生成器
+    description: '从markdown文件/内容生成目录。'
+
+  paste-as-markdown:
+    title: 粘贴为Markdown
+    description: '将剪贴板中的单元格/表格和链接粘贴为markdown格式。'
+
+### Maths
+  math-formats-converter:
+    title: 数学格式转换器
+    description: '在数学格式之间转换（latex、asciimath、mathml等）。'
+
+  math-ocr:
+    title: 数学公式OCR
+    description: '将数学公式图片转换为LaTeX代码。'
+
+  math-evaluator:
+    title: 数学表达式计算器
+    description: '用于计算数学表达式的计算器。您可以使用sqrt、cos、sin、abs等函数。'
+
+### Measurement
+  aspect-ratio-calculator:
+    title: 宽高比计算器
+    description: '使用此比例计算器在调整图像大小时检查尺寸。'
+
+  benchmark-builder:
+    title: 基准测试生成器
+    description: '使用这个非常简单的在线基准测试构建器轻松比较任务的执行时间。'
+
+  geo-distance-calculator:
+    title: 地理距离计算器
+    description: '计算两个地理位置之间的距离（并显示当前用户位置信息）。'
+
+  percentage-calculator:
+    title: 百分比计算器
+    description: '轻松计算从一个值到另一个值的百分比，或从百分比到值的百分比。'
+
+### Network
+  bimi-dns-generator:
+    title: BIMI DNS生成器
+    description: '生成BIMI DNS TXT记录。'
+
+  basic-auth-generator:
+    title: 基本身份验证生成器
+    description: '从用户名和密码生成base64基本身份验证标头。'
+
+  chmod-calculator:
+    title: Chmod计算器
+    description: '计算chmod权限并给出相应的命令及umask信息。'
+
+  crontab-generator:
+    title: Crontab表达式生成
+    description: '验证并生成crontab，并获取cron调度的可读描述。'
+
+  curl-generator:
+    title: Curl命令生成器
+    description: '根据给定的地址及选择的参数生成curl命令行。'
+
+  dkim-dns-generator:
+    title: DKIM DNS生成器
+    description: '生成DKIM DNS TXT记录。'
+
+  dmarc-dns-generator:
+    title: DMARC DNS生成器
+    description: '生成DMARC DNS TXT记录。'
+
+  dns-queries:
+    title: DNS查询
+    description: '执行DNS查询（通过HTTPS）。'
+
+  data-transfer-rate-converter:
+    title: 数据传输速率转换器
+    description: '在不同的数据传输速率单位之间转换。'
+
+  fstab-generator:
+    title: Fstab生成器
+    description: '生成/etc/fstab行。'
+
+  firewalld-generator:
+    title: Firewall命令行生成器
+    description: '生成防火墙firewall命令行。'
+
+  har-sanitizer:
+    title: Har文件净化器
+    description: '通过移除敏感信息来净化http归档(har)文件。'
+
+  hdd-calculator:
+    title: 硬盘容量计算器
+    description: '存储设备制造商以十进制形式（如gb）报告容量，而操作系统和其他软件使用二进制形式（gib）。此工具将十进制形式的容量转换为各种二进制形式。'
+
+  htaccess-generator:
+    title: Htaccess文件生成器
+    description: '生成.htaccess文件。'
+
+  htpasswd-generator:
+    title: Htpasswd文件生成器
+    description: '为http基本认证生成htpassword文件内容。'
+
+  ip-geo-location:
+    title: IP地理位置
+    description: '获取IPv4/6地址或域名的地理位置信息。'
+
+  ip-include-exclude:
+    title: IP子网排除计算器
+    description: '从允许的IP范围/掩码/CIDR列表中减去不允许的IP范围/掩码/CIDR列表。'
+
+  ipv4-address-converter:
+    title: IPv4地址转换器
+    description: '将IP地址转换为十进制、二进制、十六进制甚至IPv6表示形式。'
+
+  ipv4-range-expander:
+    title: IPv4范围扩展器
+    description: '给定开始和结束IPv4地址，此工具将计算有效的IPv4子网及其CIDR表示法。'
+
+  ipv4-subnet-calculator:
+    title: IPv4子网计算器
+    description: '解析IPv4 CIDR块，并获取有关子网络的所有信息。'
+
+  cidr-in-cidr:
+    title: IP子网判断
+    description: '判断给定的IPv4-6/范围/CIDR/通配符IP/IP掩码是否在子网范围内。'
+
+  ip-range-to-cidr:
+    title: IP范围转CIDR计算器
+    description: '从IP范围(IPv4/6)计算CIDR。'
+
+  ipv6-ula-generator:
+    title: IPv6 ULA生成器
+    description: '根据RFC4193在网络上生成您自己的本地不可路由IP地址。'
+
+  integers-to-ip:
+    title: 整数转IPv4/IPv6
+    description: '将整数转换为IPv4/IPv6地址。'
+
+  iptables-generator:
+    title: IPTables生成器
+    description: '生成IPTables命令行。'
+
+  ip-cidr-to-range:
+    title: IPv4/6 CIDR转IP范围计算器
+    description: '从CIDR(IPv4/6)计算IP范围。'
+
+  ipv6-address-converter:
+    title: IPv6地址转换器
+    description: '将IP地址转换为十进制、二进制、十六进制并获取信息。'
+
+  ipv6-subnet-calculator:
+    title: IPv6子网计算器
+    description: '解析IPv6 CIDR块，并获取有关子网络的所有信息。'
+
+  mac-address-converter:
+    title: MAC地址转换器
+    description: '更改MAC地址的格式并在不同格式(EUI-48、EUI-64、IPv6)之间选择。'
+
+  mac-address-generator:
+    title: MAC地址生成器
+    description: '将以输入数量和前缀，选择的大小写生成MAC地址。'
+
+  mac-address-lookup:
+    title: MAC地址查询
+    description: '查询MAC（Media Access Control）地址厂商信息。'
+
+  mic-tester:
+    title: 麦克风测试工具
+    description: '重播和可视化来自麦克风的声音，并增加一秒的延迟。'
+
+  multi-link-downloader:
+    title: 多链接下载器
+    description: '从多个链接异步下载到zip文件中，单个链接时直接下载。（需要互联网连接）。'
+
+  my-ip:
+    title: 我的IP地址
+    description: '使用https://www.ipify.org/获取您的客户端IP地址（IPv4/6）。'
+
+  nginx-formatter:
+    title: NGINX格式化工具
+    description: '格式化NGINX配置文件。'
+
+  option43-generator:
+    title: Option43生成器
+    description: '生成Option43 WiFi DHCP配置。'
+
+  password-strength-analyser:
+    title: 密码强度分析仪
+    description: '显示密码强度和破解时间预估。'
+
+  port-numbers:
+    title: 端口号查询
+    description: '搜索指定端口和协议的相关用途。'
+
+  punycode-converter:
+    title: Punycode转换器
+    description: '将国际Unicode域名或电子邮件与ASCII Punycode版本相互转换。'
+
+  raid-calculator:
+    title: RAID计算器
+    description: '根据磁盘数量、大小和RAID类型计算存储容量、容错能力和空间效率。'
+
+  random-port-generator:
+    title: 随机端口生成器
+    description: '生成端口范围（0-1023）之外的随机端口号。'
+
+  rsync-generator:
+    title: Rsync生成器
+    description: 'Rsync命令生成器。'
+
+  sip-auth:
+    title: SIP认证校验
+    description: '这个工具能够帮你验证SIP授权头。该工具所有运算过程都在浏览器中进行，并不会通过网络传输敏感信息，所以请放心使用。'
+    password: 'SIP密码'
+    password-tips: '输入密码...'
+    message: 'SIP消息文本'
+    message-tips: '在此处粘贴您的SIP消息...'
+    result: '检测结果'
+    sucess: '成功'
+    failure: '失败'
+
+  spf-dns-generator:
+    title: SPF DNS生成器
+    description: '生成SPF DNS TXT记录。'
+
+  wpa-psk-generator:
+    title: WPA PSK生成器
+    description: 'Wi-Fi Protected Access（WPA）预共享密钥生成器，将WPA密码和SSID转换为256位预共享（原始）密钥。'
+
+  websocket-tester:
+    title: WebSocket测试工具
+    description: '允许测试WebSocket连接。'
+
+  x-vr-spamcause-decoder:
+    title: X-VR-SpamCause解码器
+    description: '解码OVH邮件中的X-VR-SpamCause头部。'
+
+### PDF
+  pdf-signature-checker:
+    title: PDF签名检查器
+    description: '验证PDF文件的签名。签名的PDF文件包含一个或多个签名，可用于确定文件的内容在签名后是否已被更改。'
+
+  pdf-concat:
+    title: PDF合并
+    description: '将多个PDF拼接成一个PDF。'
+
+  pdf-unlock:
+    title: PDF解密和解锁
+    description: '解密PDF并解锁（移除安全权限）。'
+
+  pdf-encrypt:
+    title: PDF加密
+    description: '为PDF文件加密并添加保护。'
+
+  pdf-linearize:
+    title: PDF线性化/FastWeb
+    description: '创建PDF的线性化版本（转为FastWeb）。'
+
+  pdf-extract:
+    title: PDF页面提取器
+    description: '从PDF中提取页面范围。'
+
+### Physics
+  angle-converter:
+    title: 角度单位转换器
+    description: '在不同角度单位之间转换数值。'
+
+  area-converter:
+    title: 面积单位转换器
+    description: '在不同面积单位之间转换数值。'
+
+  energy-converter:
+    title: 能量单位转换器
+    description: '在不同能量单位之间转换数值。'
+
+  force-converter:
+    title: 力单位转换器
+    description: '在不同力单位之间转换数值。'
+
+  illuminance-converter:
+    title: 照度单位转换器
+    description: '在不同照度单位（lux、foot candles、nox、phot、flame）之间转换数值。'
+
+  length-converter:
+    title: 长度单位转换器
+    description: '在不同长度单位之间转换数值。'
+
+  mass-converter:
+    title: 质量单位转换器
+    description: '在不同质量单位之间转换数值。'
+
+  power-converter:
+    title: 功率单位转换器
+    description: '在不同功率单位之间转换数值。'
+
+  pressure-converter:
+    title: 压力单位转换器
+    description: '在不同压力单位之间转换数值。'
+
+  temperature-converter:
+    title: 温度单位转换器
+    description: '在不同温度单位之间转换数值。'
+
+  volume-converter:
+    title: 体积单位转换器
+    description: '在不同体积单位之间转换数值。'
+
+### Text
+  ai-prompt-splitter:
+    title: Ai提示拆分器
+    description: '将长文档拆分为多个聊天（如chatgpt）提示。'
+
+  ascii-text-drawer:
+    title: Ascii文本绘制器
+    description: '创建具有多种字体和样式的ascii艺术文本。'
+
+  case-converter:
+    title: 大小写转换器
+    description: '转换字符串的大小写并在不同的格式之间进行选择。'
+
+  distinct-words:
+    title: 单词统计
+    description: '提取并计算文本中每个唯一单词的出现次数。'
+
+  duplicate-line-finder:
+    title: 重复行查找器
+    description: '在文本中查找并列出重复行。'
+
+  emoji-picker:
+    title: Emoji选择器
+    description: '轻松复制和粘贴emoji并获取每个emoji的unicode和code points值。'
+
+  extract-text-from-html:
+    title: 从Html中提取文本
+    description: '将的html粘贴到输入表单中，您将立即获得文本。有时，您可能需要从CSS属性（如 user-select： none;）阻止文本选择的HTML页面中提取纯文本。典型的解决方法包括使用DevTools（F12） 选择“Copy → outer HTML”。拟议的工具将通过直接从复制的HTML中提取“内部文本”来简化此过程。'
+
+  folder-structure-diagram:
+    title: 文件夹结构图
+    description: '类似tree命令的工具，用于生成ascii文件夹树状结构图。'
+
+  gpt-token-estimator:
+    title: Gpt Token估算器
+    description: 'openai gpt token数量估算器。'
+
+  image-to-ascii-art:
+    title: 图像转Ascii艺术字体
+    description: '将图像转换为ascii字符艺术字体。'
+
+  list-converter:
+    title: 列表转换器
+    description: '该工具可以处理基于数组的数据，并将各种更改（转置、添加前缀和后缀、反向列表、排序列表、小写值、截断值）应用于每一行。'
+
+  list-comparer:
+    title: 列表比较器
+    description: '比较两个列表项。'
+
+  lorem-ipsum-generator:
+    title: Lorem Ipsum生成器
+    description: 'lorem ipsum是一种占位符文本，通常用于演示文档或字体的视觉形式，而不依赖于有意义的内容。'
+
+  mermaid-exporter:
+    title: Mermaid导出工具
+    description: '将markdown mermaid转换为图像，并支持导出为png、jpg和svg格式。'
+
+  morse-converter:
+    title: 摩尔斯电码转换器
+    description: '编码/解码摩尔斯电码。'
+
+  regex-tester:
+    title: 正则表达式测试器
+    description: '使用示例文本测试您的正则表达式。'
+
+  rune-converter:
+    title: 符文转换器
+    description: '在文本和符文之间相互转换。'
+
+  smart-text-replacer:
+    title: 智能文本替换和换行工具
+    description: '在单个或多个匹配项上搜索和替换单词，就像windows记事本搜索和替换一样。还允许管理换行和文本分割。'
+
+  string-obfuscator:
+    title: 字符串混淆器
+    description: '混淆字符串（如秘密、iban 或令牌），使其可共享和可识别，而不泄露其内容。'
+
+  text-diff:
+    title: 文本比较
+    description: '比较两个文本并查看它们之间的差异。'
+
+  text-statistics:
+    title: 文本统计
+    description: '获取有关文本、字符数、字数、大小等的信息。'
+
+  text-to-nato-alphabet:
+    title: 文本转Nato字母表
+    description: '将文本转换为nato音标字母（国际无线电通话拼写字母）以进行口头传播。'
+
+  text-to-unicode-names:
+    title: 文本转Unicode
+    description: '将文本转换为其十六进制字符代码并显示每个字符的unicode名称。'
+
+  unicode-formatter:
+    title: Unicode格式化工具
+    description: '使用unicode字体格式化文本。'
+
+### Web
+  css-xpath-converter:
+    title: CSS与XPath转换器
+    description: '将CSS选择器与XPath表达式相互转换。'
+
+  color-contrast-checker:
+    title: 颜色对比度检查器
+    description: '检查两种颜色之间的wcag对比度级别。'
+
+  color-wheel:
+    title: 色轮
+    description: '通过选择调色板类型，在色轮上点取需要的颜色并显示相应的十六进制编码。'
+
+  color-converter:
+    title: 颜色转换器
+    description: '在不同格式（十六进制、rgb、hsl和css name）之间转换颜色。'
+
+  css-prettifier:
+    title: CSS美化器
+    description: '格式化CSS代码。'
+
+  device-information:
+    title: 设备信息
+    description: '获取有关当前设备的信息（屏幕大小、像素比率、用户代理…）。'
+
+  url-encoder:
+    title: 编码/解码URL格式的字符串
+    description: '将文本字符串与URL编码（百分比编码）互相转换。'
+
+  html-entities:
+    title: 转义/还原HTML特殊字符
+    description: "转义或unescape html实体（将<、>、&、“和'替换为其html版本）"
+
+  html-wysiwyg-editor:
+    title: HTML所见即所得编辑器
+    description: '在线、功能丰富的所见即所得（WYSIWYG）HTML编辑器，可立即生成内容的源代码。'
+
+  http-status-codes:
+    title: HTTP状态码查询
+    description: '所有HTTP状态代码、其名称和含义的列表。'
+
+  html-prettifier:
+    title: HTML美化器
+    description: '美化HTML代码。'
+
+  html-cleaner:
+    title: HTML清理器
+    description: '清理HTML代码中不需要的内容(样式等)。'
+
+  image-to-css:
+    title: 图像转CSS
+    description: '将图像转换为CSS（URL、背景等）。'
+
+  mime-types:
+    title: MIME类型
+    description: '将MIME类型与文件扩展名互相转换显示。'
+
+  rem-px-converter:
+    title: Rem像素转换器
+    description: '在px和rem之间相互转换。'
+
+  svg-placeholder-generator:
+    title: SVG占位符生成器
+    description: '生成SVG图像以用作应用程序中的占位符。'
+
+  slugify-string:
+    title: Slugify字符串
+    description: '将字符串转换成符合URL规范的slug。'
+
+  utm-url-generator:
+    title: UTM URL生成器
+    description: '生成带有UTM参数的URL。'
+
+  url-cleaner:
+    title: URL清理器
+    description: '清除URL中的广告跟踪器、UTM、Facebook和其他广告提供商参数。'
+
+  url-fanger:
+    title: URL防护转换器
+    description: '对URL或电子邮件地址进行defang防护处理，使其无法直接被点击或触发。refang则是将defang过的链接恢复成原始状态。'
+
+  url-text-fragment-maker:
+    title: URL文本搜索片段生成器
+    description: '创建允许直接链接到Web文档中特定文本部分的URL。'
+
+  user-agent-parser:
+    title: User-Agent解析器
+    description: '检测浏览器User-Agent字符串，并解析浏览器、引擎、操作系统、CPU和设备类型/模型。'
+
+### XML
+  xml-formatter:
+    title: XML格式化程序
+    description: '将XML字符串修饰为友好的可读格式。'
+
+  xml-to-json:
+    title: XML转JSON
+    description: '将XML转换为JSON。'
+
+  xpath-tester:
+    title: XPath测试工具
+    description: '测试XPath表达式对XML内容的匹配。'
+
+  xslt-tester:
+    title: XSLT测试工具
+    description: '允许使用XSLT样式表测试XML转换。'
+
+### YAML
+  toml-to-yaml:
+    title: TOML转YAML
+    description: '解析TOML并将其转换为YAML。'
+
+  yaml-prettify:
+    title: YAML格式化工具
+    description: '将YAML字符串美化为友好、人类可读的格式。'
+
+  yaml-to-json-converter:
+    title: YAML转JSON
+    description: '将YAML转换为JSON。'
+
+  yaml-to-toml:
+    title: YAML转TOML
+    description: '解析YAML并将其转换为TOML。'
+#######################################

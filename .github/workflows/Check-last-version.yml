@@ -1,0 +1,477 @@
+name: Check last version
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * *"
+
+jobs:
+  Check-Caddy:
+    runs-on: ubuntu-latest
+    env:
+      name: Caddy  # 软件名称
+      repo: caddyserver/caddy  # GitHub仓库路径
+      version_file: caddy_ver.txt  # 版本记录文件
+      dockerfile: Dockerfile.caddy2  # Dockerfile文件名
+      event_type: caddy2-on-update  # 触发构建工作流的事件类型
+      version_pattern: '^v?[0-9]+(\.[0-9]+){2}$'  # 版本号正则匹配模式
+      strip_v: true  # 是否去除版本号前的'v'前缀
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Git and Timezone
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "DTB"
+          git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
+          
+          # 设置时区
+          echo "设置时区为 Asia/Shanghai (UTC+8)"
+          sudo timedatectl set-timezone Asia/Shanghai
+          
+          # 拉取最新代码
+          git config --global pull.rebase false  # 明确合并策略
+          git pull
+          
+      - name: Check version
+        id: version_check
+        run: |
+          set -e
+          # 确保版本文件存在
+          if [ ! -e "${{ env.version_file }}" ]; then
+            touch "${{ env.version_file }}"
+          fi
+
+          # 获取当前版本和最新版本
+          version_old=$(cat "${{ env.version_file }}")
+          version_new=$(curl -s "https://api.github.com/repos/${{ env.repo }}/releases/latest" | grep "tag_name" | cut -f4 -d "\"")
+          
+          # 处理版本号格式
+          if [ "${{ env.strip_v }}" = "true" ] && [ ! -z "$version_new" ]; then
+            version_new=$(echo "$version_new" | sed 's/^v//')
+          fi
+
+          # 验证版本格式
+          if ! echo "$version_new" | grep -qE "${{ env.version_pattern }}"; then
+            echo "错误：获取的版本号 $version_new 格式不正确"
+            version_new=$version_old
+          elif [ -z "$version_new" ]; then
+            echo "错误：获取新版本为空"
+            version_new=$version_old
+          fi
+
+          echo "获取Release版本为 $version_new"
+          echo "当前旧版本为 $version_old"
+
+          # 设置输出变量
+          echo "old_version=$version_old" >> $GITHUB_OUTPUT
+          echo "new_version=$version_new" >> $GITHUB_OUTPUT
+          
+          # 检查版本是否需要更新
+          if [ "$version_old" != "$version_new" ]; then
+            echo "version_updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "未检查到${{ env.name }}版本更新，已退出！"
+            echo "version_updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Version Files and README
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          # 更新版本文件
+          echo "${{ steps.version_check.outputs.new_version }}" > "${{ env.version_file }}"
+          
+          # 更新Dockerfile中的版本
+          sed -ri "s@[0-9]+\.[0-9]+\.[0-9]+@${{ steps.version_check.outputs.new_version }}@g" "${{ env.dockerfile }}"
+          
+          # 获取当前时间
+          current_date=$(date +"%Y-%m-%d %H:%M:%S")
+          
+          # 更新README中的版本信息
+          if grep -q "| ${{ env.name }}\s*|" README.md; then
+            # 更新现有行
+            sed -ri "s@(\| ${{ env.name }}\s*\| )[^|]+(\s*\| )[^|]+(\s*\| )([^|]+)(\s*\|)@\1${{ steps.version_check.outputs.new_version }}\2$current_date\3\4\5@" README.md
+          else
+            # 添加新行
+            sed -i "/^| ----------- |/a| ${{ env.name }} | ${{ steps.version_check.outputs.new_version }} | $current_date | https://github.com/${{ env.repo }} |" README.md
+          fi
+
+      - name: Git Operations
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          git add .
+          git commit -m "更新 ${{ env.name }} Release 版本至 ${{ steps.version_check.outputs.new_version }}"
+          git push
+
+      - name: Trigger Build Workflow
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          curl -X POST https://api.github.com/repos/DoTheBetter/docker_baseimage/dispatches \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event_type":"${{ env.event_type }}"}'
+
+  Check-ZeroTier:
+    runs-on: ubuntu-latest
+    needs: Check-Caddy
+    env:
+      name: ZeroTierOne
+      repo: zerotier/ZeroTierOne
+      version_file: zerotier_ver.txt
+      dockerfile: Dockerfile.zerotier
+      event_type: zerotier-on-update
+      version_pattern: '^v?[0-9]+(\.[0-9]+){2}$'
+      strip_v: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Git and Timezone
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "DTB"
+          git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
+          
+          # 设置时区
+          echo "设置时区为 Asia/Shanghai (UTC+8)"
+          sudo timedatectl set-timezone Asia/Shanghai
+          
+          # 拉取最新代码
+          git config --global pull.rebase false  # 明确合并策略
+          git pull
+
+      - name: Check version
+        id: version_check
+        run: |
+          set -e
+          # 确保版本文件存在
+          if [ ! -e "${{ env.version_file }}" ]; then
+            touch "${{ env.version_file }}"
+          fi
+
+          # 获取当前版本和最新版本
+          version_old=$(cat "${{ env.version_file }}")
+          version_new=$(curl -s "https://api.github.com/repos/${{ env.repo }}/releases/latest" | grep "tag_name" | cut -f4 -d "\"")
+          
+          # 处理版本号格式
+          if [ "${{ env.strip_v }}" = "true" ] && [ ! -z "$version_new" ]; then
+            version_new=$(echo "$version_new" | sed 's/^v//')
+          fi
+
+          # 验证版本格式
+          if ! echo "$version_new" | grep -qE "${{ env.version_pattern }}"; then
+            echo "错误：获取的版本号 $version_new 格式不正确"
+            version_new=$version_old
+          elif [ -z "$version_new" ]; then
+            echo "错误：获取新版本为空"
+            version_new=$version_old
+          fi
+
+          echo "获取Release版本为 $version_new"
+          echo "当前旧版本为 $version_old"
+
+          # 设置输出变量
+          echo "old_version=$version_old" >> $GITHUB_OUTPUT
+          echo "new_version=$version_new" >> $GITHUB_OUTPUT
+          
+          # 检查版本是否需要更新
+          if [ "$version_old" != "$version_new" ]; then
+            echo "version_updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "未检查到${{ env.name }}版本更新，已退出！"
+            echo "version_updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Version Files and README
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          # 更新版本文件
+          echo "${{ steps.version_check.outputs.new_version }}" > "${{ env.version_file }}"
+          
+          # 更新Dockerfile中的版本
+          sed -ri "s@[0-9]+\.[0-9]+\.[0-9]+@${{ steps.version_check.outputs.new_version }}@g" "${{ env.dockerfile }}"
+          
+          # 获取当前时间
+          current_date=$(date +"%Y-%m-%d %H:%M:%S")
+          
+          # 更新README中的版本信息
+          if grep -q "| ${{ env.name }}\s*|" README.md; then
+            # 更新现有行
+            sed -ri "s@(\| ${{ env.name }}\s*\| )[^|]+(\s*\| )[^|]+(\s*\| )([^|]+)(\s*\|)@\1${{ steps.version_check.outputs.new_version }}\2$current_date\3\4\5@" README.md
+          else
+            # 添加新行
+            sed -i "/^| ----------- |/a| ${{ env.name }} | ${{ steps.version_check.outputs.new_version }} | $current_date | https://github.com/${{ env.repo }} |" README.md
+          fi
+
+      - name: Git Operations
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          git add .
+          git commit -m "更新 ${{ env.name }} Release 版本至 ${{ steps.version_check.outputs.new_version }}"
+          git push
+
+      - name: Trigger Build Workflow
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          curl -X POST https://api.github.com/repos/DoTheBetter/docker_baseimage/dispatches \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event_type":"${{ env.event_type }}"}'
+
+  Check-Composerize:
+    runs-on: ubuntu-latest
+    needs: Check-ZeroTier
+    env:
+      name: Composerize
+      repo1: composerize/composerize
+      repo2: composerize/decomposerize
+      repo3: outilslibre/composeverter
+      version_file: composerize_ver.txt
+      dockerfile: Dockerfile.composerize
+      event_type: composerize-on-update
+      version_pattern: '^v?[0-9]+(\.[0-9]+){2}$'
+      strip_v: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Git and Timezone
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "DTB"
+          git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
+          
+          # 设置时区
+          echo "设置时区为 Asia/Shanghai (UTC+8)"
+          sudo timedatectl set-timezone Asia/Shanghai
+          
+          # 拉取最新代码
+          git config --global pull.rebase false  # 明确合并策略
+          git pull
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Check versions
+        id: version_check
+        run: |
+          set -e
+          # 确保版本文件存在
+          if [ ! -e "${{ env.version_file }}" ]; then
+            touch "${{ env.version_file }}"
+            echo "composerize=" > "${{ env.version_file }}"
+            echo "decomposerize=" >> "${{ env.version_file }}"
+            echo "composeverter=" >> "${{ env.version_file }}"
+          fi
+
+          # 获取当前版本
+          version_old_composerize=$(grep "^composerize=" "${{ env.version_file }}" | cut -d'=' -f2)
+          version_old_decomposerize=$(grep "^decomposerize=" "${{ env.version_file }}" | cut -d'=' -f2)
+          version_old_composeverter=$(grep "^composeverter=" "${{ env.version_file }}" | cut -d'=' -f2)
+
+          # 获取最新版本
+          version_new_composerize=$(npm view composerize version)
+          version_new_decomposerize=$(npm view decomposerize version)
+          version_new_composeverter=$(npm view composeverter version)
+
+          # 处理版本号格式
+          if [ "${{ env.strip_v }}" = "true" ]; then
+            [ ! -z "$version_new_composerize" ] && version_new_composerize=$(echo "$version_new_composerize" | sed 's/^v//')
+            [ ! -z "$version_new_decomposerize" ] && version_new_decomposerize=$(echo "$version_new_decomposerize" | sed 's/^v//')
+            [ ! -z "$version_new_composeverter" ] && version_new_composeverter=$(echo "$version_new_composeverter" | sed 's/^v//')
+          fi
+
+          # 验证版本格式并设置默认值
+          for var in "composerize" "decomposerize" "composeverter"; do
+            version_var="version_new_${var}"
+            old_version_var="version_old_${var}"
+            eval "current_version=\${$version_var}"
+            eval "old_version=\${$old_version_var}"
+            
+            if [ -z "$current_version" ] || ! echo "$current_version" | grep -qE "${{ env.version_pattern }}"; then
+              echo "错误：获取的版本号 $current_version 格式不正确，使用旧版本 $old_version"
+              eval "$version_var=$old_version"
+            fi
+          done
+
+          echo "获取Composerize Release版本为 $version_new_composerize"
+          echo "当前Composerize旧版本为 $version_old_composerize"
+          echo "获取Decomposerize Release版本为 $version_new_decomposerize"
+          echo "当前Decomposerize旧版本为 $version_old_decomposerize"          
+          echo "获取Composeverter Release版本为 $version_new_composeverter"
+          echo "当前Composeverter旧版本为 $version_old_composeverter"
+
+          # 设置输出变量
+          echo "old_version_composerize=$version_old_composerize" >> $GITHUB_OUTPUT
+          echo "new_version_composerize=$version_new_composerize" >> $GITHUB_OUTPUT
+          echo "old_version_decomposerize=$version_old_decomposerize" >> $GITHUB_OUTPUT
+          echo "new_version_decomposerize=$version_new_decomposerize" >> $GITHUB_OUTPUT
+          echo "old_version_composeverter=$version_old_composeverter" >> $GITHUB_OUTPUT
+          echo "new_version_composeverter=$version_new_composeverter" >> $GITHUB_OUTPUT
+
+          # 检查版本是否需要更新
+          if [ "$version_old_composerize" != "$version_new_composerize" ] || \
+             [ "$version_old_decomposerize" != "$version_new_decomposerize" ] || \
+             [ "$version_old_composeverter" != "$version_new_composeverter" ]; then
+            echo "version_updated=true" >> $GITHUB_OUTPUT
+            echo "检测到至少一个${{ env.name }}版本更新"
+          else
+            echo "未检查到${{ env.name }}版本更新，已退出！"
+            echo "version_updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Version Files and README
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          # 更新版本文件
+          sed -i "s/^composerize=.*/composerize=${{ steps.version_check.outputs.new_version_composerize }}/" "${{ env.version_file }}"
+          sed -i "s/^decomposerize=.*/decomposerize=${{ steps.version_check.outputs.new_version_decomposerize }}/" "${{ env.version_file }}"
+          sed -i "s/^composeverter=.*/composeverter=${{ steps.version_check.outputs.new_version_composeverter }}/" "${{ env.version_file }}"
+          
+          # 获取当前时间
+          current_date=$(date +"%Y-%m-%d %H:%M:%S")
+          
+          # 更新README中的版本信息
+          if grep -q "| ${{ env.name }}\s*|" README.md; then
+            # 更新现有行
+            sed -ri "s@(\| ${{ env.name }}\s*\| )[^|]+(\s*\| )[^|]+(\s*\| )([^|]+)(\s*\|)@\1${{ steps.version_check.outputs.new_version_composerize }}/${{ steps.version_check.outputs.new_version_decomposerize }}/${{ steps.version_check.outputs.new_version_composeverter }}\2$current_date\3\4\5@" README.md
+          else
+            # 添加新行
+            sed -i "/^| ----------- |/a| ${{ env.name }} | ${{ steps.version_check.outputs.new_version_composerize }}/${{ steps.version_check.outputs.new_version_decomposerize }}/${{ steps.version_check.outputs.new_version_composeverter }} | $current_date | https://github.com/${{ env.repo1 }} |" README.md
+          fi
+
+      - name: Git Operations
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          git add .
+          git commit -m "更新 ${{ env.name }} Release 版本至 ${{ steps.version_check.outputs.new_version_composerize }}/${{ steps.version_check.outputs.new_version_decomposerize }}/${{ steps.version_check.outputs.new_version_composeverter }}"
+          git push
+
+      - name: Trigger Build Workflow
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          curl -X POST https://api.github.com/repos/DoTheBetter/docker_baseimage/dispatches \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event_type":"${{ env.event_type }}"}'      
+
+
+  Check-it-tools:
+    runs-on: ubuntu-latest
+    needs: Check-Composerize
+    env:
+      name: IT-Tools  # 软件名称
+      repo: sharevb/it-tools  # GitHub仓库路径
+      version_file: it-tools_ver.txt  # 版本记录文件
+      event_type: it-tools-on-update  # 触发构建工作流的事件类型
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Git and Timezone
+        run: |
+          # 配置 Git 用户信息
+          git config --global user.name "DTB"
+          git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
+          
+          # 设置时区
+          echo "设置时区为 Asia/Shanghai (UTC+8)"
+          sudo timedatectl set-timezone Asia/Shanghai
+          
+          # 拉取最新代码
+          git config --global pull.rebase false  # 明确合并策略
+          git pull
+          
+      - name: Check version
+        id: version_check
+        run: |
+          set -e
+          # 确保版本文件存在
+          if [ ! -e "${{ env.version_file }}" ]; then
+            touch "${{ env.version_file }}"
+          fi
+
+          # 获取当前版本和最新提交的SHA
+          version_old=$(cat "${{ env.version_file }}")
+          git clone --depth 1 https://github.com/${{ env.repo }}.git temp_repo
+          cd temp_repo
+          version_new=$(git rev-parse --short HEAD)
+          cd ..
+          rm -rf temp_repo
+          
+          # 验证SHA格式
+          if [ -z "$version_new" ]; then
+            echo "错误：获取新SHA为空"
+            version_new=$version_old
+          fi
+
+          echo "获取最新提交SHA为 $version_new"
+          echo "当前旧版本为 $version_old"
+
+          # 设置输出变量
+          echo "old_version=$version_old" >> $GITHUB_OUTPUT
+          echo "new_version=$version_new" >> $GITHUB_OUTPUT
+          
+          # 检查版本是否需要更新
+          if [ "$version_old" != "$version_new" ]; then
+            echo "version_updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "未检查到${{ env.name }}版本更新，已退出！"
+            echo "version_updated=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Version Files and README
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          # 更新版本文件
+          echo "${{ steps.version_check.outputs.new_version }}" > "${{ env.version_file }}"
+
+          # 获取当前时间
+          current_date=$(date +"%Y-%m-%d %H:%M:%S")
+          
+          # 更新README中的版本信息
+          if grep -q "| ${{ env.name }}\s*|" README.md; then
+            # 更新现有行
+            sed -i "s/| ${{ env.name }}\s*| [a-f0-9]\{7\} | [^|]\+ |/| ${{ env.name }} | ${{ steps.version_check.outputs.new_version }} | $current_date |/" README.md
+          else
+            # 添加新行
+            sed -i "/^| ----------- |/a| ${{ env.name }} | ${{ steps.version_check.outputs.new_version }} | $current_date | https://github.com/${{ env.repo }} |" README.md
+          fi
+
+      - name: Git Operations
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          git add .
+          git commit -m "更新 ${{ env.name }} Release 版本至 ${{ steps.version_check.outputs.new_version }}"
+          git push
+
+      - name: Trigger Build Workflow
+        if: steps.version_check.outputs.version_updated == 'true'
+        run: |
+          curl -X POST https://api.github.com/repos/DoTheBetter/docker_baseimage/dispatches \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event_type":"${{ env.event_type }}"}'
+
+  # 清理工作流运行历史记录
+  Cleanup:
+    needs: [Check-Caddy, Check-ZeroTier, Check-Composerize, Check-it-tools]
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Cleanup Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 1
