@@ -111,6 +111,10 @@ tools:
     description: '生成包含WiFi网络信息的二维码并下载，以快速连接到WiFi网络。'
 
 ### Cheatsheets
+  bash-memo:
+    title: Bash 命令速查表
+    description: '常用Linux bash命令和用法的快速参考指南。'
+
   css-selectors-memo:
     title: CSS 选择器速查表
     description: 'CSS选择器的参考指南。'
@@ -121,7 +125,7 @@ tools:
 
   docker-memo:
     title: Docker 速查表
-    description: 'docker命令和用法的快速参考指南。'
+    description: 'Docker命令和用法的快速参考指南。'
 
   git-semantic-commit-memo:
     title: Git 消息提交样式速查表
@@ -139,17 +143,29 @@ tools:
     title: JQ 速查表
     description: 'JQ命令和用法的快速参考指南。'
 
+  k8s-memo:
+    title: K8s 速查表
+    description: 'Kubernetes常用命令的快速参考指南。'
+
   markdown-cheatsheet:
     title: Markdown 速查表
-    description: 'markdown语法和格式的快速参考指南。'
+    description: 'Markdown语法和格式的快速参考指南。'
 
   nano-memo:
     title: Nano 速查表
     description: 'nano编辑器快捷键和命令的快速参考指南。'
 
+  nginx-memo:
+    title: Nginx 速查表
+    description: 'Nginx配置和常用命令的快速参考指南。'
+
   regex-memo:
     title: 正则表达式速查表
     description: '正则表达式语法和模式的快速参考指南。'
+
+  vim-memo:
+    title: VIM 速查表
+    description: 'Vim文本编辑器命令的快速参考指南。'
 
   xpath-memo:
     title: XPath 语法速查表
@@ -225,6 +241,10 @@ tools:
     description: '将Unicode字符与Java实体格式进行互相转换。'
 
 ### Crypto
+  age-crypto:
+    title: AGE 密码学工具包
+    description: 'AGE是Actual Good Encryption的缩写，是一个轻量且简单的命令行非对称加密工具，用于生成密钥、加密和解密消息。'
+
   ansible-vault-crypt-decrypt:
     title: Ansible Vault 加密解密
     description: '加密和解密Ansible Vault文件。'
@@ -242,7 +262,7 @@ tools:
     description: '生成证书签名（PEM格式）。'
 
   certificate-key-parser:
-    title: Certificate/Key parser
+    title: Certificate/Key 解析器
     description: '解析和验证SSL证书和密钥。'
 
   ecdsa-key-pair-generator:
@@ -1094,6 +1114,10 @@ tools:
     description: '解码OVH邮件中的X-VR-SpamCause头部。'
 
 ### PDF
+  pdf-text-extractor:
+    title: PDF 文本提取器
+    description: '从PDF文件中提取文本。'
+
   pdf-signature-checker:
     title: PDF 签名检查器
     description: '验证PDF文件的签名。签名的PDF文件包含一个或多个签名，可用于确定文件的内容在签名后是否已被更改。'
@@ -1116,7 +1140,7 @@ tools:
 
   pdf-extract:
     title: PDF 页面提取器
-    description: '从PDF中提取页面范围。'
+    description: '从PDF文件中提取页面。'
 
 ### Physics
   angle-converter:
