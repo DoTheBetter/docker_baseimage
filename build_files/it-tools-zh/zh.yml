@@ -753,6 +753,10 @@ tools:
     title: 移除 Exif 信息
     description: '从jpeg文件中移除exif信息。'
 
+  watermarker:
+    title: 图像水印
+    description: '为一张或多张图片添加水印。'
+
 ### JSON
   csv-to-json:
     title: CSV 转 JSON
