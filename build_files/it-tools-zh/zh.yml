@@ -448,9 +448,19 @@ tools:
     description: '合并多个ical/ics日历文件为一个。'
 
 ### Development
+  ansi-escape-tester:
+    title: ANSI 转义代码测试工具
+    description: '生成并测试ANSI控制台转义序列。'
+
   api-tester:
     title: API 测试工具
     description: '测试HTTP API接口。'
+
+  cli-command-editor:
+    title: CLI 命令编辑器
+    description: '将带有选项的CLI命令转换为易于编辑的形式，并生成带有输入值的结果命令。'
+    command: '命令'
+    placeholder: '将命令粘贴到此处'
 
   code-highlighter:
     title: 代码高亮工具
@@ -830,14 +840,6 @@ tools:
     title: JSON 转对象
     description: '解析JSON并将其转换为Object。'
 
-  json-escaper:
-    title: JSON 转义/反转义工具
-    description: '转义和反转义json字符串。'
-
-  json-size-analyzer:
-    title: JSON 节点权重分析器
-    description: '分析JSON节点的相对权重。'
-
   json-to-php:
     title: JSON 转 PHP 类
     description: '从JSON生成PHP类。'
@@ -862,6 +864,18 @@ tools:
     title: JSON 转 XML
     description: '将JSON转换为XML。'
 
+  json-escaper:
+    title: JSON 转义/反转义工具
+    description: '转义和反转义json字符串。'
+
+  json-size-analyzer:
+    title: JSON 节点权重分析器
+    description: '分析JSON节点的相对权重。'
+
+  json-query:
+    title: JSON 查询
+    description: '对给定的JSON内容运行JSON查询语言。'
+
   php-array-to-json:
     title: PHP 数组转 JSON
     description: '将PHP数组转换为JSON。'
@@ -869,6 +883,7 @@ tools:
   toml-to-json:
     title: TOML 转 JSON
     description: '解析TOML并将其转换为JSON。'
+
 
 ### Markdown
   html-to-markdown:
@@ -1204,6 +1219,10 @@ tools:
     title: 大小写转换器
     description: '转换字符串的大小写并在不同的格式之间进行选择。'
 
+  citation-generator:
+    title: 引文生成器
+    description: '以MLA或APA格式生成论文/书籍的引文。'
+
   distinct-words:
     title: 单词统计
     description: '提取并计算文本中每个唯一单词的出现次数。'
@@ -1320,6 +1339,10 @@ tools:
   html-entities:
     title: 转义/还原HTML特殊字符
     description: "转义或unescape html实体（将<、>、&、“和'替换为其html版本）"
+
+  html-minifier:
+    title: HTML 压缩工具
+    description: "压缩HTML内容。"
 
   html-wysiwyg-editor:
     title: HTML 所见即所得编辑器
