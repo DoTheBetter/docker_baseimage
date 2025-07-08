@@ -874,7 +874,7 @@ tools:
 
   json-query:
     title: JSON 查询
-    description: '对给定的JSON内容运行JSON查询语言。'
+    description: '对给定的JSON内容运行JSON查询。'
 
   php-array-to-json:
     title: PHP 数组转 JSON
