@@ -530,6 +530,10 @@ tools:
     title: 字符串转义工具
     description: '将字符串转义为各种代码语言版本。'
 
+  swagger-ui-tester:
+    title: Swagger UI 测试工具
+    description: '测试Swagger UI API。'
+
 ### Docker
   docker-compose-converter:
     title: Docker Compose 转换器
@@ -543,6 +547,10 @@ tools:
     title: Docker Compose 到 Docker Run 转换器
     description: '将docker compose内容转换为docker run命令。'
 
+  docker-compose-to-quadlets:
+    title: Docker Compose 到 Quadlets 转换器
+    description: '将docker compose内容转换为Podman Quadlets文件。'
+
   docker-compose-to-kubernetes:
     title: Docker Compose 到 Kubernetes 转换器
     description: '将docker compose内容转换为kubernetes资源。'
@@ -550,6 +558,10 @@ tools:
   docker-run-to-docker-compose-converter:
     title: Docker Run 到 Docker Compose 转换器
     description: '将docker run命令转换为docker compose内容。'
+
+  docker-run-to-quadlets:
+    title: Docker Run 到 Quadlets 转换器
+    description: '将docker run命令转换为Podman Quadlets文件。'
 
   docker-run-to-kubernetes:
     title: Docker Run 到 Kubernetes 转换器
@@ -780,9 +792,17 @@ tools:
     title: JSON 编辑器
     description: '编辑JSON内容。'
 
+  json-flatten-nestify:
+    title: JSON 扁平化与去扁平化处理
+    description: '将JSON内容中的嵌套对象和数组扁平化处理，或将扁平化后的键值对转换为嵌套对象和数组。'
+
   json-linter:
     title: JSON 检查器
     description: '检查和校验JSON内容。'
+
+  json-merger:
+    title: JSON 合并
+    description: '合并多个JSON文件。'
 
   json-diff:
     title: JSON 差异比较器
@@ -1251,6 +1271,10 @@ tools:
     title: 图像转 AscII 艺术字体
     description: '将图像转换为ascii字符艺术字体。'
 
+  levenshtein-calculator:
+    title: 莱文斯坦距离计算器
+    description: '计算两个字符串之间的莱文斯坦距离（莱文斯坦距离指的是将一个字符串变为另一个字符串需要进行编辑操作最少的次数）。'
+
   list-converter:
     title: 列表转换器
     description: '该工具可以处理基于数组的数据，并将各种更改（转置、添加前缀和后缀、反向列表、排序列表、小写值、截断值）应用于每一行。'
@@ -1421,6 +1445,14 @@ tools:
   toml-to-yaml:
     title: TOML 转 YAML
     description: '解析TOML并将其转换为YAML。'
+
+  yaml-flatten-nestify:
+    title: YAML 扁平化与去扁平化处理
+    description: '将YAML内容中的嵌套对象和数组扁平化处理，或将扁平化后的键值对转换为嵌套对象和数组。'
+
+  yaml-merger:
+    title: YAML 合并
+    description: '合并多个YAML文件。'
 
   yaml-prettify:
     title: YAML 格式化工具
