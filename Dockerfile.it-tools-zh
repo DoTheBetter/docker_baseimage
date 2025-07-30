@@ -10,7 +10,7 @@ RUN apk add --update git python3 make g++ \
    && rm -rf /var/cache/apk/* \
    && git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git \
    && cd it-tools \
-   && cp /zh.yml ./locales/zh.yml \
+#   && cp /zh.yml ./locales/zh.yml \
    && npm install -g pnpm \
    && pnpm i --frozen-lockfile \
    && pnpm build
