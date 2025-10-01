@@ -1,0 +1,23 @@
+#编译ZeroTierOne
+#https://git.alpinelinux.org/aports/tree/community/zerotier-one?id=eab757ac9e60bc25cf5d0c5b07785b12e7a4bb04
+
+#使用Alpine Edge版本，包含支持edition2024特性的最新Cargo版本
+FROM alpine:edge AS builder
+
+RUN apk upgrade --update \
+	&& apk add linux-headers cargo openssl-dev \
+	&& apk add make g++ \
+	&& wget https://github.com/zerotier/ZeroTierOne/archive/refs/tags/1.16.0.zip -O /zerotier.zip \
+	&& unzip /zerotier.zip -d / \
+	&& cd /ZeroTierOne-1.16.0 \
+	&& make \
+	&& make DESTDIR=/tmp/build install
+
+#安装并显示版本信息
+RUN cp -r /tmp/build/usr/sbin/* /usr/sbin/ \
+	&& apk add --no-cache libgcc libstdc++ \		
+	&& mkdir -p /var/lib/zerotier-one \
+	&& echo "=========================================" \
+	&& echo "当前zerotier版本：" \
+	&& echo `zerotier-cli -v` \
+	&& echo "========================================="

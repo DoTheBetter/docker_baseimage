@@ -1,0 +1,3 @@
+composerize=1.7.5
+decomposerize=1.4.4
+composeverter=1.7.5

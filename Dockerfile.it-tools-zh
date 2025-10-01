@@ -1,0 +1,26 @@
+FROM --platform=linux/amd64 node:lts-alpine AS builder
+
+ENV NPM_CONFIG_LOGLEVEL=warn \
+    CI=true \
+    VITE_LANGUAGE=zh
+
+COPY --chmod=755 /build_files/it-tools-zh/zh.yml /zh.yml
+
+RUN apk add --update git python3 make g++ \
+   && rm -rf /var/cache/apk/* \
+   && git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git \
+   && cd it-tools \
+   && cp /zh.yml ./locales/zh.yml \
+   && npm install -g pnpm \
+   && pnpm i --frozen-lockfile \
+   && pnpm build
+
+
+
+FROM alpine:latest
+
+COPY --from=builder /it-tools/dist/ /www/
+
+RUN apk add --no-cache ca-certificates tzdata darkhttpd
+
+CMD ["darkhttpd", "/www", "--port", "8080"]
