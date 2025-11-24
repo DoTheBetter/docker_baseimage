@@ -1711,9 +1711,8 @@ tools:
       tag-detach-d: 分离模式 (-d)
       tag-remove-rm: 删除 (--rm)
       tag-long-arguments: 长参数
-      tag-: '?'
-      tag-arg: 参数
-      tag-value: 值
+      tag-multiline: 多行
+      tag-equal-sep: '--参数=值'
   docker-compose-to-kubernetes:
     title: Docker Compose 转 Kubernetes
     description: Docker Compose 转 Kubernetes 清单
@@ -2419,6 +2418,16 @@ tools:
       label-public-key-jwk: '公钥（JWK）：'
       label-private-key-jwk: '私钥（JWK）：'
       title-generated-jwt-token: '生成的 JWT 令牌：'
+      label-secret-encoding: '密钥编码：'
+      label-raw-text: 原始文本
+      label-hex-array: 十六进制数组
+      verify-description: '{0}：{1}（使用{2}验证）'
+      token-secret: 令牌密钥
+      token-keys: 令牌密钥集
+      cannot-parse-secret-as-encoding: '无法将“{0}”解析为“{1}”：{2}'
+      invalid-base64-string: 无效的Base64字符串
+      placeholder-input-token: 粘贴您的JWT令牌进行编辑……
+      click-to-input-a-existing-jwt-token-to-modify: 点击输入一个现有的JWT令牌进行修改
   length-converter:
     title: 长度单位转换器
     description: 转换长度单位的数值
@@ -5130,6 +5139,13 @@ tools:
       label-secret-or-public-key-spki-or-jwk: 密钥或公钥（SPKI 或 JWK）
       placeholder-put-your-secret-or-public-key-here: 在此输入您的密钥或公钥……
       tag-signature-verified: 签名已验证
+      label-jwk: JWK密钥
+      label-pub-key: PEM公钥
+      label-secret-raw-text: 密钥 - 原始文本
+      label-secret-hex-array: 密钥 - 十六进制数组
+      label-secret-base64: 密钥 - Base64
+      label-secret-encoding: '密钥编码/类型：'
+      key-or-secret-or-verification-error-e-tostring: '密钥、密码或验证错误：{0}'
     constants:
       text:
         token-introspection-response: 令牌自省响应
@@ -5368,25 +5384,25 @@ tools:
       title-inverted-reverse: 倒置反向
       title-rotated-right-reverse: 向右旋转反向
       title-mirrored-reverse: 镜像反向
-      "tag-\U0001D5D5": "\U0001D5D5"
-      "tag-\U0001D610": "\U0001D610"
-      "tag-\U0001D67C": "\U0001D67C"
+      tag-𝗕: 𝗕
+      tag-𝘐: 𝘐
+      tag-𝙼: 𝙼
       tag-u: U
       tag-s: S
-      tag-more-fonts: 更多字体
-      "tag-\U0001D5AC": "\U0001D5AC"
-      "tag-\U0001D63D\U0001D644": "\U0001D63D\U0001D644"
-      "tag-\U0001D401": "\U0001D401"
-      "tag-\U0001D43C": "\U0001D43C"
-      "tag-\U0001D469\U0001D470": "\U0001D469\U0001D470"
+      tag-more-fonts: More fonts
+      tag-𝖬: 𝖬
+      tag-𝘽𝙄: 𝘽𝙄
+      tag-𝐁: 𝐁
+      tag-𝐼: 𝐼
+      tag-𝑩𝑰: 𝑩𝑰
       tag-u̳: U̳
       tag-s̵: S̵
-      "tag-\U0001D53B": "\U0001D53B"
+      tag-𝔻: 𝔻
       tag-ｆ: Ｆ
-      "tag-\U0001D509": "\U0001D509"
-      "tag-\U0001D571": "\U0001D571"
-      "tag-\U0001D4AE": "\U0001D4AE"
-      "tag-\U0001D4E2": "\U0001D4E2"
+      tag-𝔉: 𝔉
+      tag-𝕱: 𝕱
+      tag-𝒮: 𝒮
+      tag-𝓢: 𝓢
       tag-: ∀
       tag-aʙ: Aʙ
       tag-ₛᵤᵦ: ₛᵤᵦ
@@ -6003,10 +6019,10 @@ tools:
     description: 生成 Favicon 及相应的 header
     texts:
       title-favicon-pack-generator: Favicon 包生成器
-      title-️-previews: "\U0001F5BC️ 预览"
-      title-html-head-tags: "\U0001F4C4 HTML Head 标签"
+      title-️-previews: 🖼️ 预览
+      title-html-head-tags: 📄 HTML 头部标签
       tag-upload-png-image: 上传 PNG 图片
-      tag-download-zip: "\U0001F4E6 下载 ZIP"
+      tag-download-zip: 📦 下载 ZIP
   font-compare:
     title: 字体比较
     description: 比较给定文本的字体
@@ -6320,22 +6336,22 @@ tools:
       tag-️-mtbf-mean-time-between-failures: ⏱️ MTBF（平均故障间隔时间）
       tag-the-average-time-in-hours-a-drive-is-expected-to-operate-before-failing-higher-mtbf-means-more-reliable-hardware: >-
         驱动器在出现故障前预计运行的平均时间（以小时计）。MTBF 越高，硬件越可靠。
-      tag-rebuild-time: "\U0001F501 重建时间"
+      tag-rebuild-time: 🔁 重建时间
       tag-the-time-required-to-reconstruct-data-on-a-replacement-drive-after-a-failure-longer-rebuild-times-increase-the-risk-of-a-second-failure-during-recovery: >-
         在故障后在替换驱动器上重建数据所需的时间。重建时间越长，恢复期间出现第二次故障的风险越大。
-      tag-mttdl-mean-time-to-data-loss: "\U0001F4C9 MTTDL（平均数据丢失时间）"
+      tag-mttdl-平均数据丢失时间: 📉 MTTDL（平均数据丢失时间）
       tag-a-statistical-estimate-of-how-long-a-raid-system-can-operate-before-data-loss-occurs-it-considers-drive-failures-rebuild-time-and-raid-redundancy-higher-mttdl-means-a-safer-system: >-
         对 RAID 系统在出现数据丢失之前能够运行的时间的统计估计。它考虑了驱动器故障、重建时间和 RAID 冗余。MTTDL 越高，系统越安全。
-      tag-bit-error-rate-ber: "\U0001F9EE 位错误率（BER）"
+      tag-bit-error-rate-ber: 🧮 误码率（BER）
       tag-the-probability-that-a-bit-read-from-a-disk-will-be-incorrect-due-to-hardware-limitations-even-tiny-bers-like-1-in-a-trillion-can-cause-issues-during-rebuilds-especially-with-large-drives: >-
         由于硬件限制，从磁盘读取的位出现错误的概率。即使是极小的 BER（如万亿分之一），在重建期间也可能导致问题，尤其是大容量驱动器。
-      tag-unrecoverable-read-error-ure: "\U0001F9E0 不可恢复读取错误（URE）"
+      tag-unrecoverable-read-error-ure: 🧠 不可恢复的读取错误（URE）
       tag-occurs-when-a-drive-fails-to-read-a-sector-during-rebuild-ber-contributes-to-ure-risk-which-can-compromise-raid-recovery: >-
         在重建期间，当驱动器未能读取某个扇区时发生。BER 会增加 URE 风险，进而影响 RAID 的恢复。
-      tag-drive-capacity-tb: "\U0001F4E6 驱动器容量（TB）"
+      tag-drive-capacity-tb: 📦 驱动器容量（TB）
       tag-total-storage-per-drive-larger-drives-take-longer-to-rebuild-and-are-more-susceptible-to-ber-related-errors: >-
         每个驱动器的总存储容量。容量越大的驱动器重建时间越长，并且更易受到 BER 相关错误的影响。
-      tag-failure-probability: "\U0001F4C8 故障概率"
+      tag-failure-probability: 📈 故障概率
       tag-the-chance-that-the-raid-system-will-experience-data-loss-over-a-given-time-period-e-g-5-years-calculated-using-mttdl-and-exponential-failure-models: >-
         在给定时间段（例如 5 年）内 RAID 系统发生数据丢失的概率。通过 MTTDL 与指数失效模型计算得出。
   pack-files-for-ai:
@@ -6843,3 +6859,15 @@ tools:
       label-converted-to-hex-array: '已转换为十六进制数组：'
       tag-digit-0-no-grouping: (数字 0 = 不分组)
       tag-digit-0-no-row: (数字 0 = 不分行)
+  toon-to-json:
+    texts:
+      message-provided-json-is-not-valid: 提供的TOON无效
+      output-label-json-version: '您的TOON内容的JSON版本：'
+      input-placeholder-paste-your-raw-toon-here: 在此粘贴您的原始TOON内容...
+      input-label-your-raw-toon: '您的原始TOON内容：'
+  json-to-toon:
+    texts:
+      message-provided-json-is-not-valid: 提供的JSON无效。
+      input-placeholder-paste-your-raw-json-here: 在此粘贴您的原始JSON...
+      input-label-your-raw-json: '您的原始JSON：'
+      output-label-toon-version-of-your-json: '您的JSON的TOON版本：'
