@@ -16,7 +16,7 @@ about:
 
     IT Tools 是开源的（遵循 GPL-3.0 许可证）且免费，并将永远如此。如果你想支持我在此分支上的工作，并鼓励我添加更多工具或功能，请考虑通过 [赞助我](https://www.buymeacoffee.com/sharevb) 来支持。
 
-    ## 技术栈
+    ## 技术
 
     IT Tools 使用 Vue.js（Vue 3）以及 Naive UI 组件库构建，并由 Vercel 托管并持续部署。一些工具使用了第三方开源库，你可以在仓库的 [package.json](https://github.com/sharevb/it-tools/blob/main/package.json) 文件中找到完整列表。
 
@@ -118,8 +118,8 @@ tools:
     description: >-
       轻松计算从一个值到另一个值的百分比，或从百分比到数值的转换。
     texts:
-      placeholder-x: X
-      placeholder-y: 'Y'
+      placeholder-x: 十
+      placeholder-y: 和
       placeholder-result: 结果
       placeholder-from: 从
       placeholder-to: 到
@@ -187,7 +187,7 @@ tools:
     description: >-
       查找任意按键的 JavaScript 键码、代码、位置和修饰键。
     texts:
-      label-key: '键 ：'
+      label-key: '按键 ：'
       label-keycode: '键码 ：'
       label-code: '代码 ：'
       label-location: '位置 ：'
@@ -196,7 +196,7 @@ tools:
       label-scancode: '扫描码（十六进制） ：'
       label-scancode-dec: '扫描码（十进制） ：'
   bcrypt:
-    title: Bcrypt
+    title: 加密
     description: >-
       使用 bcrypt 对文本字符串进行哈希和比较。Bcrypt 是基于 Blowfish 加密的密码哈希函数。
     texts:
@@ -538,25 +538,28 @@ tools:
     title: 大小写转换器
     description: 转换字符串的大小写并在不同格式之间进行选择
     texts:
-      message-invalid-cleaning-regex-0: '无效的清除正则表达式：{0}'
-      label-lowercase: '小写：'
-      label-uppercase: '大写：'
-      label-camelcase: '驼峰式：'
-      label-capitalcase: '首字母大写：'
-      label-constantcase: '常量式：'
-      label-dotcase: '点式：'
-      label-kebab-paramcase: '短横线/参数式：'
-      label-nocase: '无大小写：'
-      label-train-headercase: '列车/标题式：'
-      label-pascalcase: '帕斯卡式：'
-      label-pathcase: '路径式：'
-      label-sentencecase: '句子式：'
-      label-snakecase: '蛇形式：'
-      label-mockingcase: '嘲讽式：'
-      label-your-string: '您的字符串：'
-      placeholder-your-string: 您的字符串...
-      label-cleaning-regex: '清除正则表达式：'
-      placeholder-your-cleaning-regex: 您的清除正则表达式...
+      message-invalid-cleaning-regex-0: 无效的清理正则表达式：{0}
+      label-lowercase: 小写：
+      label-uppercase: 大写：
+      label-camelcase: 驼峰式：
+      label-capitalcase: 首字母大写：
+      label-constantcase: 常量式（全大写加下划线）：
+      label-dotcase: 点分隔式：
+      label-kebab-paramcase: 短横线/参数式（kebab-case）：
+      label-nocase: 无大小写（原样）：
+      label-train-headercase: 火车头式（首字母大写加连字符）：
+      label-pascalcase: 帕斯卡式（全大写首字母）：
+      label-pathcase: 路径式（斜杠分隔）：
+      label-sentencecase: 句子式（首字母大写）：
+      label-snakecase: 蛇形式（下划线分隔）：
+      label-mockingcase: 大小写交替：
+      label-your-string: 您的字符串：
+      placeholder-your-string: 输入字符串...
+      label-cleaning-regex: 清理正则表达式：
+      placeholder-your-cleaning-regex: 输入清理用的正则表达式...
+      label-titlecase: '首字母大写：'
+      label-spongecase: '随机大小写：'
+      label-swapcase: '大小写互换：'
   html-entities:
     title: 转义HTML实体
     description: >-
@@ -639,6 +642,7 @@ tools:
       placeholder-your-lorem-ipsum: 您的 lorem ipsum...
       tag-copy: 复制
       tag-refresh: 刷新
+      tag-print-ie-use-a-pdf-printer-to-get-a-pdf-file: 打印（即，使用 PDF 打印机获取 PDF 文件）
   qrcode-generator:
     title: 二维码生成器
     description: >-
@@ -1142,6 +1146,30 @@ tools:
       placeholder-put-your-full-prompt-here: 在此输入完整提示…
       label-character-length-for-each-chunk: 每块字符长度
       title-divided-prompts: 拆分后的提示
+  amortization-calculator:
+    title: 贷款计算器
+    description: 计算贷款分期计划与月供明细
+    footer: 贷款计算器
+    texts:
+      title-loan-parameters: 贷款参数
+      title-overview: 概览
+      title-amortization-schedule: 分期还款计划表
+      label-loan-amount: 贷款金额
+      label-loan-term: 贷款期限
+      label-interest-rate: 利率
+      label-displayed-currency: 显示货币
+      label-end-of-year: 第 {year} 年末
+      label-year: 年份
+      label-month: 月份
+      label-interest: 利息
+      label-principal: 本金
+      label-ending-balance: 期末余额
+      label-monthly-payment: 月付款额
+      label-total-of-payments: 付款总额
+      label-total-interest: 利息总额
+      message-loan-amount-must-be-positive: 贷款金额必须为正值
+      message-loan-term-must-be-positive-integer: 贷款期限必须为正整数
+      message-interest-rate-must-be-between-1-and-100: 利率必须是介于0到100之间的正值
   angle-converter:
     title: 角度单位转换器
     description: 在角度单位之间转换数值
@@ -1470,22 +1498,22 @@ tools:
   data-storage-unit-converter:
     title: 数据存储单位转换器
     description: >-
-      转换数据存储或传输单位（字节、二进制字节、位、千字节……）
+      转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
     texts:
-      label-bytes-b: 字节 (B)
-      label-bits-bit: 位 (bit)
-      label-bibytes-ib: 二进制字节 (iB)
-      label-kilobytes-kb: 千字节 (KB)
-      label-kilobits-kbit: 千比特 (Kbit)
-      label-kibibytes-kib: 千二进制字节 (KiB)
-      label-megabytes-mb: 兆字节 (MB)
-      label-megabits-mbit: 兆比特 (Mbit)
-      label-mebibytes-mib: 兆二进制字节 (MiB)
-      label-gigabytes-gb: 千兆字节 (GB)
-      label-gigabits-gbit: 千兆比特 (Gbit)
-      label-gibibytes-gib: 吉二进制字节 (GiB)
-      label-terabytes-tb: 太字节 (TB)
-      label-terabits-tbit: 太比特 (Tbit)
+      label-bytes-b: 字节（B）
+      label-bits-bit: 比特（bit）
+      label-bibytes-ib: Bibytes（iB）
+      label-kilobytes-kb: 千字节（KB）
+      label-kilobits-kbit: 千比特（Kbit）
+      label-kibibytes-kib: KiB（Kibibytes）
+      label-megabytes-mb: 兆字节（MB）
+      label-megabits-mbit: 兆比特（Mbit）
+      label-mebibytes-mib: MiB（Mebibytes）
+      label-gigabytes-gb: 吉字节（GB）
+      label-gigabits-gbit: 吉比特（Gbit）
+      label-gibibytes-gib: GiB（Gibibytes）
+      label-terabytes-tb: 太字节（TB）
+      label-terabits-tbit: 太比特（Tbit）
       label-tebibytes-tib: TiB（Tebibytes）
       label-petabytes-pb: 拍字节 (PB)
       label-petabits-pbit: 拍比特 (Pbit)
@@ -2017,6 +2045,14 @@ tools:
       placeholder-your-html-content: 您的 HTML 内容...
       label-your-html-to-convert-can-paste-from-clipboard: '待转换的 HTML（可粘贴自剪贴板）：'
       label-output-markdown: '输出 Markdown：'
+      label-heading-style: 标题样式：
+      label-emphasis-style: 强调风格：
+      label-hash: 哈希（#）
+      label-underline: 下划线（=/-）
+      label-surround-heading: 环绕（= 标题 =）
+      label-asterisk: 星号 (*)
+      label-underscore: 下划线 (_)
+      label-tilde: 波浪号 (~)
   ical-parser:
     title: ICAL 文件解析器
     description: 解析 ICAL/ICS 文件并显示事件
@@ -2286,6 +2322,15 @@ tools:
     texts:
       label-current-selected-node-jsonpath: '当前选中节点的JSONPath：'
       label-your-edited-json: '您编辑的JSON：'
+      title-the-following-errors-occured: 发生以下错误
+      tag-validation-successful: 验证成功！
+      label-no-validation: 无验证
+      label-custom: 自定义
+      label-json-schema: JSON模式：
+      placeholder-paste-your-json-schema-here: 在此处粘贴您的JSON模式...
+      title-schema-validation-errors: 模式验证错误
+      label-indent-size-0-compact: 缩进大小（0 = 紧凑格式）：
+      repair-json: 修复JSON
   json-escaper:
     title: JSON转义/反转义
     description: 转义和反转义JSON字符串
@@ -2313,6 +2358,8 @@ tools:
       title-schema-validation-errors: 模式验证错误
       title-formatted-version: 已格式化版本
       label-indent-size-0-compact: '缩进大小（0=紧凑）：'
+      title-repaired-version: 自动修复和格式化版本
+      label-auto-repair-json: 汽车维修 JSON：
   json-size-analyzer:
     title: JSON大小分析器
     description: 测量JSON节点相对权重
@@ -5323,11 +5370,11 @@ tools:
       merge-cells: 合并单元格
       delete-table: 删除表格
       delete-row: 删除行
-      add-row-after: 在后面添加行
-      add-row-before: 在前面添加行
+      add-row-after: 在下方添加行
+      add-row-before: 在上方添加行
       delete-column: 删除列
-      add-column-after: 在后面添加列
-      add-column-before: 在前面添加列
+      add-column-after: 在右侧添加列
+      add-column-before: 在左侧添加列
       insert-table: 插入表格
       redo: 重做
       undo: 撤销
@@ -6860,14 +6907,329 @@ tools:
       tag-digit-0-no-grouping: (数字 0 = 不分组)
       tag-digit-0-no-row: (数字 0 = 不分行)
   toon-to-json:
+    title: TOON 转 JSON
+    description: 将TOON表示转换为供LLM使用的JSON对象
     texts:
       message-provided-json-is-not-valid: 提供的TOON无效
       output-label-json-version: '您的TOON内容的JSON版本：'
       input-placeholder-paste-your-raw-toon-here: 在此粘贴您的原始TOON内容...
       input-label-your-raw-toon: '您的原始TOON内容：'
   json-to-toon:
+    title: JSON 转 TOON
+    description: 将JSON对象转换为TOON表示形式，以供LLM/GPT使用
     texts:
       message-provided-json-is-not-valid: 提供的JSON无效。
       input-placeholder-paste-your-raw-json-here: 在此粘贴您的原始JSON...
       input-label-your-raw-json: '您的原始JSON：'
       output-label-toon-version-of-your-json: '您的JSON的TOON版本：'
+  external-link-goto: '要打开此工具，请点击以下链接：'
+  argon2-hash:
+    title: Argon2 哈希生成器
+    description: 使用参数计算 Argon2 哈希值
+    texts:
+      label-argon2id: Argon2id
+      label-argon2i: Argon2i
+      label-argon2d: Argon2d
+      label-hex: 十六进制
+      label-encoded: 编码形式
+      label-binary: 二进制
+      label-algorithm: '算法：'
+      label-password: '密码：'
+      placeholder-enter-password: 输入密码
+      label-salt-hex: '盐值（十六进制）：'
+      placeholder-optional-hex-salt: 可选的十六进制盐值
+      label-iterations: '迭代次数：'
+      label-memory-kib: '内存（千字节）：'
+      label-parallelism: '并行度：'
+      label-hash-length: '哈希长度：'
+      label-output-type: '输出类型：'
+      title-argon2-hash: Argon2 哈希值
+      tag-generate: 生成
+  binary-calculator:
+    title: 二进制计算器
+    description: >-
+      计算两个数字之间的按位/二进制运算（AND、OR、XOR、NOT、移位）
+    texts:
+      label-decimal: 十进制
+      label-hexadecimal: '十六进制：'
+      label-octal: '八进制：'
+      label-binary: '二进制：'
+      label-a-and-b: A 与 B
+      label-a-or-b: A 或 B
+      label-a-xor-b: A 异或 B
+      label-not-a: 非 A
+      label-a-b-left-shift: A << B（左移）
+      label-a-b-right-shift: A >> B（右移）
+      message-number-is-invalid: 数字无效
+      label-a: A=
+      placeholder-enter-a: 输入 A
+      label-b: B=
+      placeholder-enter-b: 输入 B
+      label-operation: '运算：'
+      placeholder-select-operation: 选择运算
+      title-result: 结果
+      label-decimal-signed: '十进制（有符号）：'
+      label-decimal-unigned: '十进制（无符号）：'
+      title-bitmask: 位掩码
+  chmod-memo:
+    title: chmod命令速查表
+    description: Linux权限更改速查表
+  css-gradient-generator:
+    title: CSS渐变生成器
+    description: 根据给定的步骤和颜色生成CSS渐变的CSS代码
+    texts:
+      label-gradient-type: '渐变类型：'
+      label-angle-degrees: '角度（度）：'
+      title-color-stops: 色标
+      title-preview: 预览
+      title-generated-css: 生成的CSS
+      tag-linear: 线性
+      tag-radial: 径向
+      tag-remove: 移除
+      tag-add-color-stop: 添加色标
+  css-units-converter:
+    title: CSS单位转换器
+    description: 转换常见CSS单位的值（em、rem、px、vw、vh、%）
+    texts:
+      label-pixels-px: 像素（px）
+      label-ems-em: 相对长度单位（em）
+      label-rems-rem: 根相对长度单位（rem）
+      label-percent: 百分比（%）
+      label-viewport-width-vw: 视口宽度（vw）
+      label-viewport-height-vh: 视口高度（vh）
+      label-value-to-convert: '要转换的值：'
+      label-from-unit: '源单位：'
+      label-to-unit: '目标单位：'
+      label-base-font-size-px: 基准字体大小（px）
+      label-viewport-width-px: 视口宽度（px）
+      label-viewport-height-px: 视口高度（px）
+      title-conversion: 转换
+      label-converted-value: '转换后的值：'
+  docker-compose-to-env-file:
+    title: Docker Compose 转换为 .env 文件
+    description: 从现有的 Docker Compose 文件中提取 .env 文件
+    texts:
+      label-docker-compose-file: 'Docker Compose 文件：'
+      placeholder-paste-your-docker-compose-yaml-here: 在此粘贴您的 docker-compose YAML...
+      title-extract-env: 提取 .env
+  emv-tlv-decoder:
+    title: EMV TLV解码器
+    description: >-
+      解码EMV TLV（标签-长度-值）数据及其具有扩展含义的各个标签（如TVR（标签95）、终端能力（标签9F33）等）
+    texts:
+      tag-: —
+      tag-tag: 标签
+      tag-length: 长度
+      tag-value: 值
+      tag-description: 描述
+      tag-bit-level-interpretation: 位级解读
+      label-tlv-hex-input: TLV十六进制输入
+      placeholder-paste-emv-tlv-hex-string-e-g-6f1a8407a0000000031010a50f500b5649534120435245444954: >-
+        粘贴EMV TLV十六进制字符串（例如
+        6F1A8407A0000000031010A50F500B5649534120435245444954）
+      label-kernel-type: '内核类型：'
+      title-decoded-emv-tags: 已解码的EMV标签
+      tag-parse-tlv: 解析TLV
+  eth-transaction-decoder:
+    title: ETH交易解码器
+    description: 带有智能合约ABI的以太坊交易解码器
+    texts:
+      label-smart-contract-abi: '智能合约ABI：'
+      placeholder-paste-abi-json-here: 在此粘贴ABI JSON
+      label-raw-transaction-0x-or-json-transaction: '原始交易（0x...）或JSON交易：'
+      placeholder-quot-to-quot-quot-0x-quot-quot-data-quot-quot-0x-quot-or-raw-0x: >-
+        {'{'}"to":"0x...","data":"0x..."{'}'}
+        或原始0x....
+      title-decoded-transaction: 已解码交易
+      label-from: 发送方
+      label-to: 接收方
+      label-value: 价值
+      label-gas: 燃气
+      label-gas-price: 燃气价格
+      label-nonce: 随机数
+      label-method: 方法
+      label-signature: 签名
+      label-arguments: 参数
+      title-structured-output-json: 结构化输出JSON
+  file-splitter:
+    title: 文件分割器
+    description: 按节点组或行组分割JSON、XML或文本文件
+    texts:
+      placeholder-strategy-value: 策略值...
+      title-drag-and-drop-a-txt-json-or-xml-file-here-or-click-to-select-a-file: 在此处拖放TXT、JSON或XML文件，或点击选择文件
+      tag-split-by-lines: 按行分割
+      tag-split-by-nodes: 按节点分割
+      tag-max-chunk-size-kb: 最大块大小（KB）：
+      tag-fixed-count: 固定数量：
+      tag-chunk-count: 块数量：
+      tag-preview-chunks: 预览块？
+      tag-process-chunks: 处理块
+      tag-download-all: 全部下载
+      tag-download: 下载
+  gitignore-generator:
+    title: GitIgnore生成器
+    description: 为一组常见模板生成.gitignore
+    texts:
+      placeholder-select-templates-e-g-node-python-vue: 选择模板（例如 node、python、vue）
+      title-gitignore: .gitignore
+      tag-const-availabletemplates-ref: const availableTemplates = ref
+      tag-this-tool-use: '此工具使用：'
+      tag-https-www-toptal-com-developers-gitignore: https://www.toptal.com/developers/gitignore
+      tag-generate: 生成
+  i-and-l-checker:
+    title: I和L检查器
+    description: 检查密码或文本，并高亮显示1、l、I、0、O
+    texts:
+      label-text-to-check: '待检查文本：'
+      placeholder-paste-your-text-here: 在此粘贴你的文本...
+      title-legend: 图例
+      tag-i: I
+      tag-uppercase-letter-i: '- 大写字母i'
+      tag-l: l
+      tag-lowercase-letter-l: '- 小写字母L'
+      tag-1: '1'
+      tag-number-1: '- 数字1'
+      tag-0: '0'
+      tag-number-0: '- 数字0'
+      tag-o: O
+      tag-uppercase-letter-o: '- 大写字母O'
+  ipv4-subnets-list:
+    title: IPv4子网列表生成器
+    description: 列出给定CIDR的所有可能子网
+    texts:
+      message-we-cannot-parse-this-address-check-the-format: 我们无法解析此地址，请检查格式
+      label-an-ipv4-address-with-or-without-mask-cidr-ip-range-wildcard-ip-ip-mask: 带或不带掩码的IPv4地址（CIDR/IP范围/通配符IP/IP掩码）
+      placeholder-ipv4-or-cidr: IPv4或cidr...
+      tag-network: 网络
+      tag-first-ip: 起始IP
+      tag-last-ip: 结束IP
+      tag-broadcast: 广播
+  json-to-msgpack:
+    title: JSON 转 MessagePack
+    description: 将 JSON 转换为 MessagePack
+    texts:
+      message-json-is-invalid: JSON 无效
+      label-output-filename: '输出文件名：'
+      placeholder-enter-output-filename: 输入输出文件名
+      label-json-to-convert: '要转换的 JSON：'
+      placeholder-enter-json-to-convert: 输入要转换的 JSON...
+      title-msgpack-binary: 'MsgPack 二进制：'
+      tag-convert: 转换
+      tag-download-msgpack-file: 下载 MsgPack 文件
+  markdown-lorem-ipsum:
+    title: Markdown 乱数假文
+    description: 生成 Markdown 格式的乱数假文
+    texts:
+      label-atx: 'ATX 格式（#, ##, ###）'
+      label-setext: Setext 格式（====, ----）
+      label-unordered: 无序列表（-, *, +）
+      label-ordered-1-2-3: 有序列表（1., 2., 3.）
+      label-language: '语言：'
+      label-blocks: '区块：'
+      label-sentences-per-paragraph: '每段句子数：'
+      title-styles: 样式
+      label-block-types: '区块类型：'
+      label-inline-styles: 行内样式
+      label-header-style: '标题样式：'
+      label-list-style: '列表样式：'
+      title-block-frequencies: 区块出现频率
+      label-headers: '标题：'
+      label-lists: '列表：'
+      label-code: '代码：'
+      label-quotes: '引用：'
+      title-generated-markdown: 生成的 Markdown
+      tag-headers: 标题
+      tag-lists: 列表
+      tag-code: 代码
+      tag-quotes: 引用
+      tag-emphasis: 强调
+      tag-strong: 加粗
+      tag-links: 链接
+      tag-inline-code: 行内代码
+      tag-generate: 生成
+      tag-print-ie-use-a-pdf-printer-to-get-a-pdf-file: 打印（即，使用 PDF 打印机获取 PDF 文件）
+  msgpack-to-json:
+    title: Message Pack转JSON
+    description: 将MessagePack文件转换为JSON
+    texts:
+      title-input-message-pack-file-or-content: 输入Message Pack文件或内容
+      label-file: 文件
+      label-hex-content: '十六进制内容：'
+      title-drag-and-drop-msgpack-file-here-or-click-to-select-a-file: 在此处拖放MsgPack文件，或点击选择文件
+      title-json-content: JSON内容
+  pdf-compressor:
+    title: PDF压缩器
+    description: 使用Ghostscript优化并压缩PDF
+    texts:
+      label-screen-smallest: 屏幕（最小）
+      label-ebook-balanced: 电子书（平衡）
+      label-printer-high-quality: 打印机（高质量）
+      label-prepress-best-quality: 印前（最佳质量）
+      label-pdf-1-4: PDF 1.4
+      label-pdf-1-5: PDF 1.5
+      label-pdf-1-6: PDF 1.6
+      label-pdf-1-7: PDF 1.7
+      label-compression-quality: '压缩质量：'
+      placeholder-select-compression-quality: 选择压缩质量
+      label-compatibility-level: '兼容级别：'
+      placeholder-select-compatibility-level: 选择兼容级别
+      title-drag-and-drop-a-pdf-file-here-or-click-to-select-a-file: 在此处拖放PDF文件，或点击选择文件
+      title-logs: 日志
+      label-ghostscript: Ghostscript
+  serial-console:
+    title: 串口控制台
+    description: 连接、读取并向串口发送消息
+    texts:
+      label-9600: '9600'
+      label-19200: '19200'
+      label-38400: '38400'
+      label-57600: '57600'
+      label-115200: '115200'
+      label-lf-n: 换行（\\n）
+      label-cr-r: 回车（\\r）
+      label-crlf-r-n: 回车换行（\\r\\n）
+      title-serial-terminal: 串口终端
+      placeholder-baud-rate: 波特率
+      placeholder-line-ending: 行尾符
+      placeholder-select-port: 选择端口
+      placeholder-type-a-command: 输入命令……
+      tag-connect: 连接
+      tag-disconnect: 断开连接
+      tag-send: 发送
+  shamirs-secret-sharing:
+    title: 沙米尔秘密分享
+    description: 允许使用Shamir算法分享和重组秘密
+    texts:
+      label-text: 文本
+      label-hexadecimal: 十六进制
+      label-base64: Base64
+      label-secret-mode: '秘密模式：'
+      title-share-a-secret-split: 分享秘密（拆分）
+      label-secret: '秘密：'
+      placeholder-enter-secret-text: 输入秘密文本
+      label-threshold-minimum-shares-to-recover: '阈值（恢复所需的最小份额数）：'
+      label-number-of-shares: '份额数量：'
+      title-generated-shares: 生成的份额
+      title-recombine-a-secret: 重组秘密
+      label-your-shares: '你的份额：'
+      placeholder-paste-your-shares-here: 在此粘贴你的份额...
+      title-recombined-secret: 重组后的秘密
+      tag-split-secret: 拆分秘密
+      tag-recombine: 重组
+  short-urls-expander:
+    title: 短网址扩展器
+    description: 将短网址扩展为目标完整网址
+    texts:
+      label-short-urls-to-expand: '待扩展的短网址：'
+      placeholder-enter-short-urls-one-per-line: 输入短网址（每行一个）
+      title-result: 结果
+      tag-this-tool-make-use-of-https-cors-anywhere-com-to-bypass-cors-this-is-a-community-driven-server: >-
+        本工具使用 https://cors-anywhere.com 来绕过跨域资源共享（CORS）限制。这是一个社区驱动的服务器。
+      tag-see-here-for-more-information: 查看此处了解更多信息
+      tag-expand-all: 全部扩展
+      tag-download-resuls-as-csv: 将结果下载为CSV文件
+      tag-short-url: 短网址
+      tag-expanded-url: 扩展后的网址
+      tag-link: 链接
+      tag-status: 状态
+      tag-open-url: 打开网址
