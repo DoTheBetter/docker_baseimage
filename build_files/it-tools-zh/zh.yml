@@ -5,7 +5,7 @@
   backHome: 返回首页
   page:
     text:
-      page-not-found-it-tools：找不到页面 - IT Tools
+      page-not-found-it-tools: 找不到页面 - IT Tools
 about:
   alltools-title: 全部 {toolsCount} 个工具
   tools:
