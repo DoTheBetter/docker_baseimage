@@ -95,8 +95,7 @@ home:
     aboutLabel: 关于
   page:
     text:
-      collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it:
-      为开发者打造的实用在线工具合集，拥有出色用户体验。IT Tools是一款免费开源的实用在线工具合集，专为开发者及IT行业从业者设计。
+      collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it: 为开发者打造的实用在线工具合集，拥有出色用户体验。IT Tools是一款免费开源的实用在线工具合集，专为开发者及IT行业从业者设计。
       it-tools-handy-online-tools-for-developers: IT Tools - 开发者实用在线工具
 tools:
   chronometer:
@@ -7488,7 +7487,7 @@ tools:
       label-decimals: "小数位数："
       label-thousand-separators: "千位分隔符："
       label-to: "至："
-      tag-: =
+      tag-equal: "="
   acceleration-converter:
     title: 加速度转换器
     description: 在加速度单位之间转换数值
