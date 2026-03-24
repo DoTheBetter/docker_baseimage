@@ -1476,7 +1476,7 @@ tools:
       label-country: 国家
       title-currencies-to-countries: 货币到国家
       label-currency: 货币
-    externalAccess: '该工具从 https://cdn.jsdelivr.net/npm/{@}fawazahmed0/currency-api 下载最新的货币数据'
+    externalAccess: '该工具从 https://cdn.jsdelivr.net/npm/\\@fawazahmed0/currency-api 下载最新的货币数据'
   data-storage-unit-converter:
     title: 数据存储单位转换器
     description: 转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
@@ -2642,7 +2642,7 @@ tools:
       label-country-name: '国家名称：'
       label-continent-name: '洲名：'
       tag-refresh: 刷新
-    externalAccess: '该工具通过 https://www.ipify.org/ 的应用程序接口获取 IPv4/6 地址，并从 https://cdn.jsdelivr.net/npm/{@}iplookup/country-extra/ 下载互联网协议地址的相关信息数据。'
+    externalAccess: '该工具通过 https://www.ipify.org/ 的应用程序接口获取 IPv4/6 地址，并从 https://cdn.jsdelivr.net/npm/\\@iplookup/country-extra/ 下载互联网协议地址的相关信息数据。'
   nano-memo:
     title: Nano 速查表
     description: Nano 编辑器速查表
