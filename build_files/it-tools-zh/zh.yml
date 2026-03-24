@@ -1476,7 +1476,7 @@ tools:
       label-country: 国家
       title-currencies-to-countries: 货币到国家
       label-currency: 货币
-    externalAccess: "该工具从 https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api 下载最新的货币数据"
+    externalAccess: '该工具从 https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api 下载最新的货币数据'
   data-storage-unit-converter:
     title: 数据存储单位转换器
     description: 转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
@@ -2642,7 +2642,7 @@ tools:
       label-country-name: '国家名称：'
       label-continent-name: '洲名：'
       tag-refresh: 刷新
-    externalAccess: "该工具通过 https://www.ipify.org/ 的应用程序接口获取 IPv4/6 地址，并从 https://cdn.jsdelivr.net/npm/@iplookup/country-extra/ 下载互联网协议地址的相关信息数据。"
+    externalAccess: '该工具通过 https://www.ipify.org/ 的应用程序接口获取 IPv4/6 地址，并从 https://cdn.jsdelivr.net/npm/@iplookup/country-extra/ 下载互联网协议地址的相关信息数据。'
   nano-memo:
     title: Nano 速查表
     description: Nano 编辑器速查表
@@ -6602,7 +6602,7 @@ tools:
       placeholder-to: 目标语言
       placeholder-translation-will-appear-here: 翻译将在此显示...
       tag-translate: 翻译
-    externalAccess: "该工具会从 https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源语言]-[目标语言]）"
+    externalAccess: '该工具会从 https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源语言]-[目标语言]）'
   unicode-to-gsm7:
     title: Unicode 转 GSM-7
     description: 将 Unicode 文本编码为 SMS GSM-7 编码并显示相关的 SMS 发送信息
@@ -7368,7 +7368,7 @@ tools:
       placeholder-select-a-language: 选择语言
       tag-search-on-wiktionary: 在 Wiktionary 中搜索
       tag-enter-a-word-and-select-a-language-to-load-wiktionary: 输入单词并选择语言以加载 Wiktionary
-    externalAccess: 此工具在 iframe 中通过 https://www.wiktionary.org/（按语言）搜索单词定义。
+    externalAccess: '此工具在 iframe 中通过 https://www.wiktionary.org/（按语言）搜索单词定义。'
   ptr-dns-generator:
     title: PTR DNS 生成器
     description: 生成 DNS PTR 记录
@@ -7495,7 +7495,7 @@ tools:
   docker-image-downloader:
     title: Docker 镜像下载器
     description: 下载给定 Docker 注册表、架构和镜像名称的 Docker 镜像
-    externalAccess: 此工具从注册表下载 Docker 镜像（使用您提供的用户名、密码或令牌）
+    externalAccess: '此工具从注册表下载 Docker 镜像（使用您提供的用户名、密码或令牌）'
     texts:
       label-linux-amd64: linux/amd64
       label-linux-arm64: linux/arm64
@@ -7542,7 +7542,7 @@ tools:
   explainshell:
     title: 解释 Shell 命令
     description: 使用 explainshell.com（或自行托管）解释 Shell 命令
-    externalAccess: 此工具会调用 https://explainshell.com（除非您自行托管）来解释提供的 Shell 命令。
+    externalAccess: '此工具会调用 https://explainshell.com（除非您自行托管）来解释提供的 Shell 命令。'
     texts:
       label-custom-explain-shell-url: "自定义 Explain Shell URL："
       placeholder-put-your-custom-explainshell-url-here: 在此处输入您的自定义 explainshell URL…
@@ -7644,7 +7644,7 @@ tools:
   tcp-udp-port-tester:
     title: TCP/UDP 端口测试工具
     description: 允许测试 TCP/UDP（在服务器端使用 WebSocket 代理）
-    externalAccess: 此工具需要服务器端的 WebSocket 服务器 (https://github.com/sharevb/ws-tcp-udp-bridge)
+    externalAccess: '此工具需要服务器端的 WebSocket 服务器 (https://github.com/sharevb/ws-tcp-udp-bridge)'
     texts:
       label-tcp: TCP
       label-udp: UDP
