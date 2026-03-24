@@ -7487,7 +7487,7 @@ tools:
       label-decimals: "小数位数："
       label-thousand-separators: "千位分隔符："
       label-to: "至："
-      tag-equal: "="
+      tag-: =
   acceleration-converter:
     title: 加速度转换器
     description: 在加速度单位之间转换数值
