@@ -1476,7 +1476,7 @@ tools:
       label-country: 国家
       title-currencies-to-countries: 货币到国家
       label-currency: 货币
-    externalAccess: 该工具从https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api下载最新的货币数据
+    externalAccess: "该工具从 https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api 下载最新的货币数据"
   data-storage-unit-converter:
     title: 数据存储单位转换器
     description: 转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
@@ -2576,7 +2576,7 @@ tools:
         注意：处理在您的浏览器中完成，请耐心等待，处理可能需要一段时间
       tag-this-tool-required-internet-connection-to-access-models: 此工具需要互联网连接（以访问模型）
       tag-latex-result: LaTeX 结果
-    externalAccess: 该工具从https://cdnjs.cloudflare.com下载数学公式渲染工具MathJaX，同时从https://huggingface.co/下载LaTeX光学字符识别模型（Xenova/texify）。
+    externalAccess: "该工具从 https://cdnjs.cloudflare.com 下载数学公式渲染工具 MathJaX，同时从 https://huggingface.co/ 下载 LaTeX 光学字符识别模型（Xenova/texify）。"
   mermaid-exporter:
     title: Mermaid 导出器
     description: 将 Markdown（Mermaid）转换为图片，并支持导出为 PNG、JPG 和 SVG
@@ -2642,7 +2642,7 @@ tools:
       label-country-name: '国家名称：'
       label-continent-name: '洲名：'
       tag-refresh: 刷新
-    externalAccess: 该工具通过https://www.ipify.org/的应用程序接口获取IPv4/6地址，并从https://cdn.jsdelivr.net/npm/@iplookup/country-extra/下载互联网协议地址的相关信息数据。
+    externalAccess: "该工具通过 https://www.ipify.org/ 的应用程序接口获取 IPv4/6 地址，并从 https://cdn.jsdelivr.net/npm/@iplookup/country-extra/ 下载互联网协议地址的相关信息数据。"
   nano-memo:
     title: Nano 速查表
     description: Nano 编辑器速查表
@@ -6602,7 +6602,7 @@ tools:
       placeholder-to: 目标语言
       placeholder-translation-will-appear-here: 翻译将在此显示...
       tag-translate: 翻译
-    externalAccess: 该工具会从https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源语言]-[目标语言]）
+    externalAccess: "该工具会从 https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源语言]-[目标语言]）"
   unicode-to-gsm7:
     title: Unicode 转 GSM-7
     description: 将 Unicode 文本编码为 SMS GSM-7 编码并显示相关的 SMS 发送信息
@@ -7255,7 +7255,7 @@ tools:
       failed: 失败
       no-redirect: 未重定向
       expanded: 已展开
-    externalAccess: 此工具使用 CORS Anywhere 实例（默认 https://cors.outils-libre.org）发送 HEAD HTTP 请求（不下载数据），以获取 HTTP 头信息和重定向
+    externalAccess: "此工具使用 CORS Anywhere 实例（默认 https://cors.outils-libre.org）发送 HEAD HTTP 请求（不下载数据），以获取 HTTP 头信息和重定向"
   copy:
     text:
       copied-to-the-clipboard: 已复制到剪贴板
