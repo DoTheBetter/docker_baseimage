@@ -1,9 +1,10 @@
-#FROM --platform=linux/amd64 node:lts-alpine AS builder
-FROM --platform=linux/amd64 node:20-alpine AS builder
+FROM --platform=linux/amd64 node:lts-alpine AS builder
+#FROM --platform=linux/amd64 node:20-alpine AS builder
 
 ENV NPM_CONFIG_LOGLEVEL=warn \
     CI=true \
-    VITE_LANGUAGE=zh
+    VITE_LANGUAGE=zh \
+    VITE_VERCEL_ENV=production
 
 COPY --chmod=755 /build_files/it-tools-zh/zh.yml /zh.yml
 
@@ -13,7 +14,7 @@ RUN apk add --update git python3 make g++ \
    && cd it-tools \
    && cp /zh.yml ./locales/zh.yml \
    && npm install -g pnpm \
-   && pnpm i --frozen-lockfile \
+   && pnpm i --ignore-scripts --frozen-lockfile \
    && pnpm build
 
 

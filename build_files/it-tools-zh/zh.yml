@@ -3,6 +3,9 @@
   sorry: 抱歉，此页面似乎不存在
   maybe: 可能是缓存出现了问题，尝试强制刷新？
   backHome: 返回首页
+  page:
+    text:
+      page-not-found-it-tools：找不到页面 - IT Tools
 about:
   alltools-title: 全部 {toolsCount} 个工具
   tools:
@@ -31,6 +34,10 @@ about:
   import-button: 导入
   favorites-imported-successfully: 收藏导入成功！
   error-importing-favorites-e: '导入收藏时出错：{0}'
+  text:
+    collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it:
+      为开发者打造的实用在线工具合集，拥有出色用户体验。IT Tools是一款免费开源的实用在线工具合集，专为开发者及IT行业从业者设计。
+    about-it-tools: 关于 - IT Tools
 favoriteButton:
   remove: 从收藏中移除
   add: 添加到收藏
@@ -86,6 +93,11 @@ home:
     lightMode: 亮色模式
     mode: 切换暗色/亮色模式
     aboutLabel: 关于
+  page:
+    text:
+      collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it:
+      为开发者打造的实用在线工具合集，拥有出色用户体验。IT Tools是一款免费开源的实用在线工具合集，专为开发者及IT行业从业者设计。
+      it-tools-handy-online-tools-for-developers: IT Tools - 开发者实用在线工具
 tools:
   chronometer:
     title: 计时器
@@ -184,8 +196,7 @@ tools:
       tag-video-recording-is-not-supported-in-your-browser: 您的浏览器不支持视频录制
   keycode-info:
     title: 键码信息
-    description: >-
-      查找任意按键的 JavaScript 键码、代码、位置和修饰键。
+    description: 查找任意按键的 JavaScript 键码、代码、位置和修饰键。
     texts:
       label-key: '按键 ：'
       label-keycode: '键码 ：'
@@ -197,8 +208,7 @@ tools:
       label-scancode-dec: '扫描码（十进制） ：'
   bcrypt:
     title: 加密
-    description: >-
-      使用 bcrypt 对文本字符串进行哈希和比较。Bcrypt 是基于 Blowfish 加密的密码哈希函数。
+    description: 使用 bcrypt 对文本字符串进行哈希和比较。Bcrypt 是基于 Blowfish 加密的密码哈希函数。
     texts:
       text-hashed-string-copied-to-the-clipboard: 已将哈希字符串复制到剪贴板
       title-hash: 哈希
@@ -220,8 +230,7 @@ tools:
       compared-in-elapsed-period: 在{elapsedPeriod}内完成比较
   crontab-generator:
     title: Crontab 生成器
-    description: >-
-      验证并生成 crontab，同时获取 cron 调度的可读描述。
+    description: 验证并生成 crontab，同时获取 cron 调度的可读描述。
     texts:
       message-this-cron-is-invalid: 此 cron 无效
       placeholder-: '* * * * *'
@@ -238,8 +247,7 @@ tools:
       tag-equivalent: '等价：'
   sql-prettify:
     title: SQL 美化与格式化
-    description: >-
-      在线格式化并美化您的 SQL 查询（支持多种 SQL 方言）。
+    description: 在线格式化并美化您的 SQL 查询（支持多种 SQL 方言）。
     texts:
       label-uppercase: 大写
       label-lowercase: 小写
@@ -278,8 +286,7 @@ tools:
       title-parsing-error: 解析错误
   benchmark-builder:
     title: 基准构建器
-    description: >-
-      使用此简易在线基准构建器，轻松比较任务的执行时间。
+    description: 使用此简易在线基准构建器，轻松比较任务的执行时间。
     texts:
       label-suite-name: 套件名称
       placeholder-suite-name: 套件名称...
@@ -295,8 +302,7 @@ tools:
       tag-add-a-measure: 添加度量
   git-memo:
     title: Git速查表
-    description: >-
-      Git是一款分布式版本管理软件。使用此速查表，您可以快速查阅最常用的Git命令。
+    description: Git是一款分布式版本管理软件。使用此速查表，您可以快速查阅最常用的Git命令。
   slugify-string:
     title: 生成Slug字符串
     description: 将字符串转化为URL、文件名和ID安全的形式。
@@ -311,8 +317,7 @@ tools:
       tag-copy-slug: 复制Slug
   encryption:
     title: 加密 / 解密文本
-    description: >-
-      使用AES、TripleDES、Rabbit或RC4等加密算法，对明文进行加密或对密文进行解密。
+    description: 使用AES、TripleDES、Rabbit或RC4等加密算法，对明文进行加密或对密文进行解密。
     defaultErrorMessage: 无法加密您的文本
     title-encrypt: 加密
     title-decrypt: 解密
@@ -333,8 +338,7 @@ tools:
       label-your-decrypted-text: '已解密的文本：'
   random-port-generator:
     title: 随机端口生成器
-    description: >-
-      生成位于“已知”端口范围（0-1023）之外的随机端口号。
+    description: 生成位于“已知”端口范围（0-1023）之外的随机端口号。
     texts:
       text-port-copied-to-the-clipboard: 端口已复制到剪贴板
       tag-copy: 复制
@@ -344,8 +348,7 @@ tools:
     description: 将您的 YAML 字符串美化为友好、易读的格式。
   eta-calculator:
     title: ETA 计算器
-    description: >-
-      ETA（预计到达时间）计算器，用于确定任务的大致结束时间，例如文件下载的结束时间和持续时间。
+    description: ETA（预计到达时间）计算器，用于确定任务的大致结束时间，例如文件下载的结束时间和持续时间。
     texts:
       label-milliseconds: 毫秒
       label-seconds: 秒
@@ -371,8 +374,7 @@ tools:
       tag-copy: 复制
   hmac-generator:
     title: HMAC 生成器
-    description: >-
-      使用密钥和您喜欢的散列函数计算基于散列的消息认证码（HMAC）。
+    description: 使用密钥和您喜欢的散列函数计算基于散列的消息认证码（HMAC）。
     texts:
       label-plain-text: 纯文本
       label-hexadecimal-text: 十六进制文本
@@ -395,8 +397,7 @@ tools:
       tag-copy-hmac: 复制 HMAC
   bip39-generator:
     title: BIP39 助记词生成器
-    description: >-
-      从已有或随机的助记词生成 BIP39 助记词，或从助记词获取密码短语。
+    description: 从已有或随机的助记词生成 BIP39 助记词，或从助记词获取密码短语。
     texts:
       message-entropy-length-should-be-16-32-and-be-a-multiple-of-4: 熵长度应 ≥ 16，≤ 32 且为 4 的倍数
       message-entropy-should-be-an-hexadecimal-string: 熵应为十六进制字符串
@@ -428,8 +429,7 @@ tools:
       tag-copy: 复制
   list-converter:
     title: 列表转换器
-    description: >-
-      此工具可处理基于列的数据，并对每行应用各种变化（转置、添加前缀和后缀、反转列表、排序列表、转换为小写、截断值）。
+    description: 此工具可处理基于列的数据，并对每行应用各种变化（转置、添加前缀和后缀、反转列表、排序列表、转换为小写、截断值）。
     texts:
       label-no-sort: 不排序
       label-sort-ascending: 升序排序
@@ -444,6 +444,7 @@ tools:
       label-remove-duplicates: 删除重复项
       label-convert-to-lowercase: 转换为小写
       label-keep-line-breaks: 保留换行符
+      label-output-as-column: 按列输出
       label-sort-list: 排序列表
       placeholder-sort-alphabetically: 按字母顺序排序
       label-items-separator: 项目分隔符
@@ -496,8 +497,7 @@ tools:
       output-label-yaml-from-your-toml: 来自您的 TOML 的 YAML
   math-evaluator:
     title: 数学评估器
-    description: >-
-      用于评估数学表达式的计算器。您可以使用 sqrt、cos、sin、abs 等函数。
+    description: 用于评估数学表达式的计算器。您可以使用 sqrt、cos、sin、abs 等函数。
     texts:
       placeholder-your-math-expression-ex-2-sqrt-6: '您的数学表达式（例如：2*sqrt(6)）...'
       title-result: '结果 '
@@ -529,8 +529,7 @@ tools:
       output-label-json-from-your-javascript-object: 来自您的 JavaScript 对象的 JSON
   numeronym-generator:
     title: 数字缩写生成器
-    description: >-
-      数字缩写是指在单词中使用数字形成缩写的词。例如，“i18n”是“internationalization”（国际化）的数字缩写，其中 18 代表单词中第一个 i 与最后一个 n 之间的字母数量。
+    description: 数字缩写是指在单词中使用数字形成缩写的词。例如，“i18n”是“internationalization”（国际化）的数字缩写，其中 18 代表单词中第一个 i 与最后一个 n 之间的字母数量。
     texts:
       placeholder-enter-a-word-e-g-internationalization: 输入一个单词，例如 'internationalization'
       placeholder-your-numeronym-will-be-here-e-g-i18n: 您的数字缩写将在此显示，例如 'i18n'
@@ -562,8 +561,7 @@ tools:
       label-swapcase: '大小写互换：'
   html-entities:
     title: 转义HTML实体
-    description: >-
-      转义或反转义HTML实体（将 <、>、&、" 和 \' 等字符替换为对应的HTML版本）
+    description: 转义或反转义HTML实体（将 <、>、&、" 和 \' 等字符替换为对应的HTML版本）
     texts:
       title-escape-html-entities: 转义HTML实体
       label-your-string: '你的字符串：'
@@ -629,8 +627,7 @@ tools:
       output-label-json-from-your-toml: 来自您的 TOML 的 JSON
   lorem-ipsum-generator:
     title: Lorem ipsum 生成器
-    description: >-
-      Lorem ipsum 是一种常用的占位文本，用于在不依赖实际内容的情况下展示文档或字体的视觉效果。
+    description: Lorem ipsum 是一种常用的占位文本，用于在不依赖实际内容的情况下展示文档或字体的视觉效果。
     texts:
       text-lorem-ipsum-copied-to-the-clipboard: Lorem ipsum 已复制到剪贴板
       label-language: '语言：'
@@ -645,8 +642,7 @@ tools:
       tag-print-ie-use-a-pdf-printer-to-get-a-pdf-file: 打印（即，使用 PDF 打印机获取 PDF 文件）
   qrcode-generator:
     title: 二维码生成器
-    description: >-
-      生成并下载用于 URL（或纯文本）的二维码，并自定义背景色和前景色。
+    description: 生成并下载用于 URL（或纯文本）的二维码，并自定义背景色和前景色。
     error-resistance: '容错率：'
     background-color: '背景颜色：'
     foreground-color: '前景颜色：'
@@ -671,8 +667,7 @@ tools:
       tag-bar: bar
   temperature-converter:
     title: 温度转换器
-    description: >-
-      提供开尔文、摄氏、华氏、兰金、德里塞尔、牛顿、勒朗和勒梅尔等温度单位之间的换算。
+    description: 提供开尔文、摄氏、华氏、兰金、德里塞尔、牛顿、勒朗和勒梅尔等温度单位之间的换算。
   rsa-key-pair-generator:
     title: RSA 密钥对生成器
     description: 生成新的随机 RSA 私钥和公钥 PEM 证书密钥对。
@@ -695,10 +690,11 @@ tools:
       tag-refresh-key-pair: 刷新密钥对
       tag-public-key: 公钥
       tag-private-key: 私钥
+    text:
+      bits-should-be-256-less-than-bits-less-than-16384-and-be-a-multiple-of-8: 位数应满足 256 ≤ 位数 ≤ 16384，且为 8 的倍数
   html-wysiwyg-editor:
     title: HTML 所见即所得编辑器
-    description: >-
-      在线、功能丰富的所见即所得 HTML 编辑器，可即时生成内容的源代码。
+    description: 在线、功能丰富的所见即所得 HTML 编辑器，可即时生成内容的源代码。
     texts:
       placeholder-your-html-content: 您的 Html 内容...
       label-your-html-to-convert-can-paste-from-clipboard: '待转换的 Html（可粘贴自剪贴板）:'
@@ -706,6 +702,7 @@ tools:
       tag-hey: 嘿！
       tag-welcome-to-this-html-wysiwyg-editor: 欢迎使用此 html 所见即所得编辑器
       tag-click-here-to-paste-or-edit-raw-html: 点击此处粘贴或编辑原始 html
+      label-xhtmlfy: "XHtml:"
   yaml-to-toml:
     title: YAML 转 TOML
     description: 解析并转换 YAML 为 TOML。
@@ -728,8 +725,7 @@ tools:
     description: 将日期和时间转换为多种不同格式
   ipv4-subnet-calculator:
     title: IPv4 子网计算器
-    description: >-
-      解析您的 IPv4 CIDR 区块并获取有关子网的所有信息。
+    description: 解析您的 IPv4 CIDR 区块并获取有关子网的所有信息。
     texts:
       message-we-cannot-parse-this-address-check-the-format: 无法解析此地址，请检查格式
       label-netmask: 子网掩码
@@ -759,8 +755,7 @@ tools:
     description: 为您网站生成 Open Graph 和社交媒体的 HTML 元标签。
   ipv6-ula-generator:
     title: IPv6 ULA 生成器
-    description: >-
-      根据 RFC4193 为您的网络生成本地、不可路由的 IP 地址。
+    description: 根据 RFC4193 为您的网络生成本地、不可路由的 IP 地址。
     texts:
       label-ipv6-ula: 'IPv6 ULA：'
       label-first-routable-block: '首个可路由块：'
@@ -770,8 +765,7 @@ tools:
       label-mac-address: 'MAC 地址：'
   hash-text:
     title: 哈希文本
-    description: >-
-      使用您需要的函数对文本字符串进行哈希：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3 或 RIPEMD160
+    description: 使用您需要的函数对文本字符串进行哈希：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3 或 RIPEMD160
     texts:
       label-binary-base-2: 二进制（2 进制）
       label-hexadecimal-base-16: 十六进制（16 进制）
@@ -802,8 +796,7 @@ tools:
       output-label-ts-from-your-json: JSON 的 TS
   device-information:
     title: 设备信息
-    description: >-
-      获取您当前设备的信息（屏幕尺寸、像素比、用户代理等）
+    description: 获取您当前设备的信息（屏幕尺寸、像素比、用户代理等）
     texts:
       label-screen-size: 屏幕尺寸
       label-orientation: 方向
@@ -820,8 +813,7 @@ tools:
       tag-unknown: 未知
   pdf-signature-checker:
     title: PDF 签名检查器
-    description: >-
-      验证 PDF 文件的签名。已签名的 PDF 文件包含一个或多个签名，可用于确定文件签署后其内容是否被更改。
+    description: 验证 PDF 文件的签名。已签名的 PDF 文件包含一个或多个签名，可用于确定文件签署后其内容是否被更改。
     texts:
       title-drag-and-drop-a-pdf-file-here-or-click-to-select-a-file: 将 PDF 文件拖放到此处，或点击选择文件
       tag-no-signatures-found-in-the-provided-file: 在提供的文件中未找到签名。
@@ -848,8 +840,7 @@ tools:
       output-label-minified-version-of-your-json: 已压缩的 JSON 版本
   json-string-converter:
     title: JSON 字符串转换器
-    description: >-
-      将您的文本或 JavaScript 对象转换为 JSON 字符串格式，或反向转换。
+    description: 将您的文本或 JavaScript 对象转换为 JSON 字符串格式，或反向转换。
     texts:
       message-provided-text-is-not-valid-make-sure-your-json-is-in-double-quotes: 提供的文本无效。（确保您的 JSON 使用双引号）
       label-json-stringify: JSON 字符串化
@@ -860,8 +851,7 @@ tools:
       output-label-json-string-conversion-of-your-input: 您输入的 JSON 字符串转换结果
   ulid-generator:
     title: ULID 生成器
-    description: >-
-      生成随机的通用唯一词典顺序可排序标识符（ULID）。
+    description: 生成随机的通用唯一词典顺序可排序标识符（ULID）。
     texts:
       label-raw: 原始
       label-json: JSON
@@ -872,8 +862,7 @@ tools:
       tag-copy: 复制
   string-obfuscator:
     title: 字符串混淆器
-    description: >-
-      对字符串（如密钥、IBAN 或令牌）进行混淆，使其在不泄露内容的情况下可共享和辨识。
+    description: 对字符串（如密钥、IBAN 或令牌）进行混淆，使其在不泄露内容的情况下可共享和辨识。
     texts:
       placeholder-enter-string-to-obfuscate: 输入要混淆的字符串
       label-string-to-obfuscate: '要混淆的字符串：'
@@ -882,12 +871,10 @@ tools:
       tag-keep-nbsp-spaces: '保留&nbsp;空格：'
   base-converter:
     title: 整数进制转换器
-    description: >-
-      在不同进制之间转换数字（十进制、十六进制、二进制、八进制、Base64等）
+    description: 在不同进制之间转换数字（十进制、十六进制、二进制、八进制、Base64等）
   floating-point-converter:
     title: 浮点数转换器
-    description: >-
-      将十进制数转换为 IEEE 754 二进制浮点数或反向转换。
+    description: 将十进制数转换为 IEEE 754 二进制浮点数或反向转换。
   yaml-to-json-converter:
     title: YAML 转 JSON 转换器
     description: 使用此在线实时转换器轻松将 YAML 转换为 JSON。
@@ -899,8 +886,7 @@ tools:
       label-nestify-a-b-c-to-nested-objects: 嵌套化（将'a.b.c'转换为嵌套对象）
   uuid-generator:
     title: UUID 生成器
-    description: >-
-      通用唯一标识符（UUID）是用于在计算机系统中标识信息的 128 位数字。可能的 UUID 数量为 16^32，即 2^128，约为 3.4×10^38（相当庞大！）。
+    description: 通用唯一标识符（UUID）是用于在计算机系统中标识信息的 128 位数字。可能的 UUID 数量为 16^32，即 2^128，约为 3.4×10^38（相当庞大！）。
     texts:
       message-invalid-uuid: 无效的 UUID
       text-uuids-copied-to-the-clipboard: UUID 已复制到剪贴板
@@ -915,7 +901,7 @@ tools:
       tag-copy: 复制
       tag-refresh: 刷新
   nanoid-generator:
-    title: NanoID 生成器
+    title: NanoIDs 生成器
     description: 为您的应用生成随机、唯一且适合 URL 使用的 ID。
     uppercase: 大写
     lowercase: 小写
@@ -935,8 +921,7 @@ tools:
       placeholder-your-uuids: 您的 UUID
   ipv4-address-converter:
     title: IPv4 地址转换器
-    description: >-
-      将 IP 地址转换为十进制、二进制、十六进制，甚至是其 IPv6 表示形式。
+    description: 将 IP 地址转换为十进制、二进制、十六进制，甚至是其 IPv6 表示形式。
     texts:
       label-decimal: '十进制： '
       label-hexadecimal: '十六进制： '
@@ -955,8 +940,7 @@ tools:
       placeholder-set-a-correct-ipv4-address: 设置正确的 ipv4 地址
   text-statistics:
     title: 文本统计
-    description: >-
-      获取关于文本的信息，包括字符数、单词数、字节大小等...
+    description: 获取关于文本的信息，包括字符数、单词数、字节大小等...
     characters: 字符数
     words: 词数
     lines: 行数
@@ -996,7 +980,7 @@ tools:
       label-html-decimal-amp-160: HTML 十进制（&amp;#160;）
       label-html-hexadecimal-amp-xa0: HTML 十六进制（&amp;#xA0;）
       label-u-00a0: U+00A0
-      label-u00a0: '\\u00A0'
+      label-u00a0: \\u00A0
       label-css-0000a0: CSS（\\0000A0）
       label-python-xa0-u00a0-u100a0: Python（\\xA0, \\u00A0, \\U100A0）
       label-python-u00a0-u-100a0: Python (\\u00A0; \\u{'{'}100A0{'}'})
@@ -1017,8 +1001,7 @@ tools:
       tag-copy-text-to-clipboard: 复制文本到剪贴板
   ipv4-range-expander:
     title: IPv4 范围展开器
-    description: >-
-      提供起始和结束的 IPv4 地址，此工具可计算有效的 IPv4 子网及其 CIDR 表示。
+    description: 提供起始和结束的 IPv4 地址，此工具可计算有效的 IPv4 子网及其 CIDR 表示。
     texts:
       label-start-address: 起始地址
       label-end-address: 结束地址
@@ -1038,14 +1021,13 @@ tools:
     texts:
       tag-const-wordwrap-ref-false: const wordWrap = ref(false);
       tag-word-wrap: 自动换行？
+      tag-ignore-whitespaces: 忽略尾部空白字符？
   otp-generator:
     title: OTP 代码生成器
-    description: >-
-      生成和验证基于时间或事件的 OTP（一次性密码），用于多因素认证。
+    description: 生成和验证基于时间或事件的 OTP（一次性密码），用于多因素认证。
   url-encoder:
-    title: Encode/decode url formatted strings
-    description: >-
-      编码为 URL 编码格式（亦称“百分号编码”），或对其进行解码。
+    title: 对URL格式字符串进行编码/解码
+    description: 编码为 URL 编码格式（亦称“百分号编码”），或对其进行解码。
     texts:
       label-uricomponent: URIComponent
       label-rfc3986-uricomponent: RFC3986 - URIComponent
@@ -1069,8 +1051,7 @@ tools:
       tag-copy: 复制
   image-resizer:
     title: 图像尺寸调整器
-    description: >-
-      更改图像的宽度和高度，预览并以所需格式下载。
+    description: 更改图像的宽度和高度，预览并以所需格式下载。
     texts:
       label-custom: 自定义
       label-original: 原始
@@ -1117,8 +1098,7 @@ tools:
     description: Unicode 字符转 Java 实体转换器及其反向转换
   uuid-converter:
     title: UUID 转换器
-    description: >-
-      将带有或不带连字符的 UUID 转换为其他常用的 SQL 表示法，反之亦然。
+    description: 将带有或不带连字符的 UUID 转换为其他常用的 SQL 表示法，反之亦然。
     uuid: UUID
     uuidhexupper: 十六进制表示（大写）
     uuidhexlower: 十六进制表示（小写）
@@ -1213,6 +1193,7 @@ tools:
       tag-add-a-new-query-parameter: 添加新的查询参数
       tag-no-cors: 无 CORS
       tag-call-api: 调用 API
+    externalAccess: 此工具仅在您的浏览器中调用您提供的API端点。
   area-converter:
     title: 面积单位转换器
     description: 在面积单位之间转换数值
@@ -1320,8 +1301,7 @@ tools:
       tag-refresh-deck: 刷新牌组
   cidr-in-cidr:
     title: IPv4-6/IP范围/CIDR 在 IP范围/CIDR/IP掩码 中
-    description: >-
-      给定 CIDR/IP 范围/通配符 IP/IP 掩码，判断指定的 IPv4-6/范围/CIDR/通配符 IP/IP 掩码 是否在子网范围内
+    description: 给定 CIDR/IP 范围/通配符 IP/IP 掩码，判断指定的 IPv4-6/范围/CIDR/通配符 IP/IP 掩码 是否在子网范围内
     texts:
       message-we-cannot-parse-this-cidr-ip-range-mask-wildcard-check-the-format: 无法解析此 CIDR/IP 范围/掩码/通配符，请检查格式
       label-an-ipv4-6-cidr-range-mask-wildcard-base-network: IPv4/6 CIDR/范围/掩码/通配符（基础网络）
@@ -1340,9 +1320,10 @@ tools:
       label-code-snippet-to-format: '要格式化的代码片段：'
       placeholder-put-your-code-snippet-here: 在此处粘贴您的代码片段
       label-show-line-numbers: 显示行号
-      tag-: ''', '''
+      tag-: "', '"
       tag-copy-html-formatted: 复制 HTML 格式
       tag-copy-code-text: 复制代码文本
+      tag-copy-html-word: 将Word中的内容复制为HTML/富文本格式
   coin-flipper:
     title: 抛硬币
     description: 抛硬币
@@ -1409,8 +1390,7 @@ tools:
       tag-stop: 停止
   crc-calculator:
     title: CRC 计算器
-    description: >-
-      计算文本或文件的 CRC（CRC1、CRC8、CRC8 1-Wire、CRC8 DVB‑S2、CRC16、CRC16 CCITT、CRC16 Modbus、CRC16 Kermit、CRC16 XModem、CRC24、CRC32、CRC32 MPEG‑2、CRCJAM）
+    description: 计算文本或文件的 CRC（CRC1、CRC8、CRC8 1-Wire、CRC8 DVB‑S2、CRC16、CRC16 CCITT、CRC16 Modbus、CRC16 Kermit、CRC16 XModem、CRC24、CRC32、CRC32 MPEG‑2、CRCJAM）
     texts:
       label-binary-base-2: 二进制（基数 2）
       label-hexadecimal-base-16: 十六进制（基数 16）
@@ -1449,6 +1429,8 @@ tools:
       tag-certificate-signing-request: 证书签名请求
       tag-public-key: 公钥
       tag-private-key: 私钥
+      label-rsa-bits: "RSA密钥位数："
+      bits-should-be-256-less-than-bits-less-than-16384-and-be-a-multiple-of-8: 位数应满足 256 ≤ 位数 ≤ 16384，且为 8 的倍数
   css-prettifier:
     title: CSS 美化工具
     description: CSS 美化
@@ -1495,10 +1477,10 @@ tools:
       label-country: 国家
       title-currencies-to-countries: 货币到国家
       label-currency: 货币
+    externalAccess: 该工具从https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api下载最新的货币数据
   data-storage-unit-converter:
     title: 数据存储单位转换器
-    description: >-
-      转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
+    description: 转换数据存储或传输单位（字节、Bibytes、比特、千字节...）。
     texts:
       label-bytes-b: 字节（B）
       label-bits-bit: 比特（bit）
@@ -1712,10 +1694,10 @@ tools:
       label-dns-record-type: 'DNS 记录类型：'
       title-query-results: 查询结果
       tag-send-dns-query: 发送 DNS 查询
+    externalAccess: "该工具通过以下列表中处于可用状态的DNS over HTTPS终端节点发送DNS查询请求：https://martinheidegger.github.io/dns-query/resolvers.json"
   docker-compose-converter:
     title: Docker Compose 格式转换器
-    description: >-
-      在 V1、2.x、3.x 或 CommonSpec 之间转换 Docker Compose 文件，并可能展开端口/卷语法
+    description: 在 V1、2.x、3.x 或 CommonSpec 之间转换 Docker Compose 文件，并可能展开端口/卷语法
     texts:
       label-v1-to-v2-2-x: V1 到 V2 2.x
       label-v1-to-v2-3-x: V1 到 V2 3.x
@@ -1800,8 +1782,7 @@ tools:
       tag-supports-comment-line-hh-mm-ss-fff-3d-1h-3s-p4dt12h20m20-3s: '支持：注释（# 行），HH:MM:SS.FFF，3d 1h 3s...，P4DT12H20M20.3S..'
   ecdsa-key-pair-generator:
     title: ECDSA 密钥对生成器
-    description: >-
-      生成新的随机 ECDSA 私钥和公钥（可带或不带密码短语）。
+    description: 生成新的随机 ECDSA 私钥和公钥（可带或不带密码短语）。
     texts:
       label-nistp256: nistp256
       label-nistp384: nistp384
@@ -1824,8 +1805,7 @@ tools:
       tag-private-key: 私钥
   ed25519-key-pair-generator:
     title: Ed25519 密钥对生成器
-    description: >-
-      生成新的随机 Ed25519 私钥和公钥（可带或不带密码短语）。
+    description: 生成新的随机 Ed25519 私钥和公钥（可带或不带密码短语）。
     texts:
       label-pem: PEM
       label-pkcs-8: PKCS#8
@@ -1875,8 +1855,9 @@ tools:
       tag-createxxhash64-seedlow-number-seedhigh-number-promise: '// createXXHash64, //(seedLow: number, seedHigh: number): Promise'
       tag-createxxhash3-seedlow-number-seedhigh-number-promise: '// createXXHash3, //(seedLow: number, seedHigh: number): Promise'
       tag-createxxhash128-seedlow-number-seedhigh-number-promise: '// createXXHash128, //(seedLow: number, seedHigh: number): Promise'
-      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise: >-
-        BLAKE2b: await createBLAKE2b(), // (bits?: number, key?: IDataType): Promise
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
+        "BLAKE2b: await createBLAKE2b(), // (bits?: number, key?: IDataType):
+        Promise"
       tag-md5-await-createmd5-promise: 'MD5: await createMD5(), // (): Promise'
       tag-ripemd160-await-createripemd160-promise: 'RIPEMD160: await createRIPEMD160(), // (): Promise'
       tag-sha1-await-createsha1-promise: 'SHA1: await createSHA1(), // (): Promise'
@@ -1894,6 +1875,7 @@ tools:
       label-file-name: '文件名：'
       label-extension: '扩展名：'
       label-mime-type: 'MIME 类型：'
+      an-error-occured-processing: 处理时发生错误
   folder-structure-diagram:
     title: 文件夹结构图
     description: 用于生成 ASCII 文件夹结构图的树形工具
@@ -1907,8 +1889,7 @@ tools:
     description: 在力单位之间转换数值
   geo-distance-calculator:
     title: 地理距离计算器
-    description: >-
-      计算两个地理位置之间的距离（并显示当前用户位置信息）
+    description: 计算两个地理位置之间的距离（并显示当前用户位置信息）
     texts:
       title-distance-computer: 距离计算器
       label-geolocation-1-latitude-longitude: '地理位置 1（纬度，经度）：'
@@ -1977,8 +1958,7 @@ tools:
       tag-sanitize-and-download: 清理并下载
   hdd-calculator:
     title: 硬盘容量计算器
-    description: >-
-      存储设备制造商以十进制形式（如 GB）报告容量，而操作系统和其他软件使用二进制形式（GiB），但仍错误地使用十进制单位（GiB）。此工具将十进制容量转换为多种二进制形式。
+    description: 存储设备制造商以十进制形式（如 GB）报告容量，而操作系统和其他软件使用二进制形式（GiB），但仍错误地使用十进制单位（GiB）。此工具将十进制容量转换为多种二进制形式。
     texts:
       label-kb: kB
       label-mb: MB
@@ -1990,10 +1970,10 @@ tools:
       label-gib: GiB
       label-tib: TiB
       label-pib: PiB
-      label-claimed-capacity: '标称容量：'
-      label-unit: '单位：'
       tag-1mib-1024kib-1mb-1000kb-1gib-1024mib-1gb-1000mb: 1MiB = 1024KiB ; 1MB = 1000kB ; 1GiB = 1024MiB ; 1GB = 1000MB ;
-      tag-see-here-for-details: 详情请参见此处
+      tag-see-here-for-details: 详情请见此处
+      column-decimal: Decimal
+      column-binary: Binary
   heic-converter:
     title: HEIC 转换器
     description: HEIC 转换为 JPEG 或 PNG
@@ -2002,6 +1982,7 @@ tools:
       label-png: PNG
       label-output-format: 输出格式
       title-drag-and-drop-a-heic-file-here-or-click-to-select-a-file: 将 HEIC 文件拖放到此处，或点击选择文件
+      an-error-occured-processing-heic-heif-is-invalid: "处理时发生错误：HEIC/HEIF格式无效。"
   hex-file-converter:
     title: HEX 文件转换器
     description: 在文件与十六进制表示之间相互转换
@@ -2068,6 +2049,9 @@ tools:
     description: 在 PNG/JPEG 与 ICO 之间转换
     texts:
       title-drag-and-drop-an-ico-or-png-jpeg-file-here-or-click-to-select-a-file: 将 ICO 或 PNG/JPEG 文件拖放到此处，或点击选择文件
+      an-error-occured-processing: 处理时发生错误
+      invalid-ico-file: 无效的ICO文件！
+      invalid-png-file: 无效的PNG文件！
   illuminance-converter:
     title: 照度转换器
     description: 照度单位转换器（Lux、英尺烛光、Nox、Phot、Flame）
@@ -2081,12 +2065,13 @@ tools:
       label-svg-scaling: 'SVG 缩放：'
       title-drag-and-drop-images-files-here-or-click-to-select-some-files: 将图像文件拖拽到此处，或点击选择文件
       tag-first-select-output-options: '首先，选择输出选项：'
-      tag-then-drag-and-drop-your-images-below-and-they-will-be-converted-and-downloaded-immediately: >-
-        然后，将图像拖拽到下方，它们将立即被转换并下载：
+      tag-then-drag-and-drop-your-images-below-and-they-will-be-converted-and-downloaded-immediately:
+        "然后，将你的图片拖放到下方，它们将立即转换并下载："
+      invalid-image-file: 无效图像文件！
+      an-error-occured-processing: 处理时发生错误
   image-exif-reader:
     title: 图像 EXIF/元数据/GPS/JPEG 质量读取器
-    description: >-
-      读取图像文件的 EXIF、IPTC、XMP、GPS 等元数据，JPEG 质量以及其他信息
+    description: 读取图像文件的 EXIF、IPTC、XMP、GPS 等元数据，JPEG 质量以及其他信息
     texts:
       title-drag-and-drop-a-image-file-here-or-click-to-select-a-file: 将图像文件拖拽到此处，或点击选择文件
       title-jpeg-quality: JPEG 质量
@@ -2098,7 +2083,7 @@ tools:
       tag-localize-on-open-street-map: 在 OpenStreetMap 上定位
       tag-no-gps-information: 无 GPS 信息
       tag-made-with: 制作于
-      tag-exifreader: ExifReader
+      tag-exifreader: Exif读取器
   image-to-ascii-art:
     title: 图像转 ASCII 艺术
     description: 图像转 ASCII 艺术生成器
@@ -2167,10 +2152,10 @@ tools:
       tag-signup-for-a-free-token: 注册免费令牌
       tag-click-on-button-above-to-get-latest-infos: 点击上方按钮获取最新信息
       tag-localize-on-open-street-map: 在 Open Street Map 上定位
+    externalAccess: 该工具会将指定的IP地址发送至https://ipinfo.io/，以获取IP地理定位信息
   ip-include-exclude:
     title: IP 子网排除计算器
-    description: >-
-      从允许的 IP 范围/掩码/CIDR 列表中减去不允许的 IP 范围/掩码/CIDR 列表
+    description: 从允许的 IP 范围/掩码/CIDR 列表中减去不允许的 IP 范围/掩码/CIDR 列表
     texts:
       label-allowedips-ipv4-6-cidr-range-mask-wildcard: 允许的 IP（IPv4/6 CIDR/范围/掩码/通配符）
       placeholder-an-ipv4-6-cidr-range-mask-wildcard: 一个 IPv4/6 CIDR/范围/掩码/通配符...
@@ -2211,8 +2196,7 @@ tools:
       placeholder-set-a-correct-ipv6-address: 设置正确的 IPv6 地址
   ipv6-subnet-calculator:
     title: IPv6 子网计算器
-    description: >-
-      解析您的 IPv6 CIDR 块并获取子网络所需的所有信息。
+    description: 解析您的 IPv6 CIDR 块并获取子网络所需的所有信息。
     texts:
       message-we-cannot-parse-this-address-check-the-format: 无法解析此地址，请检查格式
       label-full-address: 完整地址
@@ -2279,6 +2263,7 @@ tools:
       tag-iso2-iso3: Iso2/Iso3
       tag-name-and-info: 名称和信息
       tag-gt-see-on-openstreetmap: '&gt; 在 OpenStreetMap 上查看'
+      loading-more-results: 正在加载更多结果...
   javascript-prettifier:
     title: Javascript 美化工具
     description: JS/Javascript 美化工具
@@ -2308,8 +2293,7 @@ tools:
       tag-see-jsonpath-cheatsheet: 查看 JSONPath 速查表
   js-unobfuscator:
     title: Javascript 反混淆/解包工具
-    description: >-
-      webcrack 是一款用于逆向工程 Javascript 的工具。它可以对 obfuscator.io 进行反混淆、去压缩、转译，并解包 webpack/browserify，以尽可能接近原始源代码。
+    description: webcrack 是一款用于逆向 JavaScript 的工具。它能够对 obfuscator.io 混淆代码进行反混淆、解压缩、转译，并解包 webpack/browserify 打包文件，尽可能还原出原始源代码。
     texts:
       title-sandbox: 沙盒
       placeholder-your-obfuscate-javascript-code: 您的混淆 Javascript 代码
@@ -2331,6 +2315,7 @@ tools:
       title-schema-validation-errors: 模式验证错误
       label-indent-size-0-compact: 缩进大小（0 = 紧凑格式）：
       repair-json: 修复JSON
+    externalAccess: 此工具在需要验证时可能会从 https://www.schemastore.org 下载 JSON 模式文件。不会向外部发送任何数据。
   json-escaper:
     title: JSON转义/反转义
     description: 转义和反转义JSON字符串
@@ -2360,6 +2345,7 @@ tools:
       label-indent-size-0-compact: '缩进大小（0=紧凑）：'
       title-repaired-version: 自动修复和格式化版本
       label-auto-repair-json: 汽车维修 JSON：
+    externalAccess: 该工具可能会在请求验证时从https://www.schemastore.org下载JSON模式。不会向外部发送任何数据。
   json-size-analyzer:
     title: JSON大小分析器
     description: 测量JSON节点相对权重
@@ -2430,8 +2416,7 @@ tools:
       output-label-php-array-version: PHP 数组版本
   json-to-schema:
     title: JSON 转 Schema
-    description: >-
-      将 JSON 数据转换为 JSON Schema、MySQL DDL、Mongoose Schema、Google BigQuery Schema 或 ClickHouse 表结构
+    description: 将 JSON 数据转换为 JSON Schema、MySQL DDL、Mongoose Schema、Google BigQuery Schema 或 ClickHouse 表结构
     texts:
       label-generic: 通用
       label-json-schema: JSON Schema
@@ -2475,6 +2460,7 @@ tools:
       invalid-base64-string: 无效的Base64字符串
       placeholder-input-token: 粘贴您的JWT令牌进行编辑……
       click-to-input-a-existing-jwt-token-to-modify: 点击输入一个现有的JWT令牌进行修改
+      label-base64: Base64
   length-converter:
     title: 长度单位转换器
     description: 转换长度单位的数值
@@ -2504,8 +2490,7 @@ tools:
       tag-invalid-luhn-key: 无效的 Luhn 密钥。
   mac-address-converter:
     title: MAC 地址转换器
-    description: >-
-      更改 MAC 地址的格式并在不同格式之间选择（EUI-48、EUI-64、IPv6）
+    description: 更改 MAC 地址的格式并在不同格式之间选择（EUI-48、EUI-64、IPv6）
     texts:
       label-canonical-ietf-format: '规范 IETF 格式：'
       label-canonical-format: '规范格式：'
@@ -2562,8 +2547,7 @@ tools:
       tag-advanced: 高级
       tag-concat-spaces: 合并空格
       tag-you-can-paste-a-document-with-existing-toc-generated-by-this-tool-or-add-a: >-
-        您可以粘贴已存在目录的文档（由此工具生成），或添加一个
-      tag-marker-in-your-document-on-a-single-line: 标记到您的文档中（单行）
+        您可以粘贴已存在目录的文档（由此工具生成），或添加一个tag-marker-in-your-document-on-a-single-line: 标记到您的文档中（单行）
   mass-converter:
     title: 质量单位转换器
     description: 在质量单位之间转换数值
@@ -2593,6 +2577,7 @@ tools:
         注意：处理在您的浏览器中完成，请耐心等待，处理可能需要一段时间
       tag-this-tool-required-internet-connection-to-access-models: 此工具需要互联网连接（以访问模型）
       tag-latex-result: LaTeX 结果
+    externalAccess: 该工具从https://cdnjs.cloudflare.com下载数学公式渲染工具MathJaX，同时从https://huggingface.co/下载LaTeX光学字符识别模型（Xenova/texify）。
   mermaid-exporter:
     title: Mermaid 导出器
     description: 将 Markdown（Mermaid）转换为图片，并支持导出为 PNG、JPG 和 SVG
@@ -2658,6 +2643,7 @@ tools:
       label-country-name: '国家名称：'
       label-continent-name: '洲名：'
       tag-refresh: 刷新
+    externalAccess: 该工具通过https://www.ipify.org/的应用程序接口获取IPv4/6地址，并从https://cdn.jsdelivr.net/npm/@iplookup/country-extra/下载互联网协议地址的相关信息数据。
   nano-memo:
     title: Nano 速查表
     description: Nano 编辑器速查表
@@ -2689,6 +2675,7 @@ tools:
       label-spaces-chars: 空格字符
       label-word-count-no-punct: 单词数（不含标点）
       tag-ocr: OCR
+    externalAccess: 该工具会从https://cdn.jsdelivr.net下载光学字符识别语言模型
   option43-generator:
     title: Option43 生成器
     description: 生成 Option43 Wi-Fi DHCP 配置
@@ -2827,6 +2814,10 @@ tools:
       title-drag-and-drop-a-pdf-file-here-or-click-to-select-a-file: 将 PDF 文件拖放到此处，或点击选择文件
       title-logs: 日志
       label-qpdf: qpdf
+      label-password: "密码："
+      placeholder-password: Password
+      tag-decrypt-pdf: 解密PDF
+      tag-output-file: "输出文件："
   pgp-encryption:
     title: PGP 加密
     description: 使用 PGP 密钥加密和解密明文文本。
@@ -2859,8 +2850,7 @@ tools:
       tag-signing-public-key-optional: 签名公钥（可选）
   pgp-key-pair-generator:
     title: PGP 密钥生成
-    description: >-
-      生成新的随机 PGP 私钥和公钥（可带或不带密码短语）。
+    description: 生成新的随机 PGP 私钥和公钥（可带或不带密码短语）。
   php-array-to-json:
     title: PHP数组转 JSON
     description: 将 PHP 数组转换为 JSON
@@ -3050,8 +3040,7 @@ tools:
       title-decoded: 已解码
   smart-text-replacer:
     title: 智能文本替换与换行工具
-    description: >-
-      在单个或多个出现位置搜索并替换单词，类似 Windows 记事本的查找替换功能。同时支持换行管理和文本拆分
+    description: 在单个或多个出现位置搜索并替换单词，类似 Windows 记事本的查找替换功能。同时支持换行管理和文本拆分
     texts:
       label-add-linebreak-before: 在前面添加换行
       label-add-linebreak-after: 在后面添加换行
@@ -3131,8 +3120,7 @@ tools:
       tag-download-as-png: 下载为 PNG
   timezone-converter:
     title: 时区转换器
-    description: >-
-      将日期时间从一个时区转换到其他时区，并获取时区与国家信息
+    description: 将日期时间从一个时区转换到其他时区，并获取时区与国家信息
     texts:
       title-timezones-date-time-converter: 时区日期时间转换器
       label-timezone: 时区
@@ -3184,8 +3172,7 @@ tools:
       tag-gt-more-info: '&gt; 更多信息'
   url-cleaner:
     title: URL 清理器
-    description: >-
-      从 URL 中清除广告跟踪、UTM、Facebook 以及其他广告提供商的参数
+    description: 从 URL 中清除广告跟踪、UTM、Facebook 以及其他广告提供商的参数
     texts:
       title-clean-url: 清理 URL
       placeholder-put-your-url-here: 在此输入您的 URL...
@@ -3210,8 +3197,7 @@ tools:
       placeholder-the-defanged-string-will-be-here: 已恢复的字符串将显示在此
   url-text-fragment-maker:
     title: URL 文本搜索片段生成器
-    description: >-
-      创建允许直接链接到网页文档中指定文本部分的 URL
+    description: 创建允许直接链接到网页文档中指定文本部分的 URL
     texts:
       label-base-url: '基础 URL：'
       placeholder-base-url: 基础 URL...
@@ -3289,8 +3275,7 @@ tools:
       label-month: '月份：'
   wpa-psk-generator:
     title: WPA PSK 生成器
-    description: >-
-      WPA 预共享密钥生成器，将 WPA 密码短语和 SSID 转换为 256 位预共享（“原始”）密钥
+    description: WPA 预共享密钥生成器，将 WPA 密码短语和 SSID 转换为 256 位预共享（“原始”）密钥
     texts:
       message-ssid-must-not-be-empty: SSID 不能为空。
       title-wifi-infos: WiFi 信息
@@ -3355,8 +3340,7 @@ tools:
       tag-xpath-expression-selected-nothing: XPath 表达式未选中任何内容
   cli-command-editor:
     title: CLI 命令编辑器
-    description: >-
-      将带选项的 CLI 命令转换为易于编辑的形式，并生成命令
+    description: 将带选项的 CLI 命令转换为易于编辑的形式，并生成命令
     command: 命令
     placeholder: 在此粘贴命令
   safelink-decoder:
@@ -3394,8 +3378,7 @@ tools:
     error: 提供的 XML 无效。
   email-normalizer:
     title: 邮箱标准化工具
-    description: >-
-      将电子邮件地址标准化为统一格式，便于比较。适用于去重和数据清洗。
+    description: 将电子邮件地址标准化为统一格式，便于比较。适用于去重和数据清洗。
     input: '待标准化的原始邮箱：'
     output: '标准化后的邮箱：'
     input-placeholder: 在此输入邮箱（每行一个）...
@@ -3425,8 +3408,7 @@ tools:
     description: JavaScript 正则/正则表达式速查表
   age-crypto:
     title: AGE 加密
-    description: >-
-      提供一个简单易用的开源 Age 工具，用于生成密钥、加密和解密消息。
+    description: 提供一个简单易用的开源 Age 工具，用于生成密钥、加密和解密消息。
     texts:
       title-private-key: 私钥
       placeholder-your-private-key-will-be-generated-here: 您的私钥将在此生成。
@@ -4074,8 +4056,7 @@ tools:
       tag-extract-text: 提取文本
   pgp-keygen:
     title: PGP密钥生成
-    description: >-
-      生成新的随机PGP私钥和公钥（可带或不带密码短语）。
+    description: 生成新的随机PGP私钥和公钥（可带或不带密码短语）。
     texts:
       message-bits-should-be-256-bits-16384-and-be-a-multiple-of-8: 位数应为 256 ≤ bits ≤ 16384 且是8的倍数
       label-format: '格式:'
@@ -4109,8 +4090,7 @@ tools:
       output-label-properties-version: '.properties 版本：'
   punycode-converter:
     title: Punycode 转换器
-    description: >-
-      在国际 Unicode 域名或电子邮件与 ASCII Punycode 版本之间转换
+    description: 在国际 Unicode 域名或电子邮件与 ASCII Punycode 版本之间转换
     texts:
       title-punycode-to-international: Punycode 转 国际化
       placeholder-put-your-punycode-domain-name-or-email-to-decode: 输入要解码的 punycode 域名或电子邮件...
@@ -4245,8 +4225,7 @@ tools:
       tag-advanced-filters-for-packet-selection: 用于选择数据包的高级过滤器。
   text-to-unicode-names:
     title: 文本转 Unicode 名称
-    description: >-
-      将文本转换为其十六进制字符代码并为每个字符提供 Unicode 名称
+    description: 将文本转换为其十六进制字符代码并为每个字符提供 Unicode 名称
     texts:
       title-text-to-unicode-names: 文本转 Unicode 名称
       placeholder-e-g-hello-world: 例如 'Hello world'
@@ -4268,8 +4247,7 @@ tools:
       tag-stop: 停止
   traefik-compose-maker:
     title: Traefik Docker Compose 生成器
-    description: >-
-      为特定服务及其选项创建带有 Traefik 标签的 Docker Compose 文件
+    description: 为特定服务及其选项创建带有 Traefik 标签的 Docker Compose 文件
     texts:
       title-traefik-docker-compose-generator: Traefik Docker Compose 生成器
       label-proxied-service-name: '代理服务名称：'
@@ -4301,6 +4279,8 @@ tools:
       message-this-date-is-invalid-for-this-format: 此日期对该格式无效
       placeholder-put-your-date-string-here: 在此输入日期字符串...
       placeholder-invalid-date: 无效日期...
+      button-add-timezone: 添加时区
+      placeholder-select-timezone: 选择时区...
   extract-text-from-html:
     texts:
       message-provided-html-is-not-valid: 提供的 HTML 无效。
@@ -4372,13 +4352,13 @@ tools:
       tag-copy-connection-string: 复制连接字符串
   url-parser:
     title: URL 解析器
-    description: >-
-      将 URL 解析为其各个组成部分（协议、源、参数、端口、用户名-密码，…）
+    description: 将 URL 解析为其各个组成部分（协议、源、参数、端口、用户名-密码，…）
     texts:
       message-invalid-url: 无效的 URL
       label-your-url-to-parse: '您要解析的 URL：'
       placeholder-your-url-to-parse: 要解析的 URL...
       url-must-have-http-or-https-prefix: URL 必须以 http:// 或 https:// 为前缀
+      button-open-url: 打开网址
   text-to-binary:
     title: 文本转 UTF-8 二进制
     description: 将文本转换为其 UTF-8 二进制表示，反之亦然。
@@ -4426,8 +4406,7 @@ tools:
       unable-to-get-private-key: 无法获取私钥。
   sip-auth:
     title: SIP 授权
-    description: >-
-      此工具帮助您验证 SIP 授权头。所有计算均在浏览器中完成，不会将敏感信息传输到网络，您可以放心使用。
+    description: 此工具帮助您验证 SIP 授权头。所有计算均在浏览器中完成，不会将敏感信息传输到网络，您可以放心使用。
     password: SIP 密码
     password-tips: 输入密码...
     message: SIP 消息
@@ -4451,8 +4430,7 @@ tools:
       invalid-safelinks-url-provided: 提供的 SafeLinks URL 无效
   mac-address-generator:
     title: MAC 地址生成器
-    description: >-
-      输入数量和前缀。MAC 地址将以您选择的大小写（大写或小写）生成
+    description: 输入数量和前缀。MAC 地址将以您选择的大小写（大写或小写）生成
     texts:
       label-uppercase: 大写
       label-lowercase: 小写
@@ -4468,8 +4446,7 @@ tools:
       label-none: 无
   raid-calculator:
     title: RAID 计算器
-    description: >-
-      根据磁盘数量、容量和 RAID 类型计算阵列的存储容量、容错性和空间效率
+    description: 根据磁盘数量、容量和 RAID 类型计算阵列的存储容量、容错性和空间效率
     texts:
       label-mb: MB
       label-gb: GB
@@ -4567,6 +4544,9 @@ tools:
     physics: 物理
     cheatsheets: 速查表
     forensic: 取证
+    finance: 金融
+    default: Default
+    toml: TOML
   websocket-tester:
     title: WebSocket 测试工具
     description: 允许测试 WebSocket 连接
@@ -4599,6 +4579,8 @@ tools:
         email-1: 电子邮件
         email-0: 电子邮件
         email: 电子邮件
+        otpauth: OTP认证
+        otpmigration: OTP迁移
   SplashScreen:
     text:
       pomodoro-timer: 番茄钟计时器
@@ -4636,7 +4618,7 @@ tools:
     title: 番茄工作法计时器
     description: 基本番茄工作法计时器
     texts:
-      tag-import-pomodoroapp-from-app-pomodoroapp-vue: import PomodoroApp from './app/PomodoroApp.vue';
+      tag-import-pomodoroapp-from-app-pomodoroapp-vue: 从'./app/PomodoroApp.vue'导入番茄钟应用组件;
     SplashScreen:
       text:
         pomodoro-timer-0: 番茄工作法计时器
@@ -4690,8 +4672,7 @@ tools:
         settings: 设置
   phone-parser-and-formatter:
     title: 电话解析与格式化
-    description: >-
-      解析、验证并格式化电话号码。获取电话号码的相关信息，如国家代码、类型等。生成用于在 WhatsApp 和短信中发送消息的链接。
+    description: 解析、验证并格式化电话号码。获取电话号码的相关信息，如国家代码、类型等。生成用于在 WhatsApp 和短信中发送消息的链接。
     texts:
       message-invalid-phone-number: 无效的电话号码
       label-country: 国家
@@ -4795,8 +4776,7 @@ tools:
       article: 文章
   qr-contact-info-generator:
     title: 二维码联系人信息生成器
-    description: >-
-      生成并下载用于联系信息（vCard）的二维码，并自定义背景色和前景色。
+    description: 生成并下载用于联系信息（vCard）的二维码，并自定义背景色和前景色。
     texts:
       label-full-name: 全名
       placeholder-john-doe: 约翰·多伊
@@ -4834,8 +4814,7 @@ tools:
       state-or-province-name: 州或省份名称
   chmod-calculator:
     title: Chmod 计算器
-    description: >-
-      使用此在线 chmod 计算器计算您的 chmod 权限和命令。
+    description: 使用此在线 chmod 计算器计算您的 chmod 权限和命令。
     texts:
       message-invalid-octal-permission-string: 无效的八进制权限字符串
       message-invalid-symbolic-permission-string: 无效的符号权限字符串
@@ -4879,8 +4858,7 @@ tools:
         invalid-label-tolowercase-format: 无效的 {0} 格式。
   password-strength-analyser:
     title: 密码强度分析器
-    description: >-
-      使用此仅在客户端运行的密码强度分析器和破解时间估算工具，了解您的密码强度。
+    description: 使用此仅在客户端运行的密码强度分析器和破解时间估算工具，了解您的密码强度。
     texts:
       label-password-length: '密码长度：'
       label-entropy: '熵：'
@@ -4917,8 +4895,7 @@ tools:
         second: 秒
   multi-link-downloader:
     title: 多链接下载器
-    description: >-
-      该工具将异步将提供的链接内容合并为一个 zip 文件供您下载。（需要网络连接）
+    description: 该工具将异步将提供的链接内容合并为一个 zip 文件供您下载。（需要网络连接）
     texts:
       placeholder-add-links-separated-by-new-lines: 添加链接（每行一个）...
       tag-start-download: 开始下载
@@ -4927,10 +4904,10 @@ tools:
       text:
         failed-to-fetch-linkurl-0: 无法获取 {0}
         failed-to-fetch-linkurl: 无法获取 {0}
+    externalAccess: 此工具仅在你的浏览器中下载所提供的网址。
   mic-tester:
     title: 麦克风测试器
-    description: >-
-      重新播放并可视化来自麦克风的声音，附加一秒延迟
+    description: 重新播放并可视化来自麦克风的声音，附加一秒延迟
     start-button-text: 开始重新播放麦克风
     stop-button-text: 停止重新播放麦克风
     service:
@@ -4970,8 +4947,7 @@ tools:
     username: 用户名
   ies-lighting-guidelines:
     title: IES 照明指南
-    description: >-
-      在照明工程学会 (IES) 的当前照度推荐中搜索。
+    description: 在照明工程学会 (IES) 的当前照度推荐中搜索。
     texts:
       placeholder-search-ies-recommendation-by-industry-or-application: 按行业或应用搜索 IES 推荐
       tag-individual-applications-will-determine-exact-foot-candle-levels-please-refer-to-the: >-
@@ -5164,8 +5140,7 @@ tools:
       label-subject: 主题
   user-agent-parser:
     title: User-agent 解析器
-    description: >-
-      检测并解析用户代理字符串中的浏览器、引擎、操作系统、CPU 和设备类型/型号。
+    description: 检测并解析用户代理字符串中的浏览器、引擎、操作系统、CPU 和设备类型/型号。
     texts:
       label-name: 名称
       label-version: 版本
@@ -5299,8 +5274,7 @@ tools:
         md5-does-not-currently-support-non-ascii-characters: MD5 当前不支持非 ASCII 字符
   iban-validator-and-parser:
     title: IBAN 验证器和解析器
-    description: >-
-      验证并解析 IBAN 号码。检查 IBAN 是否有效，并获取国家、BBAN、是否为 QR-IBAN 以及 IBAN 友好格式。
+    description: 验证并解析 IBAN 号码。检查 IBAN 是否有效，并获取国家、BBAN、是否为 QR-IBAN 以及 IBAN 友好格式。
     texts:
       label-is-iban-valid: IBAN 是否有效？
       label-iban-errors: IBAN 错误
@@ -5333,6 +5307,8 @@ tools:
       label-merged-ical: 已合并的 ICAL
       tag-delete: 删除
       tag-merge-ical-files: 合并 iCal 文件
+      file-to-merge-file-name: "要合并的文件：{0}"
+      download-merged-ical: 下载合并后的iCal文件
     service:
       text:
         no-icals-parsed-successfully: 未成功解析任何 iCal 文件
@@ -5358,7 +5334,7 @@ tools:
       tag-custom: '自定义：'
     model:
       text:
-        invalid-digit-digit-for-base-finalfrombase: 无效数字 "{0}" 对于基数 {1}。
+        invalid-digit-digit-for-base-finalfrombase: 无效数字"{0}"（针对进制{1}）
   menu-bar:
     text:
       fix-tables: 修复表格
@@ -5387,20 +5363,26 @@ tools:
       blockquote: 引用块
       code-block: 代码块
       ordered-list: 有序列表
-      bullet-list: 项目符号列表
-      heading-4: 标题 4
-      heading-3: 标题 3
-      heading-2: 标题 2
-      heading-1: 标题 1
+      bullet-list: 无序列表
+      heading-4: 标题4
+      heading-3: 标题3
+      heading-2: 标题2
+      heading-1: 标题1
       inline-code: 行内代码
       strike: 删除线
+      heading-5: 标题5
+      text-left: 左对齐
+      text-center: 居中对齐
+      text-right: 右对齐
+      text-justify: 两端对齐
+      clear-align: 清晰的排列
   unicode-formatter:
     title: Unicode 格式化工具
     description: 使用 Unicode 字体格式化文本
     texts:
-      text-formatted-text-copied-to-the-clipboard: 已复制格式化文本到剪贴板
-      label-fonts: '字体：'
-      title-normal: 普通
+      text-formatted-text-copied-to-the-clipboard: 格式化后的文本已复制到剪贴板
+      label-fonts: 字体：
+      title-normal: 常规
       title-monospace: 等宽
       title-math-sans: 数学无衬线
       title-sans-bold-italic: 无衬线粗斜体
@@ -5409,10 +5391,10 @@ tools:
       title-serif-bold-italic: 衬线粗斜体
       title-double-underline: 双下划线
       title-short-strikethrough: 短删除线
-      title-math-double-struck: 数学双线体
+      title-math-double-struck: 数学双线
       title-fullwidth: 全角
-      title-math-fraktur: 数学 Fraktur
-      title-math-fraktur-bold: 数学 Fraktur 粗体
+      title-math-fraktur: 数学花体
+      title-math-fraktur-bold: 数学粗花体
       title-script: 手写体
       title-bold-script: 粗体手写体
       title-circled: 带圈
@@ -5461,8 +5443,7 @@ tools:
       title-bold: 粗体
   hex-converter:
     title: 十六进制编码器/解码器
-    description: >-
-      对十六进制缓冲区进行编码和解码，转换为数字（位、字节序、符号或浮点数或字符）以及结构
+    description: 对十六进制缓冲区进行编码和解码，转换为数字（位、字节序、符号或浮点数或字符）以及结构
     texts:
       message-struct-definition-is-not-a-valid-json: 结构定义不是有效的 JSON
       label-decimal: 十进制
@@ -5575,8 +5556,7 @@ tools:
       click-to-copy-emojiinfo-unicode: '点击复制：{0}'
   emoji-picker:
     title: 表情符号选择器
-    description: >-
-      轻松复制粘贴表情符号，并获取每个表情符号的 Unicode 和代码点值。
+    description: 轻松复制粘贴表情符号，并获取每个表情符号的 Unicode 和代码点值。
     texts:
       title-this-emoji-might-not-display-correctly-on-your-system: 此表情符号在您的系统上可能无法正确显示
       tag-️: ⚠️
@@ -5592,6 +5572,7 @@ tools:
     layout:
       text:
         made-with-npmpackages-join-n: 使用 {0}\n
+        runs-entirely-in-your-browser-no-external-requests: 完全在浏览器中运行。无需外部请求。
   json-viewer:
     texts:
       label-sort-keys: '键排序 :'
@@ -5605,6 +5586,7 @@ tools:
       label-json-schema: 'JSON schema:'
       placeholder-paste-your-json-schema-here: 在此粘贴您的 JSON Schema...
       title-schema-validation-errors: 架构验证错误
+      label-unescape-json-string: "反转义JSON字符串："
     text:
       provided-json-is-not-valid: 提供的 JSON 无效。
       try-again-with-repairjsonlabel: 使用 "{0}" 重试
@@ -5916,8 +5898,7 @@ tools:
       label-typical-storage-location: '典型存储位置：'
   json-flatten-nestify:
     title: JSON 扁平化/展开工具
-    description: >-
-      将 JSON 内容展开或折叠/反折叠（例如，{'{'}a:{'{'}b:1{'}'}{'}'} 与 {'{'}"a.b":1{'}'}）
+    description: 将 JSON 内容展开或折叠/反折叠（例如，{'{'}a:{'{'}b:1{'}'}{'}'} 与 {'{'}"a.b":1{'}'}）
     texts:
       message-provided-json-is-not-valid: 提供的 JSON 无效
       label-mode: 模式
@@ -6003,8 +5984,7 @@ tools:
       生成随机数字（十进制、十六进制）。通过排除字符，可生成其他进制的数字。
   charset-detector:
     title: 文本字符集检测/解码器
-    description: >-
-      检测文本可能的字符集并允许使用每种检测到的编码进行解码
+    description: 检测文本可能的字符集并允许使用每种检测到的编码进行解码
     texts:
       title-input: 输入
       label-file: 文件
@@ -6026,6 +6006,9 @@ tools:
       label-django-secret-key: 'Django 密钥：'
       tag-copy: 复制
       tag-regenerate: 重新生成
+    service:
+      texts:
+        generating-range-is-too-large: 生成范围过大
   dnsbl-checker:
     title: DNSBL 检查器
     description: 检查给定 IP 是否在已知 DNS 黑名单服务器中（垃圾邮件拦截）
@@ -6038,6 +6021,7 @@ tools:
       tag-want-to-understand-why-an-ip-might-be-blacklisted-check-out: 想了解为何 IP 可能被列入黑名单吗？查看
       tag-this-dnsbl-explanation-and-removal-guide: 此 DNSBL 解释及移除指南
       tag-: 。
+    externalAccess: 该工具会检查指定的互联网协议地址，并通过https://cloudflare-dns.com/dns-query这个地址将其发送至域名系统黑名单进行核验。
   docker-compose-memo:
     title: Docker Compose 速查表
     description: Docker Compose 格式速查表
@@ -6070,6 +6054,7 @@ tools:
       title-html-head-tags: 📄 HTML 头部标签
       tag-upload-png-image: 上传 PNG 图片
       tag-download-zip: 📦 下载 ZIP
+      invalid-png-file: 无效的PNG文件！
   font-compare:
     title: 字体比较
     description: 比较给定文本的字体
@@ -6154,7 +6139,13 @@ tools:
       placeholder-font-style: 字形样式
       label-fallback: '后备：'
       placeholder-fallback-font: 后备字体
-      tag-defineprops: defineProps
+      tag-defineprops: 定义属性
+    text:
+      by-font-name: 按字体名称
+      by-font-url: 通过字体URL
+      by-font-file: 按字体文件
+      by-inline-css: 通过内联CSS
+      by-css-url: 通过CSS地址
   gpt-token-encoder:
     title: GPT 令牌 编码器/解码器
     description: 将文本编码为 GPT 令牌，并将 GPT 令牌解码回文本
@@ -6170,8 +6161,7 @@ tools:
       label-decoded-text: 已解码文本
   image-color-inverter:
     title: 图像颜色反转器
-    description: >-
-      反转图像颜色以创建负片效果。上传任意图像，即可瞬间获得颜色反转的版本。
+    description: 反转图像颜色以创建负片效果。上传任意图像，即可瞬间获得颜色反转的版本。
     texts:
       title-drag-and-drop-an-image-here-or-click-to-select: 将图像拖放到此处，或点击选择
       label-original-image: 原始图像
@@ -6190,6 +6180,10 @@ tools:
       tag-original-image: 原始图像
       tag-inverted-image: 反转图像
       tag-clear-upload-new: 清除并上传新图像
+    service:
+      texts:
+        file-must-be-an-image: 文件必须为图片格式
+        failed-to-process-image-err: "处理图片失败："
   image-comparer:
     title: 图像比较器
     description: 用于可视化比较图像的工具
@@ -6204,6 +6198,9 @@ tools:
       tag-compare: 比较
       tag-upload-left: 上传左侧
       tag-upload-right: 上传右侧
+    text:
+      compare-by-url: 按网址对比
+      compare-by-upload: 上传对比
   logrotate-generator:
     title: Apache LogRotate 生成器
     description: 生成 Apache .log 轮转配置
@@ -6303,16 +6300,14 @@ tools:
       label-prettified-markdown: 已美化的 Markdown
   markdown-to-docx:
     title: Markdown 转 DOCX
-    description: >-
-      将 Markdown 文档转换为 Word/DOCX 格式，提供实时预览和自定义样式支持。
+    description: 将 Markdown 文档转换为 Word/DOCX 格式，提供实时预览和自定义样式支持。
     texts:
       label-your-markdown-to-convert: '要转换的 Markdown：'
       placeholder-put-your-markdown-content-here: 在此放入您的 Markdown 内容...
       tag-convert-to-docx-word: 转换为 DOCX/Word
   middle-endian-converter:
     title: 中序（Middle-Endian）转换器
-    description: >-
-      将字节从中序（Middle-Endian）转换为小端或大端，支持指定的位数精度和中序类型
+    description: 将字节从中序（Middle-Endian）转换为小端或大端，支持指定的位数精度和中序类型
     texts:
       label-16-bit: 16 位
       label-32-bit: 32 位
@@ -6331,6 +6326,15 @@ tools:
       label-decimal: '十进制：'
       label-octal: '八进制：'
       label-hexadecimal: '十六进制：'
+    service:
+      texts:
+        invalid-hex-input-only-0-9-and-a-f-allowed: 无效的十六进制输入。仅允许0-9和A-F。
+        invalid-1: 无效
+        invalid-0: 无效
+        invalid: 无效
+        unsupported-middle-endian-format: 不支持中序格式。
+        failed-to-parse-bytes: 解析字节失败。
+        input-must-be-bytecount-2-hex-characters-for-bitlength-bit: 输入必须为 {0} 个十六进制字符，对应 {1} 位。
   mttdl-calculator:
     title: RAID 可靠性计算器
     description: 使用广为人知的 MTTDL 方法计算存储系统的可靠性
@@ -6403,8 +6407,7 @@ tools:
         在给定时间段（例如 5 年）内 RAID 系统发生数据丢失的概率。通过 MTTDL 与指数失效模型计算得出。
   pack-files-for-ai:
     title: 为 AI 打包文件
-    description: >-
-      将代码源文件目录打包为单个 AI 可解析的格式（如 repomix）
+    description: 将代码源文件目录打包为单个 AI 可解析的格式（如 repomix）
     texts:
       title-repomix-like-ai-pack-generator: 类似 Repomix 的 AI 打包生成器
       label-directory-structure: '目录结构：'
@@ -6448,6 +6451,11 @@ tools:
       tag-convert: 转换
       tag-axial: 轴向
       tag-radial: 径向
+    text:
+      bands-notation: Bands → Notation
+      notation-bands: Notation → Bands
+      number-notation: Number → Notation
+      notation-number: Notation → Number
   sed-command-generator:
     title: Sed 命令生成器
     description: 生成 Unix sed 命令
@@ -6595,10 +6603,10 @@ tools:
       placeholder-to: 目标语言
       placeholder-translation-will-appear-here: 翻译将在此显示...
       tag-translate: 翻译
+    externalAccess: 该工具会从https://huggingface.co/ 下载翻译模型（Xenova/opus-mt-[源语言]-[目标语言]）
   unicode-to-gsm7:
     title: Unicode 转 GSM-7
-    description: >-
-      将 Unicode 文本编码为 SMS GSM-7 编码并显示相关的 SMS 发送信息
+    description: 将 Unicode 文本编码为 SMS GSM-7 编码并显示相关的 SMS 发送信息
     texts:
       input-label-your-text-to-encode-to-gsm-7: 要编码为 GSM-7 的文本
       input-placeholder-put-your-text-here: 在此输入文本...
@@ -6611,8 +6619,7 @@ tools:
       label-non-gsm-7-characters: '非 GSM-7 字符：'
   which-day:
     title: 是哪一天？
-    description: >-
-      给定日期和月份以及年份范围，列出该日期对应的所有星期几
+    description: 给定日期和月份以及年份范围，列出该日期对应的所有星期几
     texts:
       label-day-in-month: '月份中的日期：'
       label-month: '月份：'
@@ -6823,6 +6830,9 @@ tools:
       title-mw-to-dbm: mW 转 dBm
       label-mw-value: 'mW 值：'
       label-corresponding-dbm-value: '对应的 dBm 值：'
+    service:
+      texts:
+        power-in-milliwatts-must-be-greater-than-0: 功率（毫瓦）必须大于 0
   diceware-generator:
     title: Diceware 密码生成器
     description: 使用 Diceware 方法生成随机密码
@@ -6839,10 +6849,10 @@ tools:
       placeholder-diceware-passwords: Diceware 密码…
       tag-copy: 复制
       tag-refresh: 刷新
+      label-russian: 俄语
   gtin-validator:
     title: GTIN 验证器
-    description: >-
-      验证并显示关于 GTIN（全球贸易标识号，前称 EAN 编号）、UPC 以及其他产品代码格式的信息
+    description: 验证并显示关于 GTIN（全球贸易标识号，前称 EAN 编号）、UPC 以及其他产品代码格式的信息
     texts:
       placeholder-enter-gtin-e-g-4006381333931: 输入 GTIN（例如，4006381333931）
       label-gtin: 'GTIN：'
@@ -6859,6 +6869,7 @@ tools:
       label-domain-to-check: '要检查的域名：'
       placeholder-enter-a-domain-e-g-example-com: 输入域名（例如 example.com）
       tag-lookup-whois: 查询 WHOIS
+    externalAccess: 该工具会打开一个新标签页，跳转至域名查询地址https://www.iana.org/whois
   keyboard-layout-converter:
     title: 键盘布局转换器
     description: 将按键序列从一种键盘布局转换为另一种
@@ -6907,21 +6918,21 @@ tools:
       tag-digit-0-no-grouping: (数字 0 = 不分组)
       tag-digit-0-no-row: (数字 0 = 不分行)
   toon-to-json:
-    title: TOON 转 JSON
-    description: 将TOON表示转换为供LLM使用的JSON对象
     texts:
       message-provided-json-is-not-valid: 提供的TOON无效
       output-label-json-version: '您的TOON内容的JSON版本：'
       input-placeholder-paste-your-raw-toon-here: 在此粘贴您的原始TOON内容...
       input-label-your-raw-toon: '您的原始TOON内容：'
+    title: TOON 转 JSON
+    description: 将TOON表示转换为供LLM使用的JSON对象
   json-to-toon:
-    title: JSON 转 TOON
-    description: 将JSON对象转换为TOON表示形式，以供LLM/GPT使用
     texts:
       message-provided-json-is-not-valid: 提供的JSON无效。
       input-placeholder-paste-your-raw-json-here: 在此粘贴您的原始JSON...
       input-label-your-raw-json: '您的原始JSON：'
       output-label-toon-version-of-your-json: '您的JSON的TOON版本：'
+    title: JSON 转 TOON
+    description: 将JSON对象转换为TOON表示形式，以供LLM/GPT使用
   external-link-goto: '要打开此工具，请点击以下链接：'
   argon2-hash:
     title: Argon2 哈希生成器
@@ -6947,8 +6958,7 @@ tools:
       tag-generate: 生成
   binary-calculator:
     title: 二进制计算器
-    description: >-
-      计算两个数字之间的按位/二进制运算（AND、OR、XOR、NOT、移位）
+    description: 计算两个数字之间的按位/二进制运算（AND、OR、XOR、NOT、移位）
     texts:
       label-decimal: 十进制
       label-hexadecimal: '十六进制：'
@@ -7014,8 +7024,7 @@ tools:
       title-extract-env: 提取 .env
   emv-tlv-decoder:
     title: EMV TLV解码器
-    description: >-
-      解码EMV TLV（标签-长度-值）数据及其具有扩展含义的各个标签（如TVR（标签95）、终端能力（标签9F33）等）
+    description: 解码EMV TLV（标签-长度-值）数据及其具有扩展含义的各个标签（如TVR（标签95）、终端能力（标签9F33）等）
     texts:
       tag-: —
       tag-tag: 标签
@@ -7051,6 +7060,9 @@ tools:
       label-signature: 签名
       label-arguments: 参数
       title-structured-output-json: 结构化输出JSON
+    service:
+      texts:
+        transaction-data-must-start-with-0x: 交易数据必须以0x开头
   file-splitter:
     title: 文件分割器
     description: 按节点组或行组分割JSON、XML或文本文件
@@ -7066,16 +7078,17 @@ tools:
       tag-process-chunks: 处理块
       tag-download-all: 全部下载
       tag-download: 下载
+    service:
+      texts:
+        unsupported-format-or-invalid-content: 不支持的格式或无效内容
   gitignore-generator:
     title: GitIgnore生成器
     description: 为一组常见模板生成.gitignore
     texts:
       placeholder-select-templates-e-g-node-python-vue: 选择模板（例如 node、python、vue）
       title-gitignore: .gitignore
-      tag-const-availabletemplates-ref: const availableTemplates = ref
-      tag-this-tool-use: '此工具使用：'
-      tag-https-www-toptal-com-developers-gitignore: https://www.toptal.com/developers/gitignore
       tag-generate: 生成
+    externalAccess: 该工具通过GitHub接口从https://github.com/github/gitignore下载.gitignore文件
   i-and-l-checker:
     title: I和L检查器
     description: 检查密码或文本，并高亮显示1、l、I、0、O
@@ -7176,6 +7189,8 @@ tools:
       title-drag-and-drop-a-pdf-file-here-or-click-to-select-a-file: 在此处拖放PDF文件，或点击选择文件
       title-logs: 日志
       label-ghostscript: Ghostscript
+      process-run-failed: 流程运行失败
+      an-error-occured-processing: 处理时发生错误
   serial-console:
     title: 串口控制台
     description: 连接、读取并向串口发送消息
@@ -7217,19 +7232,940 @@ tools:
       tag-split-secret: 拆分秘密
       tag-recombine: 重组
   short-urls-expander:
-    title: 短网址扩展器
-    description: 将短网址扩展为目标完整网址
+    title: 短 URL 展开器
+    description: 将短链接展开为目标完整链接
     texts:
-      label-short-urls-to-expand: '待扩展的短网址：'
-      placeholder-enter-short-urls-one-per-line: 输入短网址（每行一个）
+      label-short-urls-to-expand: "要展开的短 URL："
+      placeholder-enter-short-urls-one-per-line: 输入短 URL（每行一个）
       title-result: 结果
-      tag-this-tool-make-use-of-https-cors-anywhere-com-to-bypass-cors-this-is-a-community-driven-server: >-
-        本工具使用 https://cors-anywhere.com 来绕过跨域资源共享（CORS）限制。这是一个社区驱动的服务器。
-      tag-see-here-for-more-information: 查看此处了解更多信息
-      tag-expand-all: 全部扩展
-      tag-download-resuls-as-csv: 将结果下载为CSV文件
-      tag-short-url: 短网址
-      tag-expanded-url: 扩展后的网址
+      tag-expand-all: 全部展开
+      tag-download-resuls-as-csv: 下载结果为 CSV
+      tag-short-url: 短 URL
+      tag-expanded-url: 展开后的 URL
       tag-link: 链接
       tag-status: 状态
-      tag-open-url: 打开网址
+      tag-open-url: 打开 URL
+      cors-anywhere-configuration: CORS Anywhere 配置
+      self-hosted-cors-anywhere: 自行托管的 CORS Anywhere
+      this-tools-requires-a-cors-anywhere-instance-to-bypass-cors-policy-you-can-use-a: 此工具需要一个 CORS Anywhere 实例来绕过 CORS 策略。您可以使用一个
+      put-your-cors-anywhere-instance-url: 输入您的 CORS Anywhere 实例 URL……
+      cors-anywhere-instance-url: "CORS Anywhere 实例 URL："
+      expanded-url: 展开的 URL
+      short-url: 短 URL
+      failed-to-expand-some-urls: 部分 URL 展开失败。
+      failed: 失败
+      no-redirect: 未重定向
+      expanded: 已展开
+    externalAccess: 此工具使用 CORS Anywhere 实例（默认 https://cors.outils-libre.org）发送 HEAD HTTP 请求（不下载数据），以获取 HTTP 头信息和重定向
+  copy:
+    text:
+      copied-to-the-clipboard: 已复制到剪贴板
+  arpa-decoder:
+    title: ARPA 解码器
+    description: 解码 IPv4/6 ARPA 地址或 PTR 记录
+    texts:
+      label-arpa-address: "ARPA 地址："
+      placeholder-e-g-10-1-168-192-in-addr-arpa-or-xxxx-ip6-arpa: 例如 10.1.168.192.in-addr.arpa. 或 xxxx.ip6.arpa.
+  database-builder:
+    title: 数据库创建构建器
+    description: 为各种数据库构建 SQL CREATE DATABASE 查询
+    texts:
+      label-mysql: MySQL
+      label-postgresql: PostgreSQL
+      label-sql-server: SQL Server
+      label-oracle: Oracle
+      label-sqlite: SQLite
+      label-database-type: "数据库类型："
+      label-database-name: "数据库名称："
+      placeholder-test: 测试
+      label-server-address: "服务器地址："
+      placeholder-127-0-0-1: 127.0.0.1
+      label-account: "账号："
+      label-password-leave-empty-to-generate: "密码（留空则自动生成）："
+      placeholder-leave-empty-for-random: 留空则随机生成
+      label-permissions-all-privileges-if-none-selected: "权限（未选择则为全部权限）："
+      title-generated-sql-instructions: "生成的SQL语句："
+      tag-select: 查询
+      tag-insert: 插入
+      tag-update: 更新
+      tag-delete: 删除
+      tag-create: 创建
+      tag-drop: 删除
+      tag-alter: 修改
+      tag-index: 索引
+      tag-execute: 执行
+      tag-references: 引用
+      tag-trigger: 触发器
+      tag-usage: 用法
+      tag-replication-client: 复制客户端
+      tag-replication-slave: 复制从属
+      tag-generate-sql-instructions: 生成SQL语句
+  database-table-generator:
+    title: 数据库表生成器
+    description: 为常见数据库生成 SQL CREATE TABLE 语句
+    texts:
+      label-mysql: MySQL
+      label-postgresql: PostgreSQL
+      label-sqlite: SQLite
+      label-sql-server: SQL Server
+      label-database-type: "数据库类型："
+      label-database-name: "数据库名称："
+      placeholder-enter-database-name: 输入数据库名称
+      placeholder-table-name: 表名
+      placeholder-column-name: 列名
+      placeholder-default-value: 默认值
+      title-generated-sql: 生成的 SQL
+      tag-remove-table: 删除表
+      tag-add-column: 添加列
+      tag-nullable: 可为空
+      tag-pk: 主键
+      tag-unique: 唯一
+      tag-autoinc: 自动递增
+      tag-add-table: 添加表
+      tag-generate-sql: 生成 SQL
+  gitattributes-generator:
+    title: Gitattributes 生成器
+    description: 从 https://github.com/alexkaratarakis/gitattributes 的常用配置生成 .gitattributes
+    texts:
+      label-gitattributes-templates: "Gitattributes 模板："
+      placeholder-select-templates: 选择模板
+      title-preview: 预览
+      tag-fetch-generate: 获取并生成
+    externalAccess: 此工具使用 Github API 从 https://github.com/gitattributes/gitattributes 下载 .gitattributes
+  html-to-xhtml:
+    title: HTML 转 XHTML
+    description: 将 HTML 转换为严格的 XHTML（可解析的 XML，自闭合标签...）
+    texts:
+      placeholder-your-html-content: 你的 HTML 内容...
+      label-your-html-to-convert-to-xhtml: "要转换为 XHTML 的 HTML："
+      label-add-xhtml-xmlns: "添加 XHTML xmlns："
+      label-indentation: "缩进："
+      title-output-xhtml: "输出 XHTML："
+  javascript-obfuscator:
+    title: Javascript 混淆器
+    description: 使用 base64 或 rot13 编码的 Javascript 代码混淆器
+    texts:
+      label-base-64: Base 64
+      label-rot-13: ROT 13
+      label-obfuscator-io: Obfuscator.io
+      label-your-javascript-code-to-obfuscate: "要混淆的 JavaScript 代码："
+      placeholder-enter-your-javascript-code-here: // 在此输入您的 JavaScript 代码
+      label-obfuscation-method: "混淆方法："
+      title-obfuscted-js-code: 混淆的 JS 代码
+  online-wiktionary:
+    title: 在线词典
+    description: 在 Wiktionary 中搜索单词
+    texts:
+      label-english: 英语
+      label-french: 法语
+      label-german: 德语
+      label-spanish: 西班牙语
+      label-italian: 意大利语
+      label-russian: 俄语
+      label-chinese: 中文
+      label-japanese: 日语
+      label-arabic: 阿拉伯语
+      placeholder-enter-a-word: 输入单词…
+      placeholder-select-a-language: 选择语言
+      tag-search-on-wiktionary: 在 Wiktionary 中搜索
+      tag-enter-a-word-and-select-a-language-to-load-wiktionary: 输入单词并选择语言以加载 Wiktionary
+    externalAccess: 此工具在 iframe 中通过 https://www.wiktionary.org/（按语言）搜索单词定义。
+  ptr-dns-generator:
+    title: PTR DNS 生成器
+    description: 生成 DNS PTR 记录
+    texts:
+      label-ip-address-ipv4-or-ipv6: "IP 地址（IPv4 或 IPv6）："
+      placeholder-e-g-192-168-1-10-or-2001-db8-1: 例如 192.168.1.10 或 2001:db8::1
+  screen-memo:
+    title: Screen 命令速查表
+    description: Screen Linux 命令备忘
+  svg-previewer:
+    title: SVG 预览器
+    description: 预览 SVG 文件
+    texts:
+      title-upload-a-svg-file: 上传 SVG 文件
+      title-raw-svg-content: "原始 SVG 内容："
+      placeholder-paste-raw-svg-content-here: 在此粘贴原始 SVG 内容...
+      label-select-background: "选择背景："
+      title-svg-preview: SVG 预览
+      tag-const-svgcontent-ref: const svgContent = ref
+  tmux-memo:
+    title: Tmux 命令速查表
+    description: Tmux Linux 命令备忘
+  trigo-viewer:
+    title: 三角函数/方程曲线可视化
+    description: 根据 x 可视化三角函数或方程
+    texts:
+      text-degrees: 角度 (°)
+      text-value: 值
+      placeholder-enter-equation-in-terms-of-x-e-g-sin-x-cos-2-x: 输入关于 x 的方程（例如 sin(x) + cos(2*x)）
+      label-equation-in-term-of-x: "关于 x 的方程："
+      label-domain: "定义域："
+      tag-reset-zoom: 重置缩放
+  zellij-memo:
+    title: Zellij 命令速查表
+    description: Zellij Linux 命令备忘
+  dead-pixel:
+    texts:
+      title-dead-pixel-iframe: 坏点检测内嵌窗口
+      tag-: "`;"
+      tag-keyboard-shortcuts: "键盘快捷键："
+      tag-arrow-right-arrow-down-space: 右箭头，向下箭头，空格
+      tag-next-color: ": 下一个颜色"
+      tag-arrow-left-arrow-up: 左箭头，向上箭头
+      tag-previous-color: ": 上一个颜色"
+      tag-esc: ESC
+      tag-exit-dead-pixel-mode: ": 退出坏点检测模式"
+      tag-start-dead-pixel: 启动坏点检测
+    title: 屏幕坏点检测工具
+    description: 用于检测屏幕像素是否存在坏点的工具。
+  UnitsConverter:
+    texts:
+      exclude-si-prefixes: 排除SI前缀
+    text:
+      si-converter: 前往SI前缀转换器
+  geo-coordinates-converter:
+    title: 地理坐标转换器
+    description: 在WGS84、GCJ02、BD09和CGCS2000之间转换地理坐标
+    texts:
+      label-latitude: "纬度:"
+      label-longitude: "经度:"
+      label-csv-content-lng-lat: "CSV 内容（经度，纬度）:"
+      placeholder-put-your-longitude-and-latitude-in-this-order-csv-to-convert: 将经度和纬度（按此顺序）CSV 放入以进行转换...
+      title-conversion-results: 转换结果
+      title-notes: 备注
+      tag-wgs84-wsg1984-epsg4326-global-standard: WGS84/WSG1984/EPSG4326（全球标准）
+      tag-gcj02-amap-gaode-qq-maps: GCJ02/AMap（高德, QQ地图）
+      tag-bd09-bd09ll-bmap-baidu-maps: BD09/BD09LL/BMap（百度地图）
+      tag-bd09mc-bd09meter-baidu-meter: BD09MC/BD09Meter（百度米）
+      tag-cgcs2000-china-geodetic-system-2000: CGCS2000（中国大地坐标系2000）
+      tag-webmercator-epsg3857-epsg900913: WebMercator/EPSG3857/EPSG900913
+      tag-convert-single: 单个转换
+      tag-convert-batch: 批量转换
+      tag-longitude-east-is-positive-west-is-negative: "经度：东为正，西为负。"
+      tag-latitude-north-is-positive-south-is-negative: "纬度：北为正，南为负。"
+    text:
+      coordinate-system: 坐标系
+      decimal-format-lng-lat: 十进制格式（经度，纬度）
+      dms-format-lng-lat: 度分秒格式（经度，纬度）
+      download-results-csv: 下载结果CSV
+      batch-lat-lng-converter: 批量经纬度转换器
+      single-lat-lng-converter: 单个经纬度转换器
+  si-prefixes-converter:
+    title: SI前缀转换器
+    description: 在公制前缀之间转换
+    texts:
+      label-quetta-q: quetta (Q)
+      label-ronna-r: ronna (R)
+      label-yotta-y: yotta (Y)
+      label-zetta-z: zetta (Z)
+      label-exa-e: exa (E)
+      label-peta-p: peta (P)
+      label-tera-t: tera (T)
+      label-giga-g: giga (G)
+      label-mega-m: mega (M)
+      label-kilo-k: kilo (k)
+      label-hecto-h: hecto (h)
+      label-deca-da: deca (da)
+      label-unit: 单位
+      label-deci-d: deci (d)
+      label-centi-c: centi (c)
+      label-milli-m: milli (m)
+      label-micro-µ: micro (µ)
+      label-nano-n: nano (n)
+      label-pico-p: pico (p)
+      label-femto-f: femto (f)
+      label-atto-a: atto (a)
+      label-zepto-z: zepto (z)
+      label-yocto-y: yocto (y)
+      label-ronto-r: ronto (r)
+      label-quecto-q: quecto (q)
+      label-auto: 自动
+      label-fixed: 固定
+      label-exponential: 指数
+      label-convert: "转换："
+      label-mode: "模式："
+      label-decimals: "小数位数："
+      label-thousand-separators: "千位分隔符："
+      label-to: "至："
+      tag-: =
+  acceleration-converter:
+    title: 加速度转换器
+    description: 在加速度单位之间转换数值
+    externalAccess: "null"
+  docker-image-downloader:
+    title: Docker 镜像下载器
+    description: 下载给定 Docker 注册表、架构和镜像名称的 Docker 镜像
+    externalAccess: 此工具从注册表下载 Docker 镜像（使用您提供的用户名、密码或令牌）
+    texts:
+      label-linux-amd64: linux/amd64
+      label-linux-arm64: linux/arm64
+      label-linux-arm-v7: linux/arm/v7
+      label-linux-arm-v6: linux/arm/v6
+      label-linux-ppc64le: linux/ppc64le
+      label-linux-s390x: linux/s390x
+      label-windows-amd64: windows/amd64
+      label-docker-image-download-service-url: "Docker 镜像下载服务 URL："
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: "基本认证："
+      placeholder-username-password: username:password
+      label-docker-image: "Docker 镜像："
+      placeholder-alpine-latest: alpine:latest
+      label-platform: "Platform:"
+      label-registry-url: "Registry Url:"
+      placeholder-myregistry-com-optional: myregistry.com（可选）
+      label-username: "用户名："
+      placeholder-optional: 可选
+      label-password: "密码："
+      title-error: 错误
+      tag-docker-image-download-service-configuration-self-hosted: Docker 镜像下载服务配置（自托管）
+      tag-you-must-self-host-docker-image-download-service-see: "您必须自行托管 Docker 镜像下载服务。参见："
+      tag-docker-image-download-service-install: Docker 镜像下载服务安装
+      tag-download-image: 下载镜像
+  epub-to-markdown:
+    title: Epub 转 Markdown
+    description: 将 EPUB 文件转换为完整的 Markdown 内容
+    externalAccess: "null"
+    texts:
+      label-markdown: Markdown
+      label-plain-text: 纯文本
+      label-format: "格式："
+      title-drop-an-epub-file-here-or-click-to-select-a-file: 将 EPUB 文件拖放到此处，或点击选择文件
+      title-metadata: 元数据
+      label-title: "标题："
+      label-creator: "创建者："
+      label-language: "语言："
+      label-publisher: "出版商："
+      label-identifier: "标识符："
+      label-rights: "版权："
+      label-description: "描述："
+      title-epub-content: Epub 内容
+  explainshell:
+    title: 解释 Shell 命令
+    description: 使用 explainshell.com（或自行托管）解释 Shell 命令
+    externalAccess: 此工具会调用 https://explainshell.com（除非您自行托管）来解释提供的 Shell 命令。
+    texts:
+      label-custom-explain-shell-url: "自定义 Explain Shell URL："
+      placeholder-put-your-custom-explainshell-url-here: 在此处输入您的自定义 explainshell URL…
+      label-shell-command: "Shell 命令："
+      placeholder-shell-command-to-explain: 要解释的 Shell 命令
+      tag-explain-shell-configuration: Explain Shell 配置
+      tag-you-can-self-host-explain-shell-to-get-total-privacy-see: "您可以自行托管 Explain Shell，以获取完整隐私。参见："
+      tag-local-explain-shell-docker-install: 本地 Explain Shell Docker 安装
+      tag-explain: 解释
+      tag-enter-a-shell-command-to-explain: 输入要解释的 Shell 命令
+  frequency-converter:
+    title: 频率转换器
+    description: 在频率单位之间转换数值
+    externalAccess: "null"
+  markdown-to-text:
+    title: Markdown 转文本
+    description: 将 Markdown 转换为纯文本
+    externalAccess: "null"
+    texts:
+      label-input-mardown: "输入 Markdown："
+      placeholder-enter-your-markdown-here: 在此输入您的 Markdown…
+      title-output-text: 输出文本
+  rj45-memo:
+    title: RJ45 Cat6 布线速查表
+    description: 完整的 RJ45 Cat6 布线速查表
+    externalAccess: "null"
+  rsvp-reader:
+    title: RSVP 阅读器
+    description: 一种快速连串视觉呈现（RSVP）工具，允许您粘贴文本，并以可配置的每分钟词数（WPM）逐词显示。
+    externalAccess: "null"
+    texts:
+      label-text-to-read: "要阅读的文本："
+      placeholder-paste-or-type-your-text-here: 在此粘贴或输入您的文本…
+      title-drop-an-pdf-epub-or-txt-file-here-or-click-to-select-a-file: 将 PDF、EPUB 或 txt 文件拖放到此处，或点击选择文件
+      label-word-per-minute: "每分钟词数："
+      label-chunk-size: "块大小："
+      label-large-chunk-slowdown: 大块减速（%）
+      title-pauses: 暂停 (%)
+      label-sentence-end: 句子结束
+      label-paragraph-end: 段落结束
+      label-punctuation: 标点符号
+      title-appearance: 外观
+      label-font-size: "字体大小："
+      label-font-color: "字体颜色："
+      label-background: "背景："
+      tag-no-text-to-read-please-input-some-text-in-text-tab: 没有可阅读的文本，请在“文本”选项卡中输入一些文本。
+      tag-play-space: 播放（空格）
+      tag-pause-space: 暂停（空格）
+      tag-back: 后退（←）
+      tag-next: 前进（→）
+      tag-reset: 重置
+      tag-or: "- 或 -"
+      tag-control-playback-and-navigation-without-touching-the-mouse: 在不使用鼠标的情况下控制播放和导航。
+      tag-shortcut: 快捷键
+      tag-action: 操作
+      tag-space: 空格
+      tag-play-pause: 播放/暂停
+      tag-right-arrow: （右箭头）
+      tag-skip-forward-one-chunk: 向前跳过一个块
+      tag-left-arrow: （左箭头）
+      tag-skip-backward-one-chunk: 向后跳过一个块
+      tag-up-arrow: （上箭头）
+      tag-increase-wpm: 增加每分钟单词数
+      tag-down-arrow: （下箭头）
+      tag-decrease-wpm: 降低每分钟单词数
+      tag-home: 主页
+      tag-jump-to-start: 跳转到开始
+      tag-end: 结束
+      tag-jump-to-end: 跳转到结束
+    text:
+      please-provide-some-text-first: 请先提供一些文本。
+      unsupported-file-type: 不支持的文件类型。
+      display: 显示
+      text: 文本
+      settings: 设置
+      keyboard-shortcuts: 键盘快捷键
+      ready: 准备就绪
+      words: 词
+      wpm: 每分钟词数
+  speed-converter:
+    title: 速度转换器
+    description: 在速度单位之间转换数值
+    externalAccess: "null"
+  tab-to-spaces:
+    title: 制表符转空格
+    description: 将制表符转换为多个空格
+    externalAccess: "null"
+    texts:
+      label-spaces-per-tab: 每个制表符的空格数
+      label-convert-only-leading-tabs: 仅转换前导制表符
+      label-normalize-inner-spacing: 标准化内部间距
+      title-input-with-tabs: 输入（带制表符）
+      placeholder-paste-text-with-tabs-here: 在此粘贴带制表符的文本...
+      title-output-with-spaces: 输出（含空格）
+      tag-0x00-chr: = 0x00 && chr
+      tag-0xa0-chr: = 0xA0 && chr
+      tag-0xff61-chr: = 0xFF61 && chr
+      tag-0xf8f1-chr: = 0xF8F1 && chr
+  tcp-udp-port-tester:
+    title: TCP/UDP 端口测试工具
+    description: 允许测试 TCP/UDP（在服务器端使用 WebSocket 代理）
+    externalAccess: 此工具需要服务器端的 WebSocket 服务器 (https://github.com/sharevb/ws-tcp-udp-bridge)
+    texts:
+      label-tcp: TCP
+      label-udp: UDP
+      label-websocket-tcp-udp-bridge-url: "WebSocket TCP/UDP 桥接 URL："
+      placeholder-websocket-url: WebSocket URL
+      label-target: "目标："
+      placeholder-target-ip: 目标 IP
+      placeholder-port: 端口
+      placeholder-protocol: 协议
+      title-logs: 日志
+      title-payload-builder: 负载构建器
+      label-send-text-payload-can-add-r-n: "发送文本负载（可添加 \\r \\n）："
+      placeholder-text-payload: 文本负载
+      label-send-hex-payload: "发送十六进制负载："
+      placeholder-hex-payload-e-g-48656c6c6f: 十六进制负载（例如 48656c6c6f）
+      tag-websocket-tcp-udp-bridge-configuration: WebSocket TCP/UDP 桥接配置
+      tag-to-use-this-tool-you-need-to-host-a-websocket-tcp-udp-bridge-based-on: 要使用此工具，您需要基于以下内容托管一个 WebSocket TCP/UDP 桥接：
+      tag-https-github-com-sharevb-ws-tcp-udp-bridge: https://github.com/sharevb/ws-tcp-udp-bridge
+      tag-connect: 连接
+      tag-disconnect: 断开连接
+      tag-apply-configuration: 应用配置
+      tag-clear-logs: 清除日志
+      tag-send: 发送
+      already-connected: ⚠️ 已经连接
+      connected-to-websocket-bridge: ✅ 已连接到 WebSocket 桥接
+      disconnected: 🔌 已断开
+      no-active-connection: ⚠️ 无活动连接
+      sent-text: "➡️ 已发送文本："
+      configured: ⚙️ 已配置
+      sent-hex: "➡️ 已发送十六进制："
+      disconnecting: "🔻 正在断开连接..."
+      error: "❌ 错误："
+      end: "🛑 结束："
+      text: "📩 文本："
+      binary: "📩 二进制："
+    text:
+      connected: 已连接
+      disconnected: 已断开
+  volume-flow-rate-converter:
+    title: 体积流量转换器
+    description: 在体积流量单位之间转换数值
+    externalAccess: "null"
+  calendar-converter:
+    service:
+      text:
+        sunday: 星期日
+        wednesday: 星期三
+        tuesday: 星期二
+        monday: 星期一
+        thursday: 星期四
+        friday: 星期五
+        saturday: 星期六
+        invalid-year-length-hebrew_year_days-hebcal-0-days: "无效的年份长度：{0} 天。"
+        common-deficient-353-days: 平年亏缺（353 天）
+        common-regular-354-days: 平年常规（354 天）
+        common-complete-355-days: 平年完满（355 天）
+        embolismic-deficient-383-days: 闰年亏缺（383 天）
+        embolismic-regular-384-days: 闰年常规（384 天）
+        embolismic-complete-385-days: 闰年完满（385 天）
+        normal-year: 平年
+        leap-year: 闰年
+    title: 日历转换工具
+    description: 在公历、儒略历、希伯来历、伊斯兰历、波斯历、玛雅历、印度历、法国共和历、ISO‑8601、Unix 时间和 Excel 序列格式之间转换日期和时间
+    externalAccess: null
+    texts:
+      label-january: 一月
+      label-february: 二月
+      label-march: 三月
+      label-april: 四月
+      label-may: 五月
+      label-june: 六月
+      label-july: 七月
+      label-august: 八月
+      label-september: 九月
+      label-october: 十月
+      label-november: 十一月
+      label-december: 十二月
+      label-nisan-נִיסָן: Nisan (נִיסָן)
+      label-iyyar-אִיָּר: Iyyar (אִיָּר)
+      label-sivan-סִיוָן: Sivan (סִיוָן)
+      label-tammuz-תַּמּוּז: Tammuz (תַּמּוּז)
+      label-av-אָב: Av (אָב)
+      label-elul-אֱלוּל: Elul (אֱלוּל)
+      label-tishri-תִּשְׁרֵי: Tishri (תִּשְׁרֵי)
+      label-heshvan-חֶשְׁוָן: Heshvan (חֶשְׁוָן)
+      label-kislev-כִּסְלֵו: Kislev (כִּסְלֵו)
+      label-teveth-טֵבֵת: Teveth (טֵבֵת)
+      label-shevat-שְׁבָט: Shevat (שְׁבָט)
+      label-adar-adar-i-אֲדָר: Adar/Adar I (אֲדָר)
+      label-veadar-adar-ii-אֲדָר-שֵׁנִי: Veadar/Adar II (אֲדָר שֵׁנִי)
+      label-muharram-مُحَرَّم: Muharram (مُحَرَّم)
+      label-safar-صَفَر: Safar (صَفَر)
+      label-rabiʿ-al-awwal-رَبيع-الأوّل: Rabiʿ al‑Awwal (رَبيع الأوّل)
+      label-rabiʿ-ath-thani-رَبيع-الثاني: Rabiʿ ath‑Thani (رَبيع الثاني)
+      label-jumada-al-ula-جُمادى-الأولى: Jumada al‑Ula (جُمادى الأولى)
+      label-jumada-ath-thania-جُمادى-الآخرة: Jumada ath‑Thania (جُمادى الآخرة)
+      label-rajab-رَجَب: Rajab (رَجَب)
+      label-shaʿban-شَعْبان: Shaʿban (شَعْبان)
+      label-ramadan-رَمَضان: Ramadan (رَمَضان)
+      label-shawwal-شَوّال: Shawwal (شَوّال)
+      label-dhu-al-qaʿda-ذو-القَعْدة: Dhu al‑Qaʿda (ذو القَعْدة)
+      label-dhu-al-hijja-ذو-الحِجّة: Dhu al‑Hijja (ذو الحِجّة)
+      label-farvardin-فروردین: Farvardin (فروردین)
+      label-ordibehesht-اردیبهشت: Ordibehesht (اردیبهشت)
+      label-khordad-خرداد: Khordad (خرداد)
+      label-tir-تیر: Tir (تیر)
+      label-mordad-مرداد: Mordad (مرداد)
+      label-shahrivar-شهریور: Shahrivar (شهریور)
+      label-mehr-مهر: Mehr (مهر)
+      label-aban-آبان: Aban (آبان)
+      label-azar-آذر: Azar (آذر)
+      label-dey-دی: Dey (دی)
+      label-bahman-بهمن: Bahman (بهمن)
+      label-esfand-اسفند: Esfand (اسفند)
+      label-caitra-चैत्र: Caitra (चैत्र)
+      label-vaisakha-वैशाख: Vaisakha (वैशाख)
+      label-jyaistha-ज्येष्ठ: Jyaistha (ज्येष्ठ)
+      label-asadha-आषाढ़: Asadha (आषाढ़)
+      label-sravana-श्रावण: Sravana (श्रावण)
+      label-bhadra-भाद्रपद: Bhadra (भाद्रपद)
+      label-asvina-आश्विन: Asvina (आश्विन)
+      label-kartika-कार्तिक: Kartika (कार्तिक)
+      label-agrahayana-अग्रहायण: Agrahayana (अग्रहायण)
+      label-pausa-पौष: Pausa (पौष)
+      label-magha-माघ: Magha (माघ)
+      label-phalguna-फाल्गुन: Phalguna (फाल्गुन)
+      label-vendémiaire: Vendémiaire
+      label-brumaire: Brumaire
+      label-frimaire: Frimaire
+      label-nivôse: Nivôse
+      label-pluviôse: Pluviôse
+      label-ventôse: Ventôse
+      label-germinal: Germinal
+      label-floréal: Floréal
+      label-prairial: Prairial
+      label-messidor: Messidor
+      label-thermidor: Thermidor
+      label-fructidor: Fructidor
+      label-sans-culottides: Sans‑culottides
+      label-i: I
+      label-ii: II
+      label-iii: III
+      label-primidi-1: Primidi (1)
+      label-duodi-2: Duodi (2)
+      label-tridi-3: Tridi (3)
+      label-quartidi-4: Quartidi (4)
+      label-quintidi-5: Quintidi (5)
+      label-sextidi-6: Sextidi (6)
+      label-septidi-7: Septidi (7)
+      label-octidi-8: Octidi (8)
+      label-nonidi-9: Nonidi (9)
+      label-décadi-10: Décadi (10)
+      label-vertu-1: Vertu (1)
+      label-génie-2: Génie (2)
+      label-travail-3: Travail (3)
+      label-opinion-4: Opinion (4)
+      label-récompenses-5: Récompenses (5)
+      label-révolution-6: Révolution (6)
+      tab-gregorian: 公历
+      label-date: 日期
+      label-leap: "闰年:"
+      label-time: "时间:"
+      label-weekday: "星期:"
+      tab-julian-day: Julian Day
+      label-julian-day: "Julian Day:"
+      tab-modified-julian: Modified Julian
+      label-modified-julian-day: "Modified Julian Day:"
+      tab-julian-calendar: Julian Calendar
+      tab-gregorian-serial: Gregorian Serial
+      label-gregorian-serial-day: "Gregorian Serial Day:"
+      tab-hebrew: Hebrew
+      tab-islamic: Islamic
+      tab-persian: Persian
+      tab-persian-algorithmic: Persian Algorithmic
+      tab-mayan: Mayan
+      label-long-count: "Long Count:"
+      label-haab: Haab
+      label-tzolkin: Tzolkin
+      tab-indian-civil: Indian Civil
+      tab-french-republican: French Republican
+      label-day: "Day:"
+      label-month: "Month:"
+      label-décade: "Décade:"
+      label-year: "Year:"
+      tab-iso-8601: ISO‑8601
+      label-day-of-week: "Day of Week:"
+      label-week: "Week:"
+      label-day-of-year: "Day of Year:"
+      tab-unix-time: Unix time()
+      label-unix-time: "Unix time():"
+      tab-excel-1900-windows: Excel 1900 (Windows)
+      label-excel-serial-day-1900: "Excel Serial Day (1900):"
+      tab-excel-1904-macintosh: Excel 1904 (Macintosh)
+      label-excel-serial-day-1904: "Excel Serial Day (1904):"
+      tag-this-is-a-port-of-wonderful: 这是一个精彩的移植
+      tag-fourmilab-ch-calendar-converter: Fourmilab.ch 日历转换器
+      tag-by-john-walker: 作者 John Walker
+      tag-xa0-xa0: "&#xa0;.&#xa0;"
+      tag-update-other-calendars: 更新其他日历
+      tag-today: 今天
+  bech32:
+    title: Bech32 编码/解码器
+    description: 编码/解码/验证 bech32(m)
+    externalAccess: null
+    texts:
+      label-bech32: Bech32
+      label-bech32m: Bech32m
+      tab-decode: 解码
+      label-bech32-m-string: "Bech32(m) 字符串："
+      placeholder-bech32-bech32m-string: Bech32 / Bech32m 字符串
+      label-variant: "变体："
+      label-hrp: "HRP："
+      placeholder-hrp: HRP
+      label-payload: "负载："
+      placeholder-hex-payload: 十六进制负载
+      placeholder-variant: 变体
+      tab-encode: 编码
+      label-encoded-bech32-string: "已编码的 bech32 字符串："
+      placeholder-bech32-string: bech32 字符串
+      tab-batch: 批量
+      label-bech32-strings-one-per-line: "Bech32 字符串（每行一个）："
+      placeholder-one-bech32-string-per-line: 每行一个 Bech32 字符串
+      title-results: 结果
+      tag-auto-detect: 自动检测
+      tag-manual: 手动
+      tag-checksum-only: 仅校验和
+      tag-full-decode: 完整解码
+      tag-checksum-valid: 校验和有效
+      tag-checksum-invalid: 校验和无效
+      tag-encode: 编码
+      tag-convert: 转换
+      tag-export-csv: 导出 CSV
+      invalid-hex-payload: 无效的十六进制负载
+      input: 输入
+      variant: 变体
+      status: 状态
+      hex: 十六进制
+      hrp: HRP
+  docker-pangolin-labels:
+    title: Docker Pangolin 标签
+    description: 将 Docker Compose Pangolin 标签转换为blueprints，反之亦然
+    externalAccess: null
+    texts:
+      tab-compose-blueprint: Compose → Blueprint
+      label-docker-compose-yaml: "Docker Compose YAML："
+      placeholder-paste-full-docker-compose-yml-here: 在此粘贴完整的 docker-compose.yml…
+      label-generated-blueprint: "生成的Blueprint："
+      placeholder-blueprint-yaml-will-appear-here: Blueprint YAML 将显示在此处…
+      tab-blueprint-labels: Blueprint → Labels
+      label-blueprint-yaml: "Blueprint YAML："
+      placeholder-paste-pangolin-blueprint-yaml-here: 在此粘贴 Pangolin Blueprint YAML…
+      label-generated-docker-labels: "已生成的 Docker 标签："
+      placeholder-docker-labels-will-appear-here: Docker 标签将显示在此处...
+      tag-extract-pangolin-blueprint: 提取 Pangolin Blueprint
+      tag-array-key-value: 数组（- key=value）
+      tag-object-key-value: "对象（key: value）"
+      tag-convert-to-docker-labels: 转换为 Docker 标签
+      invalid-blueprint-yaml: 无效的Blueprint YAML
+  fitness-computer:
+    title: 健身计算器
+    description: "计算基础代谢率 (BMR)、每日总能量消耗 / 卡路里 (TDEE)、体质指数 (BMI)、理想体重 (Ideal Body Weight)、体脂率 (Body Fat Percentage)、最大心率 (Max HR)：用于评估整体健康和生理状况的关键指标。"
+    externalAccess: null
+    texts:
+      label-bmr: 基础代谢率
+      label-tdee-calories: TDEE/卡路里
+      label-bmi: "BMI："
+      label-ideal-weight: "理想体重："
+      label-body-fat-us-navy: 体脂率（美国海军）
+      label-body-fat-bmi: 体脂率（BMI）
+      label-max-heart-rate: 最大心率
+      label-sedentary-little-or-no-exercise: "久坐：几乎不运动"
+      label-light-exercise-1-3-times-week: "轻度：每周运动 1-3 次"
+      label-moderate-exercise-4-5-times-week: "中等：每周运动 4-5 次"
+      label-active-daily-exercise-or-intense-exercise-3-4-times-week: "活跃：每日锻炼或每周 3-4 次高强度锻炼"
+      label-very-active-intense-exercise-6-7-times-week: "非常活跃：每周 6-7 次高强度锻炼"
+      label-extra-active-very-intense-exercise-daily-or-physical-job: "极度活跃：每天进行高强度锻炼，或体力劳动"
+      label-units: "单位："
+      label-formula: "公式："
+      label-gender: "性别："
+      label-age: "年龄："
+      title-body-measurements: 身体测量
+      label-activity-level: "活动水平："
+      title-results: 结果
+      label-bmr-kcal-day: "基础代谢率 (kcal/天)："
+      label-tdee-calories-kcal-day: "TDEE/卡路里 (kcal/天)："
+      label-bmi-category: "BMI 类别："
+      label-healthy-range-min: "健康范围（最小）："
+      label-healthy-range-max: "健康范围（最大）："
+      label-devine-1974: "—（Devine 1974）："
+      label-hamwi-1964: "—（Hamwi 1964）："
+      label-miller-1983: "—（Miller 1983）："
+      label-robinson-1983: "—（Robinson 1983）："
+      label-body-fat: "体脂率 (%)："
+      label-fat-mass: "脂肪质量："
+      label-lean-mass: "瘦体重："
+      label-max-heart-rate-bpm: "最大心率 (bpm)："
+      tag-metric-kg-cm: 公制（千克，厘米）
+      tag-us-lbs-inches: 美制（磅，英寸）
+      tag-male: 男性
+      tag-female: 女性
+  food-energy-converter:
+    title: 食物能量转换器
+    description: 在食物能量单位（焦耳，卡路里）之间转换
+    externalAccess: null
+  iso-639-searcher:
+    title: ISO 639 搜索器
+    description: 在 ISO 639-1/2T/2B/3 语言代码中搜索
+    externalAccess: null
+    texts:
+      placeholder-search-iso-639-language-code-by-iso-1-iso-2t-2b-iso-3-name: 通过 iso-1、iso-2T/2B、iso-3、名称搜索 iso-639 语言代码...
+      label-max-results: "最大结果数："
+      label-2b: "2B："
+      label-2t: "2T："
+      label-eng: "英文："
+      tag-no-results: 暂无结果
+      tag-search-results: 搜索结果
+      tag-iso-639-1: iso-639-1
+      tag-iso-639-2t-2b: iso-639-2T/2B
+      tag-iso-639-3: iso-639-3
+      tag-english-and-local-name: 英文和本地名称
+      loading-more-results: 加载更多结果...
+  jasypt-string-encryption:
+    title: Jasypt 字符串加密
+    description: 使用 Jasypt（Java 简化加密）标准对字符串进行加密和解密。
+    externalAccess: null
+    texts:
+      label-mode: "模式："
+      label-password-secret-key: "密码（密钥）："
+      placeholder-enter-jasypt-password-salt-secret-key: 输入Jasypt密码（盐值/密钥）
+      title-results: 结果
+      label-decoded: "已解码："
+      label-raw: "原始："
+      label-enc-form: "ENC 形式："
+      tag-encrypt: 加密
+      tag-decrypt: 解密
+      plain-text: "纯文本："
+      jasypt-encrypted-string: "Jasypt 加密字符串："
+      text-to-encrypt-e-g-db-password: 要加密的文本（例如数据库密码）
+      encrypted-value-e-g-enc-or-raw-jasypt-string: 加密值（例如 ENC(...)）或原始 Jasypt 字符串
+  k8s-rbac-generator:
+    title: Kubernetes RBAC 生成器
+    description: 生成 k8s RBAC 策略 YAML
+    externalAccess: null
+    texts:
+      label-user: 用户
+      label-group: 组
+      label-serviceaccount: 服务账户
+      label-role-name: "角色名称："
+      label-role-type: 角色类型
+      label-namespace: 命名空间
+      title-rules: 规则
+      label-resources: 资源
+      placeholder-select-resources-supports: 选择资源（支持 *）
+      label-resource-names-optional: 资源名称（可选）
+      placeholder-specific-resources-names: 特定资源名称
+      label-verbs: 操作动词
+      placeholder-select-verbs-supports: 选择动词（支持 *）
+      title-subjects: 主体
+      label-kind: 类型
+      label-name: 名称
+      title-output-yaml: 输出 YAML
+      tab-role-yaml: 角色 YAML
+      tab-rolebinding-yaml: 角色绑定 YAML
+      tag-clusterrole-global: ClusterRole（全局）
+      tag-role-namespaced: Role（命名空间）
+      tag-add-rule: + 添加规则
+      tag-remove-rule: 移除规则
+      tag-add-subject: + 添加主体
+      tag-remove-subject: 移除主体
+  objgen-html:
+    title: ObjGen 转 HTML
+    description: 从类似 TOML 的语法生成复杂 HTML
+    externalAccess: null
+    texts:
+      input-label-objgen-html-definition: ObjGen HTML 定义
+      input-placeholder-put-your-objgen-html-definition-here: 在此输入您的 ObjGen HTML 定义...
+      output-label-generated-html: 生成的 HTML
+      tag-documentation: 文档
+  objgen-json:
+    title: ObjGen 转 JSON
+    description: 从类似 TOML 的语法生成复杂 JSON
+    externalAccess: null
+    texts:
+      input-label-objgen-json-definition: ObjGen JSON 定义
+      input-placeholder-put-your-objgen-json-definition-here: 在此输入您的 ObjGen JSON 定义...
+      output-label-generated-json: 生成的 JSON
+      tag-documentation: 文档
+  pgp-file-encryption:
+    title: PGP 文件加密
+    description: 使用 PGP 加密和解密文件
+    externalAccess: null
+    texts:
+      title-1-select-a-file: 1. 选择文件
+      title-drag-and-drop-a-file-or-click-to-select: 拖放文件或点击选择
+      title-2-public-key-for-encryption: 2. 公钥（用于加密）
+      title-3-private-key-passphrase-for-decryption: 3. 私钥 + 密码短语（用于解密）
+      label-passphrase: "密码短语："
+      placeholder-passphrase: 密码短语
+      tag-selected-file: "已选择文件："
+      tag-encrypt-stream: 加密（流）
+      tag-decrypt-stream: 解密（流）
+      tag-encrypting: 加密中…
+      tag-decrypting: 解密中…
+      tag-encrypted-file-ready: 加密文件已就绪。
+      tag-download-encrypted: 下载已加密文件
+      tag-decrypted-file-ready: 解密文件已就绪。
+      tag-download-decrypted: 下载已解密文件
+  remove-background:
+    title: 移除图像背景
+    description: 使用 AI 移除图像背景
+    externalAccess: 从 HuggingFace 下载 Remove Background 模型。处理在您的浏览器中完成
+    texts:
+      label-rmbg-1-4-cpu-wasm: RMBG‑1.4（CPU/WASM）
+      label-modnet-webgpu: MODNet（WebGPU）
+      label-transparent: 透明
+      label-solid-color: 纯色
+      label-pattern: "图案："
+      label-blurred-original: 模糊原图
+      label-adjust-contrast-brightness: 调整对比度/亮度
+      label-diagonal-stripes: 对角线条
+      label-dots: 点
+      label-checkerboard: 棋盘格
+      title-drag-and-drop-an-image-or-click-to-select: 拖放图片或点击选择
+      label-model: "模型："
+      label-blur: "模糊度："
+      label-contrast: "对比度："
+      label-brightness: "亮度："
+      title-original: 原始
+      title-result: 结果
+      tag-apply-background: 应用背景
+      tag-download-result: 下载结果
+  shell-formatter:
+    title: Shell 命令格式化器
+    description: 将 Shell 命令格式化为按参数拆分的多行 Shell 命令
+    externalAccess: null
+    texts:
+      input-label-shell-commands-to-format: 要格式化的 Shell 命令
+      input-placeholder-put-your-shell-commands-to-format-here: 在此处放置要格式化的 Shell 命令...
+      output-label-formatted-shell-commands: 已格式化的 Shell 命令
+  shell-linearizer:
+    title: Shell 命令线性化工具
+    description: 将多行 Shell 命令线性化
+    externalAccess: null
+    texts:
+      input-label-shell-commands-to-linearize: 要线性化的 Shell 命令
+      input-placeholder-put-your-shell-commands-to-linearize-here: 在此处放置要线性化的 Shell 命令...
+      output-label-linearized-shell-commands: 已线性化的 Shell 命令
+  ufw-generator:
+    title: UFW 命令生成器
+    description: 生成 UFW 命令行
+    externalAccess: null
+    texts:
+      label-allow: 允许
+      label-deny: 拒绝
+      label-reject: 阻止
+      label-limit: 限制
+      label-incoming: 入站
+      label-outgoing: 出站
+      label-tcp: TCP
+      label-udp: UDP
+      label-any: 任意
+      label-action: "操作："
+      label-direction: "方向："
+      label-protocol: "协议："
+      label-port: "端口："
+      placeholder-80: "80"
+      label-port-to-range: "端口至（范围）："
+      placeholder-443: "443"
+      label-from-ip: "来源 IP："
+      placeholder-192-168-1-10: 192.168.1.10
+      label-to-ip: "目的 IP："
+      placeholder-10-0-0-5: 10.0.0.5
+      label-interface: "接口："
+      placeholder-eth0: eth0
+      label-logging: "日志："
+      label-comment: "注释："
+      placeholder-optional-comment: 可选注释
+      title-generated-command: 生成的命令
+      missing-port: 缺少端口
+  visual-subnet-calculator:
+    title: 可视化子网计算器
+    description: 一个用于快速设计网络并与他人协作的工具。它侧重于加快网络管理员的工作，而非学术性的子网划分计算。
+    externalAccess: null
+  zalgo:
+    title: Zalgo 生成器/横幅
+    description: 生成 Zalgo 文本并清理生成的 Zalgo 文本
+    externalAccess: null
+    texts:
+      text-zalgo-text-copied: Zalgo 文本已复制！
+      title-zalgo-text-generation: Zalgo 文本生成
+      placeholder-put-your-string-here: 在此处输入您的字符串...
+      label-text-to-decorate-with-zalgo: 用于装饰的文本（Zalgo）
+      label-intensity: "强度："
+      title-zalgo-text: Zalgo 文本
+      title-zalgo-cleaner: Zalgo 清理器
+      placeholder-put-zalgo-text-to-clean-here: 在此处放入要清理的 Zalgo 文本...
+      label-zalgo-text-to-clean: 要清理的 Zalgo 文本
+      label-cleaned-text: 已清理的文本
+      placeholder-clean-zalgo-text-will-appear-here: 清理后的 Zalgo 文本将在此显示...
+      tag-generate: 生成
+      tag-copy: 复制
+      tag-clean: 清理
+  gpt-tokens:
+    service:
+      texts:
+        must-set-one-of-messages-or-function: 必须设置 messages 或 function 之一
+        function-must-set-messages: 函数必须设置 messages
+  dead-pixel-tester:
+    title: 坏点检测器
+  gif-to-mp4:
+    title: GIF 转 MP4
+    description: 使用 ffmpeg 将 GIF 转换为 MP4
+    externalAccess: null
+    texts:
+      label-stream-loop: "流循环："
+      title-drag-and-drop-gif-here-or-click-to-select-a-file: 将 GIF 拖放至此或点击选择文件
+      title-logs: 日志
+collapsibleToolMenu:
+  text:
+    expanding: 展开中...
+    collapsing: 折叠中...
+    collapse-all-tools: 折叠所有工具
+    expand-all-tools: 展开所有工具
