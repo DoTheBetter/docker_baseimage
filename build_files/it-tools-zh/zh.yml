@@ -141,7 +141,7 @@ tools:
       tag-what-is-the-percentage-increase-decrease: 增减的百分比是多少
   tip-calculator:
     title: 小费计算器
-    description: 计算账单小费并实现多人平摊费用。
+    description: 计算账单小费并实现多人平摊费用
     texts:
       title-bill-details: 账单信息
       label-bill-amount: '账单金额：'
@@ -7004,7 +7004,7 @@ tools:
     title: chmod命令速查表
     description: Linux权限更改速查表
   css-gradient-generator:
-    title: CSS渐变生成器
+    title: CSS 渐变生成器
     description: 根据给定的步骤和颜色生成CSS渐变的CSS代码
     texts:
       label-gradient-type: '渐变类型：'
@@ -7017,7 +7017,7 @@ tools:
       tag-remove: 移除
       tag-add-color-stop: 添加色标
   css-units-converter:
-    title: CSS单位转换器
+    title: CSS 单位转换器
     description: 转换常见CSS单位的值（em、rem、px、vw、vh、%）
     texts:
       label-pixels-px: 像素（px）

@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Git and Timezone
         run: |
@@ -34,7 +34,7 @@ jobs:
           # 拉取最新代码
           git config --global pull.rebase false  # 明确合并策略
           git pull
-          
+
       - name: Check version
         id: version_check
         run: |
@@ -128,7 +128,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Git and Timezone
         run: |
@@ -239,7 +239,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Git and Timezone
         run: |
@@ -376,7 +376,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Git and Timezone
         run: |
