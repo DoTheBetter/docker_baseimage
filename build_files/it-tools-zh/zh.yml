@@ -6133,7 +6133,7 @@ tools:
       placeholder-enter-sample-text: 输入测试文本……
       placeholder-select-font-name: 选择字体名称
       placeholder-enter-font-url: 填写字体链接地址
-      placeholder-paste-font-face-css-here: 粘贴@font-face样式代码
+      placeholder-paste-font-face-css-here: 粘贴 {'@'}font-face样式代码
       placeholder-font-family-name-from-css: CSS内定义的字体名
       placeholder-enter-css-url-e-g-https-example-com-fonts-css: 填入CSS链接（例：https://example.com/fonts.css）
       placeholder-font-family-name-from-imported-css: 外链CSS对应的字体名称
