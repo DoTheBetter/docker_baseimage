@@ -139,6 +139,25 @@ tools:
       tag-x-is-what-percent-of-y: X 是 Y 的多少百分比
       tag-is-what-percent-of: 是多少百分比
       tag-what-is-the-percentage-increase-decrease: 增减的百分比是多少
+  tip-calculator:
+    title: 小费计算器
+    description: 计算账单小费并实现多人平摊费用。
+    texts:
+      title-bill-details: 账单信息
+      label-bill-amount: '账单金额：'
+      placeholder-total-bill: 账单总额
+      label-tip-percentage: '小费比例：'
+      placeholder-tip: 小费百分比
+      label-number-of-person: '分摊人数：'
+      placeholder-people: 人数
+      title-results: 计算结果
+      label-tip-amount: '小费金额：'
+      label-total-bill: '账单合计：'
+      label-amount-per-person: '人均费用：'
+      title-quick-tip: 快捷小费比例
+      tag-const-billamount-ref: const billAmount = ref
+      tag-: '%'
+
   svg-placeholder-generator:
     title: SVG 占位符生成器
     description: 生成 SVG 图像，用作您应用中的占位符。
@@ -1854,9 +1873,9 @@ tools:
       tag-createxxhash64-seedlow-number-seedhigh-number-promise: '// createXXHash64, //(seedLow: number, seedHigh: number): Promise'
       tag-createxxhash3-seedlow-number-seedhigh-number-promise: '// createXXHash3, //(seedLow: number, seedHigh: number): Promise'
       tag-createxxhash128-seedlow-number-seedhigh-number-promise: '// createXXHash128, //(seedLow: number, seedHigh: number): Promise'
-      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise:
-        "BLAKE2b: await createBLAKE2b(), // (bits?: number, key?: IDataType):
-        Promise"
+      tag-blake2b-await-createblake2b-bits-number-key-idatatype-promise: >-
+        BLAKE2b: await createBLAKE2b(), // (bits?: number, key?: IDataType):
+        Promise
       tag-md5-await-createmd5-promise: 'MD5: await createMD5(), // (): Promise'
       tag-ripemd160-await-createripemd160-promise: 'RIPEMD160: await createRIPEMD160(), // (): Promise'
       tag-sha1-await-createsha1-promise: 'SHA1: await createSHA1(), // (): Promise'
@@ -6055,8 +6074,8 @@ tools:
       tag-download-zip: 📦 下载 ZIP
       invalid-png-file: 无效的PNG文件！
   font-compare:
-    title: 字体比较
-    description: 比较给定文本的字体
+    title: 字体对比工具
+    description: 使用同一段文字对比多款字体展示效果
     texts:
       label-arial: Arial
       label-verdana: Verdana
@@ -6111,40 +6130,41 @@ tools:
       label-work-sans: Work Sans
       label-rubik: Rubik
       label-dm-sans: DM Sans
-      placeholder-enter-sample-text: 输入示例文本...
-      placeholder-select-font-name: 请选择字体名称
-      placeholder-enter-font-url: 输入字体 URL
-      placeholder-paste-font-face-css-here: 在此粘贴 {'@'}font-face CSS
-      placeholder-font-family-name-from-css: CSS 中的 Font-family 名称
-      placeholder-enter-css-url-e-g-https-example-com-fonts-css: 输入 CSS URL（例如 https://example.com/fonts.css）
-      placeholder-font-family-name-from-imported-css: 导入的 CSS 中的 Font-family 名称
+      placeholder-enter-sample-text: 输入测试文本……
+      placeholder-select-font-name: 选择字体名称
+      placeholder-enter-font-url: 填写字体链接地址
+      placeholder-paste-font-face-css-here: 粘贴@font-face样式代码
+      placeholder-font-family-name-from-css: CSS内定义的字体名
+      placeholder-enter-css-url-e-g-https-example-com-fonts-css: 填入CSS链接（例：https://example.com/fonts.css）
+      placeholder-font-family-name-from-imported-css: 外链CSS对应的字体名称
       tag-upload-font-file: 上传字体文件
       label-normal: 常规
-      label-bold: 粗体
-      label-lighter: 更细
+      label-bold: 加粗
+      label-lighter: 细体
       label-100: '100'
       label-400: '400'
       label-700: '700'
       label-italic: 斜体
-      label-oblique: 倾斜
+      label-oblique: 倾斜体
       label-sans-serif: 无衬线体
       label-serif: 衬线体
-      label-monospace: 等宽体
+      label-monospace: 等宽字体
       label-cursive: 手写体
-      label-fantasy: 艺术体
+      label-fantasy: 装饰体
       label-weight: '字重：'
-      placeholder-font-weight: 字重
+      placeholder-font-weight: 字体粗细值
       label-style: '样式：'
-      placeholder-font-style: 字形样式
-      label-fallback: '后备：'
-      placeholder-fallback-font: 后备字体
+      placeholder-font-style: 字体样式
+      label-fallback: '备选字体：'
+      placeholder-fallback-font: 备用字体
       tag-defineprops: 定义属性
     text:
-      by-font-name: 按字体名称
-      by-font-url: 通过字体URL
-      by-font-file: 按字体文件
-      by-inline-css: 通过内联CSS
-      by-css-url: 通过CSS地址
+      by-font-name: 通过字体名称
+      by-font-url: 通过字体链接
+      by-font-file: 上传字体文件
+      by-inline-css: 粘贴CSS代码
+      by-css-url: 引入外部CSS链接
+
   gpt-token-encoder:
     title: GPT 令牌 编码器/解码器
     description: 将文本编码为 GPT 令牌，并将 GPT 令牌解码回文本
@@ -7424,32 +7444,49 @@ tools:
     text:
       si-converter: 前往SI前缀转换器
   geo-coordinates-converter:
-    title: 地理坐标转换器
-    description: 在WGS84、GCJ02、BD09和CGCS2000之间转换地理坐标
+    title: 地理坐标系转换器
+    description: >-
+      支持WGS84、GCJ02、BD09、CGCS2000、Web墨卡托坐标互转，同时实现十进制度、度分秒、UTM格式互相换算，附带交互式地图。
     texts:
-      label-latitude: "纬度:"
-      label-longitude: "经度:"
-      label-csv-content-lng-lat: "CSV 内容（经度，纬度）:"
-      placeholder-put-your-longitude-and-latitude-in-this-order-csv-to-convert: 将经度和纬度（按此顺序）CSV 放入以进行转换...
+      label-latitude: '纬度：'
+      label-longitude: '经度：'
+      label-csv-content-lng-lat: 'CSV文本（经度,纬度）：'
+      placeholder-put-your-longitude-and-latitude-in-this-order-csv-to-convert: 按【经度在前、纬度在后】粘贴CSV坐标数据进行批量转换……
       title-conversion-results: 转换结果
-      title-notes: 备注
-      tag-wgs84-wsg1984-epsg4326-global-standard: WGS84/WSG1984/EPSG4326（全球标准）
-      tag-gcj02-amap-gaode-qq-maps: GCJ02/AMap（高德, QQ地图）
-      tag-bd09-bd09ll-bmap-baidu-maps: BD09/BD09LL/BMap（百度地图）
-      tag-bd09mc-bd09meter-baidu-meter: BD09MC/BD09Meter（百度米）
-      tag-cgcs2000-china-geodetic-system-2000: CGCS2000（中国大地坐标系2000）
-      tag-webmercator-epsg3857-epsg900913: WebMercator/EPSG3857/EPSG900913
-      tag-convert-single: 单个转换
+      title-notes: 备注说明
+      tag-wgs84-wsg1984-epsg4326-global-standard: WGS84/WGS1984/EPSG4326（国际通用坐标系）
+      tag-gcj02-amap-gaode-qq-maps: GCJ02/高德坐标系（高德、QQ地图）
+      tag-bd09-bd09ll-bmap-baidu-maps: BD09/BD09LL（百度经纬度坐标系）
+      tag-bd09mc-bd09meter-baidu-meter: BD09MC/BD09米制（百度墨卡托米制坐标）
+      tag-cgcs2000-china-geodetic-system-2000: CGCS2000（2000国家大地坐标系）
+      tag-webmercator-epsg3857-epsg900913: Web墨卡托/EPSG3857/EPSG900913
+      tag-convert-single: 单点转换
       tag-convert-batch: 批量转换
-      tag-longitude-east-is-positive-west-is-negative: "经度：东为正，西为负。"
-      tag-latitude-north-is-positive-south-is-negative: "纬度：北为正，南为负。"
+      tag-longitude-east-is-positive-west-is-negative: '经度：东经为正数，西经为负数。'
+      tag-latitude-north-is-positive-south-is-negative: '纬度：北纬为正数，南纬为负数。'
+      coordinates-notations: 坐标格式类型
+      decimal-projections: 十进制度投影
+      north: 北纬
+      south: 南纬
+      decimal-notation: 十进制度格式
+      latitude-decimal: 纬度（十进制度）
+      longitude-decimal: 经度（十进制度）
+      dms-notation: 度分秒格式(DMS)
+      latitude-dms: 纬度（度分秒）
+      longitude-dms: 经度（度分秒）
+      utm-notation: UTM投影格式
+      utm-zone: UTM分带
+      hemisphere: 半球
+      easting: 东距
+      northing: 北距
     text:
-      coordinate-system: 坐标系
-      decimal-format-lng-lat: 十进制格式（经度，纬度）
-      dms-format-lng-lat: 度分秒格式（经度，纬度）
-      download-results-csv: 下载结果CSV
-      batch-lat-lng-converter: 批量经纬度转换器
-      single-lat-lng-converter: 单个经纬度转换器
+      coordinate-system: 坐标系统
+      decimal-format-lng-lat: 十进制度格式(经度,纬度)
+      dms-format-lng-lat: 度分秒格式(经度,纬度)
+      download-results-csv: 导出CSV结果文件
+      batch-lat-lng-converter: 经纬度批量转换器
+      single-lat-lng-converter: 经纬度单点转换器
+
   si-prefixes-converter:
     title: SI前缀转换器
     description: 在公制前缀之间转换
@@ -7697,18 +7734,19 @@ tools:
         thursday: 星期四
         friday: 星期五
         saturday: 星期六
-        invalid-year-length-hebrew_year_days-hebcal-0-days: "无效的年份长度：{0} 天。"
-        common-deficient-353-days: 平年亏缺（353 天）
-        common-regular-354-days: 平年常规（354 天）
-        common-complete-355-days: 平年完满（355 天）
-        embolismic-deficient-383-days: 闰年亏缺（383 天）
-        embolismic-regular-384-days: 闰年常规（384 天）
-        embolismic-complete-385-days: 闰年完满（385 天）
+        invalid-year-length-hebrew_year_days-hebcal-0-days: '年份天数非法：{0}天。'
+        common-deficient-353-days: 平年缺年（353天）
+        common-regular-354-days: 平年常年（354天）
+        common-complete-355-days: 平年满年（355天）
+        embolismic-deficient-383-days: 闰月缺年（383天）
+        embolismic-regular-384-days: 闰月常年（384天）
+        embolismic-complete-385-days: 闰月满年（385天）
         normal-year: 平年
         leap-year: 闰年
-    title: 日历转换工具
-    description: 在公历、儒略历、希伯来历、伊斯兰历、波斯历、玛雅历、印度历、法国共和历、ISO‑8601、Unix 时间和 Excel 序列格式之间转换日期和时间
-    externalAccess: null
+    title: 历法转换器
+    description: >-
+      支持公历、儒略历、希伯来历、伊斯兰历、波斯历、玛雅历、印度历、法国共和历、ISO‑8601、Unix时间、Excel序列日期等格式的日期时间互相转换
+    externalAccess: 'null'
     texts:
       label-january: 一月
       label-february: 二月
@@ -7722,129 +7760,130 @@ tools:
       label-october: 十月
       label-november: 十一月
       label-december: 十二月
-      label-nisan-נִיסָן: Nisan (נִיסָן)
-      label-iyyar-אִיָּר: Iyyar (אִיָּר)
-      label-sivan-סִיוָן: Sivan (סִיוָן)
-      label-tammuz-תַּמּוּז: Tammuz (תַּמּוּז)
-      label-av-אָב: Av (אָב)
-      label-elul-אֱלוּל: Elul (אֱלוּל)
-      label-tishri-תִּשְׁרֵי: Tishri (תִּשְׁרֵי)
-      label-heshvan-חֶשְׁוָן: Heshvan (חֶשְׁוָן)
-      label-kislev-כִּסְלֵו: Kislev (כִּסְלֵו)
-      label-teveth-טֵבֵת: Teveth (טֵבֵת)
-      label-shevat-שְׁבָט: Shevat (שְׁבָט)
-      label-adar-adar-i-אֲדָר: Adar/Adar I (אֲדָר)
-      label-veadar-adar-ii-אֲדָר-שֵׁנִי: Veadar/Adar II (אֲדָר שֵׁנִי)
-      label-muharram-مُحَرَّم: Muharram (مُحَرَّم)
-      label-safar-صَفَر: Safar (صَفَر)
-      label-rabiʿ-al-awwal-رَبيع-الأوّل: Rabiʿ al‑Awwal (رَبيع الأوّل)
-      label-rabiʿ-ath-thani-رَبيع-الثاني: Rabiʿ ath‑Thani (رَبيع الثاني)
-      label-jumada-al-ula-جُمادى-الأولى: Jumada al‑Ula (جُمادى الأولى)
-      label-jumada-ath-thania-جُمادى-الآخرة: Jumada ath‑Thania (جُمادى الآخرة)
-      label-rajab-رَجَب: Rajab (رَجَب)
-      label-shaʿban-شَعْبان: Shaʿban (شَعْبان)
-      label-ramadan-رَمَضان: Ramadan (رَمَضان)
-      label-shawwal-شَوّال: Shawwal (شَوّال)
-      label-dhu-al-qaʿda-ذو-القَعْدة: Dhu al‑Qaʿda (ذو القَعْدة)
-      label-dhu-al-hijja-ذو-الحِجّة: Dhu al‑Hijja (ذو الحِجّة)
-      label-farvardin-فروردین: Farvardin (فروردین)
-      label-ordibehesht-اردیبهشت: Ordibehesht (اردیبهشت)
-      label-khordad-خرداد: Khordad (خرداد)
-      label-tir-تیر: Tir (تیر)
-      label-mordad-مرداد: Mordad (مرداد)
-      label-shahrivar-شهریور: Shahrivar (شهریور)
-      label-mehr-مهر: Mehr (مهر)
-      label-aban-آبان: Aban (آبان)
-      label-azar-آذر: Azar (آذر)
-      label-dey-دی: Dey (دی)
-      label-bahman-بهمن: Bahman (بهمن)
-      label-esfand-اسفند: Esfand (اسفند)
-      label-caitra-चैत्र: Caitra (चैत्र)
-      label-vaisakha-वैशाख: Vaisakha (वैशाख)
-      label-jyaistha-ज्येष्ठ: Jyaistha (ज्येष्ठ)
-      label-asadha-आषाढ़: Asadha (आषाढ़)
-      label-sravana-श्रावण: Sravana (श्रावण)
-      label-bhadra-भाद्रपद: Bhadra (भाद्रपद)
-      label-asvina-आश्विन: Asvina (आश्विन)
-      label-kartika-कार्तिक: Kartika (कार्तिक)
-      label-agrahayana-अग्रहायण: Agrahayana (अग्रहायण)
-      label-pausa-पौष: Pausa (पौष)
-      label-magha-माघ: Magha (माघ)
-      label-phalguna-फाल्गुन: Phalguna (फाल्गुन)
-      label-vendémiaire: Vendémiaire
-      label-brumaire: Brumaire
-      label-frimaire: Frimaire
-      label-nivôse: Nivôse
-      label-pluviôse: Pluviôse
-      label-ventôse: Ventôse
-      label-germinal: Germinal
-      label-floréal: Floréal
-      label-prairial: Prairial
-      label-messidor: Messidor
-      label-thermidor: Thermidor
-      label-fructidor: Fructidor
-      label-sans-culottides: Sans‑culottides
-      label-i: I
-      label-ii: II
-      label-iii: III
-      label-primidi-1: Primidi (1)
-      label-duodi-2: Duodi (2)
-      label-tridi-3: Tridi (3)
-      label-quartidi-4: Quartidi (4)
-      label-quintidi-5: Quintidi (5)
-      label-sextidi-6: Sextidi (6)
-      label-septidi-7: Septidi (7)
-      label-octidi-8: Octidi (8)
-      label-nonidi-9: Nonidi (9)
-      label-décadi-10: Décadi (10)
-      label-vertu-1: Vertu (1)
-      label-génie-2: Génie (2)
-      label-travail-3: Travail (3)
-      label-opinion-4: Opinion (4)
-      label-récompenses-5: Récompenses (5)
-      label-révolution-6: Révolution (6)
+      label-nisan-נִיסָן: 尼桑月(נִיסָן)
+      label-iyyar-אִיָּר: 亚尔月(אִיָּר)
+      label-sivan-סִיוָן: 西宛月(סִיוָן)
+      label-tammuz-תַּמּוּז: 塔慕兹月(תַּמּוּז)
+      label-av-אָב: 阿布月(אָב)
+      label-elul-אֱלוּל: 以禄月(אֱלוּל)
+      label-tishri-תִּשְׁרֵי: 提斯利月(תִּשְׁרֵי)
+      label-heshvan-חֶשְׁוָן: 赫舍汪月(חֶשְׁוָן)
+      label-kislev-כִּסְלֵו: 基斯流月(כִּסְלֵו)
+      label-teveth-טֵבֵת: 提别月(טֵבֵת)
+      label-shevat-שְׁבָט: 细瓦月(שְׁבָט)
+      label-adar-adar-i-אֲדָר: 亚达月/亚达一月(אֲדָר)
+      label-veadar-adar-ii-אֲדָר-שֵׁנִי: 维亚达/亚达二月(אֲדָר שֵׁנִי)
+      label-muharram-مُحَرَّم: 穆哈兰姆月(مُحَرَّم)
+      label-safar-صَفَر: 赛法尔月(صَفَر)
+      label-rabiʿ-al-awwal-رَبيع-الأوّل: 赖比尔·安瓦勒月(رَبيع الأوّل)
+      label-rabiʿ-ath-thani-رَبيع-الثاني: 赖比尔·阿色尼月(رَبيع الثاني)
+      label-jumada-al-ula-جُمادى-الأولى: 主马达·乌莱月(جُمادى الأولى)
+      label-jumada-ath-thania-جُمادى-الآخرة: 主马达·阿黑赖月(جُمادى الآخرة)
+      label-rajab-رَجَب: 赖哲卜月(رَجَب)
+      label-shaʿban-شَعْبان: 舍尔邦月(شَعْبان)
+      label-ramadan-رَمَضان: 莱麦丹月(رَمَضان)
+      label-shawwal-شَوّال: 闪瓦鲁月(شَوّال)
+      label-dhu-al-qaʿda-ذو-القَعْدة: 祖勒盖尔代月(ذو القَعْدة)
+      label-dhu-al-hijja-ذو-الحِجّة: 祖勒希贾月(ذو الحِجّة)
+      label-farvardin-فروردین: 法尔瓦丁月(فروردین)
+      label-ordibehesht-اردیبهشت: 奥尔迪贝赫什特月(اردیبهشت)
+      label-khordad-خرداد: 霍尔达德月(خرداد)
+      label-tir-تیر: 提尔月(تیر)
+      label-mordad-مرداد: 穆尔达德月(مرداد)
+      label-shahrivar-شهریور: 沙赫里瓦尔月(شهریور)
+      label-mehr-مهر: 梅赫尔月(مهر)
+      label-aban-آبان: 阿邦月(آبان)
+      label-azar-آذر: 阿扎尔月(آذر)
+      label-dey-دی: 代伊月(دی)
+      label-bahman-بهمن: 巴赫曼月(بهمن)
+      label-esfand-اسفند: 埃斯凡德月(اسفند)
+      label-caitra-चैत्र: 恰伊特拉月(चैत्र)
+      label-vaisakha-वैशाख: 拜萨克月(वैशाख)
+      label-jyaistha-ज्येष्ठ: 杰耶什塔月(ज्येष्ठ)
+      label-asadha-आषाढ़: 阿沙达月(आषाढ़)
+      label-sravana-श्रावण: 斯拉瓦纳月(श्रावण)
+      label-bhadra-भाद्रपद: 巴德拉月(भाद्रपद)
+      label-asvina-आश्विन: 阿什维纳月(आश्विन)
+      label-kartika-कार्तिक: 卡尔蒂卡月(कार्तिक)
+      label-agrahayana-अग्रहायण: 阿格拉哈亚纳月(अग्रहायण)
+      label-pausa-पौष: 保沙月(पौष)
+      label-magha-माघ: 玛嘎月(माघ)
+      label-phalguna-फाल्गुन: 帕尔古纳月(फाल्गुन)
+      label-vendémiaire: 葡月
+      label-brumaire: 雾月
+      label-frimaire: 霜月
+      label-nivôse: 雪月
+      label-pluviôse: 雨月
+      label-ventôse: 风月
+      label-germinal: 芽月
+      label-floréal: 花月
+      label-prairial: 牧月
+      label-messidor: 获月
+      label-thermidor: 热月
+      label-fructidor: 果月
+      label-sans-culottides: 闰日
+      label-i: Ⅰ
+      label-ii: Ⅱ
+      label-iii: Ⅲ
+      label-primidi-1: 首日(1)
+      label-duodi-2: 次日(2)
+      label-tridi-3: 三日(3)
+      label-quartidi-4: 四日(4)
+      label-quintidi-5: 五日(5)
+      label-sextidi-6: 六日(6)
+      label-septidi-7: 七日(7)
+      label-octidi-8: 八日(8)
+      label-nonidi-9: 九日(9)
+      label-décadi-10: 旬末日(10)
+      label-vertu-1: 美德日(1)
+      label-génie-2: 天才日(2)
+      label-travail-3: 劳动日(3)
+      label-opinion-4: 舆论日(4)
+      label-récompenses-5: 奖赏日(5)
+      label-révolution-6: 革命日(6)
       tab-gregorian: 公历
       label-date: 日期
-      label-leap: "闰年:"
-      label-time: "时间:"
-      label-weekday: "星期:"
-      tab-julian-day: Julian Day
-      label-julian-day: "Julian Day:"
-      tab-modified-julian: Modified Julian
-      label-modified-julian-day: "Modified Julian Day:"
-      tab-julian-calendar: Julian Calendar
-      tab-gregorian-serial: Gregorian Serial
-      label-gregorian-serial-day: "Gregorian Serial Day:"
-      tab-hebrew: Hebrew
-      tab-islamic: Islamic
-      tab-persian: Persian
-      tab-persian-algorithmic: Persian Algorithmic
-      tab-mayan: Mayan
-      label-long-count: "Long Count:"
-      label-haab: Haab
-      label-tzolkin: Tzolkin
-      tab-indian-civil: Indian Civil
-      tab-french-republican: French Republican
-      label-day: "Day:"
-      label-month: "Month:"
-      label-décade: "Décade:"
-      label-year: "Year:"
-      tab-iso-8601: ISO‑8601
-      label-day-of-week: "Day of Week:"
-      label-week: "Week:"
-      label-day-of-year: "Day of Year:"
-      tab-unix-time: Unix time()
-      label-unix-time: "Unix time():"
-      tab-excel-1900-windows: Excel 1900 (Windows)
-      label-excel-serial-day-1900: "Excel Serial Day (1900):"
-      tab-excel-1904-macintosh: Excel 1904 (Macintosh)
-      label-excel-serial-day-1904: "Excel Serial Day (1904):"
-      tag-this-is-a-port-of-wonderful: 这是一个精彩的移植
-      tag-fourmilab-ch-calendar-converter: Fourmilab.ch 日历转换器
-      tag-by-john-walker: 作者 John Walker
-      tag-xa0-xa0: "&#xa0;.&#xa0;"
-      tag-update-other-calendars: 更新其他日历
-      tag-today: 今天
+      label-leap: '闰年：'
+      label-time: '时间：'
+      label-weekday: '星期：'
+      tab-julian-day: 儒略日
+      label-julian-day: '儒略日：'
+      tab-modified-julian: 修正儒略日
+      label-modified-julian-day: '修正儒略日：'
+      tab-julian-calendar: 儒略历
+      tab-gregorian-serial: 公历序列日
+      label-gregorian-serial-day: '公历序列天数：'
+      tab-hebrew: 希伯来历
+      tab-islamic: 伊斯兰历
+      tab-persian: 波斯历
+      tab-persian-algorithmic: 算法波斯历
+      tab-mayan: 玛雅历
+      label-long-count: '长计历：'
+      label-haab: 哈布历
+      label-tzolkin: 卓尔金历
+      tab-indian-civil: 印度民用历
+      tab-french-republican: 法国共和历
+      label-day: '日：'
+      label-month: '月：'
+      label-décade: '旬：'
+      label-year: '年：'
+      tab-iso-8601: ISO‑8601标准
+      label-day-of-week: '星期序号：'
+      label-week: '周数：'
+      label-day-of-year: '年内日：'
+      tab-unix-time: Unix时间戳
+      label-unix-time: 'Unix时间戳：'
+      tab-excel-1900-windows: Excel1900(Windows)
+      label-excel-serial-day-1900: 'Excel序列日期(1900)：'
+      tab-excel-1904-macintosh: Excel1904(Mac)
+      label-excel-serial-day-1904: 'Excel序列日期(1904)：'
+      tag-this-is-a-port-of-wonderful: 本工具移植自经典项目
+      tag-fourmilab-ch-calendar-converter: Fourmilab.ch历法转换器
+      tag-by-john-walker: 作者：John Walker
+      tag-xa0-xa0: '&#xa0;.&#xa0;'
+      tag-update-other-calendars: 同步换算其他历法
+      tag-today: 今日
+
   bech32:
     title: Bech32 编码/解码器
     description: 编码/解码/验证 bech32(m)
@@ -8162,6 +8201,90 @@ tools:
       label-stream-loop: "流循环："
       title-drag-and-drop-gif-here-or-click-to-select-a-file: 将 GIF 拖放至此或点击选择文件
       title-logs: 日志
+  html-to-pdf:
+    title: HTML转PDF
+    description: >-
+      输入HTML内容或网页链接生成PDF文件，可选纸张尺寸，支持自动屏蔽Cookie弹窗
+    externalAccess: >-
+      本工具会将链接与HTML内容提交至已部署的自建Puppeteer接口服务
+    texts:
+      label-a2: A2
+      label-a3: A3
+      label-a4: A4
+      label-a5: A5
+      label-letter: Letter制式
+      label-legal: Legal制式
+      label-html-to-pdf-service-url: 'HTML转PDF服务地址：'
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: '基础认证：'
+      placeholder-username-password: 用户名:密码
+      tab-url-pdf: 链接转PDF
+      label-url: '网页地址：'
+      placeholder-https-example-com: https://example.com
+      tab-html-pdf: HTML代码转PDF
+      label-html-content: 'HTML源码：'
+      tab-batch-url-pdf: 批量链接转PDF
+      label-urls-one-per-line: '链接（一行一条）：'
+      title-results: 转换结果
+      tab-custom-pdf-options: PDF自定义参数
+      label-format: '纸张规格：'
+      label-language: '语言：'
+      placeholder-en-us: en-US
+      label-landscape: '横向排版：'
+      label-one-long-page: '合并为单页：'
+      label-auto-hide-cookie-banners: '自动隐藏Cookie弹窗：'
+      label-print-background: '打印页面背景：'
+      title-margins: 页边距
+      label-top-mm: '上边距(毫米)：'
+      label-bottom-mm: '下边距(毫米)：'
+      label-left-mm: '左边距(毫米)：'
+      label-right-mm: '右边距(毫米)：'
+      tag-html-to-pdf-service-configuration-self-hosted: HTML转PDF服务配置（自建部署）
+      tag-you-must-self-host-html-to-pdf-service-see: '需自行部署HTML转PDF后端服务，参考：'
+      tag-html-to-pdf-service-install: HTML转PDF服务部署教程
+      tag-generate-pdf: 生成PDF
+      tag-generate-pdfs: 批量生成PDF
+      tag-url: 链接
+      tag-download: 下载
+      tag-download-pdf: 下载PDF
+      tag-failed: 转换失败
+
+  shutdown-command-generator:
+    title: 关机指令生成器
+    description: 生成多操作系统对应的关机命令
+    externalAccess: 'null'
+    texts:
+      label-windows: Windows系统
+      label-linux: Linux系统
+      label-macos: macOS系统
+      label-delay: '延时：'
+      label-specific-time: 指定时刻
+      label-platform: '操作系统：'
+      label-shutdown-time: '关机时长：'
+      label-force: 强制操作
+      label-reboot: 重启
+      label-logoff: 注销
+      label-cancel: 取消任务
+      label-hibernate: 休眠
+      title-generated-command: 生成命令
+      tag-nbsp-h-nbsp: '&nbsp;时&nbsp;'
+      tag-nbsp-m-nbsp: '&nbsp;分&nbsp;'
+      tag-nbsp-s: '&nbsp;秒'
+
+  random-line-picker:
+    title: 随机行抽取器
+    description: 从输入文本中随机抽取指定行数内容
+    externalAccess: 'null'
+    texts:
+      label-allow-repeated-lines: 允许重复抽取行
+      label-number-of-lines-to-pick: '抽取行数：'
+      label-prefix-lines-with-line-number: 结果附带行号
+      placeholder-picked-lines: 抽取结果
+      placeholder-put-your-text-here: 在此粘贴文本……
+      tag-copy: 复制
+      tag-refresh: 重新抽取
+      text-picked-lines-copied-to-clipboard: 已将抽取内容复制至剪贴板！
+
 collapsibleToolMenu:
   text:
     expanding: 展开中...
