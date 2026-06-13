@@ -25,14 +25,14 @@ RUN xcaddy build \
 	--with github.com/porech/caddy-maxmind-geolocation \
 	--with github.com/greenpau/caddy-security \
 	--with github.com/caddy-dns/acmedns \
-	--with github.com/caddy-dns/cloudflare \
+	--with github.com/caddy-dns/alidns \
 	#--with github.com/caddy-dns/dnspod \
 	--with github.com/caddy-dns/tencentcloud \
-	--with github.com/caddy-dns/alidns \
 	--with github.com/caddy-dns/huaweicloud \
+	--with github.com/caddy-dns/cloudflare \
 	--with github.com/caddy-dns/godaddy \
-	--with github.com/caddy-dns/namecheap@master
-	#--with github.com/caddy-dns/namesilo
+	--with github.com/caddy-dns/namecheap@master \
+	--with github.com/caddy-dns/namesilo
 
 #安装并显示版本信息
 RUN echo "=========================================" \
