@@ -3,12 +3,15 @@
 
 FROM golang:alpine
 
-# 设置要构建的 Caddy 版本
+# 指定要编译的 Caddy 核心版本
 ENV CADDY_VERSION=v2.11.4
-# 将 xcaddy 配置为不清理构建后文件
-ENV XCADDY_SKIP_CLEANUP=1
-# 将对生成的二进制文件运行sudo setcapcap_net_bind_service=+ep。将输出caddy二进制文件的功能设置为能够绑定到特权端口
+# 设为 1 自动为编译后的二进制添加 cap_net_bind_service=+ep 权限（Linux 下无需 root 绑定 80/443 端口时必须）。
+# 配合 XCADDY_SUDO=0 可禁用 sudo 执行 setcap。
 ENV XCADDY_SETCAP=1
+ENV XCADDY_SUDO=0
+# 自定义 Go 编译参数（精简二进制，生产常用）
+ENV XCADDY_GO_BUILD_FLAGS="-ldflags '-w -s'"
+
 
 RUN apk add --no-cache \
 	ca-certificates \
