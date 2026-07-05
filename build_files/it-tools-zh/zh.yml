@@ -8439,7 +8439,7 @@ tools:
       tag-refresh: 重新抽取
       text-picked-lines-copied-to-clipboard: 已将抽取内容复制至剪贴板！
 
-  collapsibleToolMenu:
+collapsibleToolMenu:
   text:
     expanding: 展开中...
     collapsing: 折叠中...
