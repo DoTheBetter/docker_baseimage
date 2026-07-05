@@ -98,7 +98,7 @@ home:
       collection-of-handy-online-tools-for-developers-with-great-ux-it-tools-is-a-free-and-open-source-collection-of-handy-online-tools-for-developers-and-people-working-in-it: 为开发者打造的实用在线工具合集，拥有出色用户体验。IT Tools是一款免费开源的实用在线工具合集，专为开发者及IT行业从业者设计。
       it-tools-handy-online-tools-for-developers: IT Tools - 开发者实用在线工具
 tools:
-crop-image:
+  crop-image:
   title: "图片裁剪"
   description: "自定义背景色对图片进行裁剪、缩放与旋转操作"
   texts:
@@ -461,7 +461,7 @@ crop-image:
       placeholder-your-string: 您的字符串...
       label-passphrase-mnemonic: '密码短语（助记词）：'
       placeholder-your-mnemonic: 您的助记词...
-base64-file-converter:
+  base64-file-converter:
     title: "Base64 文件转换工具"
     description: "将文本、文件或图片转换为 Base64 编码格式"
     texts:
@@ -562,7 +562,7 @@ base64-file-converter:
       input-label-your-json: 您的 JSON
       input-placeholder-paste-your-json-here: 在此粘贴您的 JSON...
       output-label-yaml-from-your-json: 来自您的 JSON 的 YAML
-json-to-env:
+  json-to-env:
     title: "JSON 转 .env"
     description: >-
       将单层JSON对象转换为.env文件。键名会转为大写，
@@ -947,7 +947,7 @@ json-to-env:
       input-placeholder-paste-your-yaml-here: 在此粘贴您的 YAML...
       output-label-json-from-your-yaml: 来自您的 YAML 的 JSON
       label-nestify-a-b-c-to-nested-objects: 嵌套化（将'a.b.c'转换为嵌套对象）
-uuid-generator:
+  uuid-generator:
     title: "UUID 生成器"
     description: >-
       通用唯一识别码（UUID）是用于计算机系统标识信息的128位数字。
@@ -2592,7 +2592,7 @@ uuid-generator:
   markdown-editor:
     title: Markdown 编辑器
     description: 简易 Markdown 编辑器
-markdown-toc-generator:
+  markdown-toc-generator:
     title: "Markdown 目录生成器"
     description: "根据 Markdown 文件/内容生成目录"
     texts:
@@ -2811,7 +2811,7 @@ markdown-toc-generator:
     text:
       json-content: JSON 内容
       table-view: 表格视图
-passphrase-generator:
+  passphrase-generator:
     title: "密码短语生成器"
     description: "生成易记忆的随机密码短语"
     texts:
@@ -2955,7 +2955,7 @@ passphrase-generator:
       label-protocol: 协议
       label-type: 类型
       label-description: 描述
-potrace:
+  potrace:
     title: "图片转SVG（Potrace）"
     description: "将光栅图像转换为矢量SVG图形"
     texts:
@@ -5769,7 +5769,7 @@ potrace:
       label-allowed-ipv4s: '允许的 IPv4:'
       label-allowed-domains: '允许的域名:'
       title-spf-record-generator: SPF 记录生成器
-certificate-key-parser:
+  certificate-key-parser:
     title: "证书/密钥解析器"
     description: "解析密钥与证书"
     texts:
@@ -6226,7 +6226,7 @@ certificate-key-parser:
       tag-upload-png-image: 上传 PNG 图片
       tag-download-zip: 📦 下载 ZIP
       invalid-png-file: 无效的PNG文件！
-font-compare:
+  font-compare:
     title: "字体对比"
     description: 使用指定文本对比两款字体
     texts:
@@ -6599,7 +6599,7 @@ font-compare:
       tag-show-line-numbers: 显示行号
       tag-remove-empty-lines: 移除空行
       tag-remove-comments: 移除注释
-resistor-calculator:
+  resistor-calculator:
     title: "电阻计算器"
     description: "通过色环计算电阻阻值，或由阻值反推色环"
     texts:
@@ -7676,7 +7676,7 @@ resistor-calculator:
       label-decimals: "小数位数："
       label-thousand-separators: "千位分隔符："
       label-to: "至："
-      tag-: =
+      tag-: "="
   acceleration-converter:
     title: 加速度转换器
     description: 在加速度单位之间转换数值
@@ -8439,7 +8439,7 @@ resistor-calculator:
       tag-refresh: 重新抽取
       text-picked-lines-copied-to-clipboard: 已将抽取内容复制至剪贴板！
 
-collapsibleToolMenu:
+  collapsibleToolMenu:
   text:
     expanding: 展开中...
     collapsing: 折叠中...
