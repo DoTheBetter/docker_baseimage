@@ -3,7 +3,7 @@ name: Docker baseimage：Composerize
 on:
   push:
     paths:
-    - 'Dockerfile.composerize'
+    - 'dockerfiles/Dockerfile.composerize'
   workflow_dispatch:  # 允许手动触发
   repository_dispatch:  # 允许事件类型为composerize-on-update时被触发
     types:
@@ -19,7 +19,7 @@ jobs:
 
       - name: 'Set env'
         run: |
-          versions=$(grep -oP '(?<==)\d+\.\d+\.\d+' composerize_ver.txt | paste -sd "-")
+          versions=$(grep -oP '(?<==)\d+\.\d+\.\d+' versions/composerize_ver.txt | paste -sd "-")
           echo "当前镜像版本号: $versions"
           echo "Composerize_VER=$versions" >> $GITHUB_ENV
 
@@ -46,7 +46,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./Dockerfile.composerize
+          file: ./dockerfiles/Dockerfile.composerize
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |

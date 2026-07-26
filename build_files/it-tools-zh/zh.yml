@@ -520,26 +520,72 @@ tools:
       placeholder-remove-item-filter-regex: 过滤正则表达式
       placeholder-remove-item-not-filter-regex: 非过滤正则表达式
   base64-string-converter:
-    title: Base64 字符串编码/解码器
-    description: 轻松将字符串编码和解码为 Base64 表示形式。
+    title: Base64 字符串编解码器
+    description: 简单实现字符串与 Base64 格式相互编码和解码。
     texts:
       text-base64-string-copied-to-the-clipboard: Base64 字符串已复制到剪贴板
       text-string-copied-to-the-clipboard: 字符串已复制到剪贴板
       message-invalid-base64-string: 无效的 Base64 字符串
       title-string-to-base64: 字符串转 Base64
       label-encode-url-safe: URL 安全编码
-      placeholder-put-your-string-here: 在此输入您的字符串...
+      placeholder-put-your-string-here: 在此输入字符串……
       label-string-to-encode: 待编码字符串
-      label-base64-of-string: 字符串的 Base64
-      placeholder-the-base64-encoding-of-your-string-will-be-here: 您的字符串的 Base64 编码将在此显示
+      label-base64-of-string: 字符串 Base64 结果
+      placeholder-the-base64-encoding-of-your-string-will-be-here: 字符串的 Base64 编码结果将显示在此
       title-base64-to-string: Base64 转字符串
       label-decode-url-safe: URL 安全解码
-      placeholder-your-base64-string: 您的 Base64 字符串...
-      label-base64-string-to-decode: 待解码的 Base64 字符串
-      label-decoded-string: 已解码字符串
-      placeholder-the-decoded-string-will-be-here: 已解码的字符串将在此显示
+      placeholder-your-base64-string: 输入 Base64 字符串……
+      label-base64-string-to-decode: 待解码 Base64 字符串
+      label-decoded-string: 解码后字符串
+      placeholder-the-decoded-string-will-be-here: 解码结果将显示在此
       tag-copy-base64: 复制 Base64
-      tag-copy-decoded-string: 复制已解码字符串
+      tag-copy-decoded-string: 复制解码字符串
+      text-encoding: '文本编码：'
+      label-utf-8: UTF-8
+      label-utf-8-alias-utf8: 'UTF-8（别名：UTF8）'
+      label-utf-16le: UTF-16LE
+      label-utf-16be: UTF-16BE
+      label-utf-7: UTF-7
+      label-utf-7-imap: UTF-7（IMAP）
+      label-utf-32le: UTF-32LE
+      label-utf-32be: UTF-32BE
+      label-iso-8859-1-latin-1: ISO-8859-1（拉丁-1）
+      label-iso-8859-2-central-european: ISO-8859-2（中欧字符集）
+      label-iso-8859-3-south-european: ISO-8859-3（南欧字符集）
+      label-iso-8859-4-north-european: ISO-8859-4（北欧字符集）
+      label-iso-8859-5-cyrillic: ISO-8859-5（西里尔字母）
+      label-iso-8859-6-arabic: ISO-8859-6（阿拉伯文）
+      label-iso-8859-7-greek: ISO-8859-7（希腊文）
+      label-iso-8859-8-hebrew: ISO-8859-8（希伯来文）
+      label-iso-8859-9-turkish: ISO-8859-9（土耳其文）
+      label-iso-8859-10-nordic: ISO-8859-10（北欧语种）
+      label-iso-8859-13-baltic: ISO-8859-13（波罗的海语种）
+      label-iso-8859-14-celtic: ISO-8859-14（凯尔特语种）
+      label-iso-8859-15-latin-9: ISO-8859-15（拉丁-9）
+      label-iso-8859-16-romanian: ISO-8859-16（罗马尼亚文）
+      label-windows-1250-central-european: Windows-1250（中欧字符集）
+      label-windows-1251-cyrillic: Windows-1251（西里尔字母）
+      label-windows-1252-western-european: Windows-1252（西欧字符集）
+      label-windows-1253-greek: Windows-1253（希腊文）
+      label-windows-1254-turkish: Windows-1254（土耳其文）
+      label-windows-1255-hebrew: Windows-1255（希伯来文）
+      label-windows-1256-arabic: Windows-1256（阿拉伯文）
+      label-windows-1257-baltic: Windows-1257（波罗的海语种）
+      label-windows-1258-vietnamese: Windows-1258（越南文）
+      label-koi8-r-russian: KOI8-R（俄语）
+      label-koi8-u-ukrainian: KOI8-U（乌克兰语）
+      label-gbk-simplified-chinese: GBK（简体中文）
+      label-gb2312-simplified-chinese: GB2312（简体中文）
+      label-gb18030-simplified-chinese: GB18030（简体中文）
+      label-big5-traditional-chinese: Big5（繁体中文）
+      label-shift-jis-japanese: Shift-JIS（日语）
+      label-euc-jp-japanese: EUC-JP（日语）
+      label-macroman: MacRoman
+      label-macgreek: MacGreek
+      label-macturkish: MacTurkish
+      label-maccyrillic: MacCyrillic
+      label-maccentraleurope: MacCentralEurope
+      label-maciceland: MacIceland
   toml-to-yaml:
     title: TOML 转 YAML
     description: 解析并将 TOML 转换为 YAML。
@@ -4463,6 +4509,31 @@ tools:
       placeholder-your-url-to-parse: 要解析的 URL...
       url-must-have-http-or-https-prefix: URL 必须以 http:// 或 https:// 为前缀
       button-open-url: 打开网址
+  keyboard-tester:
+    instructions:
+      highlight: 按下的按键将会高亮显示
+      press: 按下键盘任意按键进行测试
+      reset: 点击「重置」按钮清空测试记录
+      tested: 已测试按键将显示为绿色
+      title: 使用说明
+    keys: 按键
+    layout: '键盘布局：'
+    legend:
+      pressed: 已按下
+      tested: 已测试
+      untested: 未测试
+    progress: 测试进度
+    reset: 重置
+    size: '键盘尺寸：'
+    sizes:
+      '60': 60% 紧凑型
+      full: 全尺寸 (100%)
+      tkl: TKL (80%)
+    texts:
+      label-qwerty: QWERTY
+      label-azerty: AZERTY
+      label-dvorak: DVORAK
+      label-colemak: COLEMAK
   text-to-binary:
     title: 文本转 UTF-8 二进制
     description: 将文本转换为其 UTF-8 二进制表示，反之亦然。
@@ -8438,7 +8509,615 @@ tools:
       tag-copy: 复制
       tag-refresh: 重新抽取
       text-picked-lines-copied-to-clipboard: 已将抽取内容复制至剪贴板！
-
+  markdown-to-data:
+    texts:
+      label-paste-your-markdown-content: '粘贴 Markdown 内容：'
+      placeholder-your-markdown: Markdown 内容……
+    title: Markdown 转数据
+    description: >-
+      将 Markdown 表格转换为 JSON、YAML、CSV、SQL INSERT、XML、Markdown 或
+      XLSX
+    externalAccess: 'null'
+  html-to-data:
+    texts:
+      label-paste-your-html-content: '粘贴 HTML 内容：'
+      placeholder-your-html: HTML 内容……
+      error-multiple-json-blocks: 无法同时转换多个表格
+    title: HTML 转数据
+    description: 将 HTML 表格转换为 JSON、YAML、CSV、SQL INSERT、XML、Markdown 或 XLSX
+    externalAccess: 'null'
+  cron-expression-builder:
+    title: Cron 表达式生成器
+    description: 通过可视化界面生成 Cron 表达式
+    externalAccess: 'null'
+    texts:
+      label-seconds: 秒
+      label-minutes: 分
+      label-hours: 时
+      label-day-of-month: 日期
+      label-month: 月份
+      label-january: 一月
+      label-february: 二月
+      label-march: 三月
+      label-april: 四月
+      label-may: 五月
+      label-june: 六月
+      label-july: 七月
+      label-august: 八月
+      label-september: 九月
+      label-october: 十月
+      label-november: 十一月
+      label-december: 十二月
+      label-day-of-week: 星期
+      label-sunday: 星期日
+      label-monday: 星期一
+      label-tuesday: 星期二
+      label-wednesday: 星期三
+      label-thursday: 星期四
+      label-friday: 星期五
+      label-saturday: 星期六
+      label-year: 年
+      label-every: 每
+      label-specific-values: 指定值
+      label-range: 范围
+      label-increment: 步长
+      title-generated-cron-expression: 生成的 Cron 表达式
+      title-validation-errors: 校验错误
+      label-mode: '模式：'
+      label-from: '起始：'
+      label-to: '结束：'
+      label-start-at: '起始值：'
+      tag-cron-expression-is-invalid: Cron 表达式无效
+      paste-cron-expression: 粘贴 Cron 表达式
+      e-g-5-0-12-1-2025: 例如：*/5 0 12 * * 1 2025
+      0-6-sunday-0-monday-1-saturday-6: 0-6（星期日=0，星期一=1，……，星期六=6）
+      label-select-at-least-one-value: '{0}：至少选择一个值'
+      day-of-month-and-day-of-week-cannot-both-be-specific: 日期与星期不能同时指定固定值
+      label-start-cannot-be-greater-than-end: '{0}：起始值不能大于结束值'
+      label-start-must-be-within-allowed-range: '{0}：起始值超出允许范围'
+      label-step-must-be-greater-than-1: '{0}：步长必须 ≥ 1'
+      label-start-cannot-be-greater-than-end-0: '{0}：起始值不能大于结束值'
+      seconds: 秒
+      minutes: 分
+      hours: 时
+      day-of-month: 日期
+      month: 月份
+      day-of-week: 星期
+      year: 年
+  css-js-prettify-minify:
+    title: CSS/JS 格式化与压缩
+    description: 在线格式化或压缩 CSS 和 JavaScript 代码。
+    externalAccess: 'null'
+    texts:
+      label-javascript: JavaScript
+      label-css: CSS
+      label-language: 语言
+      label-indent-size: 缩进大小
+      placeholder-2: '2'
+      title-prettify: 格式化
+      label-your-code: 代码
+      placeholder-paste-your-code-to-prettify: 粘贴待格式化代码……
+      label-prettified-code: 格式化后代码
+      title-minify: 压缩
+      placeholder-paste-your-code-to-minify: 粘贴待压缩代码……
+      label-minified-code: 压缩后代码
+  dns-propagation-tester:
+    title: DNS 全球传播检测
+    description: 在多个服务器检测 DNS 记录全球同步情况的简易工具。
+    externalAccess: >-
+      该工具调用自建网络工具服务执行 DNS
+      查询。
+    texts:
+      label-network-utilities-service-url: '网络工具服务地址：'
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: '基础认证：'
+      placeholder-username-password: 用户名:密码
+      tab-dns-propagation: DNS 传播检测
+      label-domain: '域名：'
+      placeholder-example-com: example.com
+      label-record-type: '记录类型：'
+      title-resolvers-to-check: 待检测解析服务器
+      title-results: 结果
+      tab-custom-resolvers: 自定义解析服务器
+      title-add-custom-resolver: 添加自定义解析服务器
+      label-resolver-name: '解析服务器名称：'
+      placeholder-resolver-name-e-g-my-dns: 解析服务器名称（例如：My DNS）
+      label-resolver-ip: '解析服务器IP：'
+      placeholder-resolver-ip-e-g-10-0-0-1: 解析服务器IP（例如：10.0.0.1）
+      title-your-custom-resolvers: 已添加自定义解析服务器
+      tag-network-utilities-service-configuration-self-hosted: 网络工具服务配置（自建部署）
+      tag-you-must-self-host-network-utilities-service-see: '你需要自行部署网络工具服务，参考：'
+      tag-network-utilities-service-docker-install: 网络工具服务 Docker 部署教程
+      tag-select-all: 全选
+      tag-deselect-all: 取消全选
+      tag-check-propagation: 开始检测
+      tag-resolver: 解析服务器
+      tag-resolver-ip: 服务器IP
+      tag-status: 状态
+      tag-answers: 解析结果
+      tag-checking: 检测中……
+      tag-no-answers: 无解析记录
+      tag-add-resolver: 添加解析服务器
+      tag-remove: 删除
+      tag-no-custom-resolvers-added-yet: 尚未添加自定义解析服务器
+  dns-query:
+    title: Cloudflare DNS/RDAP 查询
+    description: >-
+      使用 Cloudflare DNS / RDAP.org 在线查询任意域名的 DNS 记录与 RDAP 信息。
+    externalAccess: 'null'
+    texts:
+      message-please-enter-a-valid-domain-name: 请输入有效的域名
+      text-dns-records-copied-to-the-clipboard: DNS 记录已复制到剪贴板
+      label-domain-name: 域名
+      placeholder-e-g-example-com: 例如：example.com
+      tag-name: 名称
+      tag-ttl: TTL
+      tag-data: 记录值
+      tag-copy-results: 复制结果
+      tag-no-records-found-for-this-domain: 未查询到该域名相关记录
+      tag-loading-whois-info: 正在加载 WHOIS 信息……
+      tag-whois: WHOIS
+      tag-domain-name: 域名
+      tag-registrar: 注册商
+      tag-registration-date: 注册时间
+      tag-expiration-date: 到期时间
+      tag-updated-date: 更新时间
+      tag-registrant: 注册人
+      tag-name-servers: 域名服务器
+      tag-domain-status: 域名状态
+      tag-dnssec: DNSSEC
+  dns-tester:
+    title: DNS 综合查询工具
+    description: >-
+      用于 DNS 解析、WHOIS 查询及其他
+      DNS 相关任务的简易工具。
+    externalAccess: >-
+      该工具调用自建网络工具服务执行
+      DNS/WHOIS 查询等相关操作。
+    texts:
+      label-a-ipv4-address: A — IPv4 地址
+      label-aaaa-ipv6-address: AAAA — IPv6 地址
+      label-afsdb-afs-database-location: AFSDB — AFS 数据库位置
+      label-apl-address-prefix-list: APL — 地址前缀列表
+      label-caa-certificate-authority-authorization: CAA — CA 授权
+      label-cdnskey-child-dnskey: CDNSKEY — 子域名 DNSKEY
+      label-cds-child-ds: CDS — 子域名 DS
+      label-cert-certificate-storage: CERT — 证书存储
+      label-cname-canonical-name: CNAME — 规范别名
+      label-csync-child-to-parent-sync: CSYNC — 子域向父域同步
+      label-dhcid-dhcp-identifier: DHCID — DHCP 标识
+      label-dlv-dnssec-lookaside-validation-obsolete: DLV — DNSSEC 旁路验证（已废弃）
+      label-dname-non-terminal-rename: DNAME — 非终端重定向
+      label-dnskey-dnssec-public-key: DNSKEY — DNSSEC 公钥
+      label-ds-delegation-signer: DS — 授权签名者
+      label-eui48-mac-address-48-bit: EUI48 — 48位MAC地址
+      label-eui64-mac-address-64-bit: EUI64 — 64位MAC地址
+      label-hinfo-host-information: HINFO — 主机信息
+      label-hip-host-identity-protocol: HIP — 主机身份协议
+      label-https-https-service-binding: HTTPS — HTTPS 服务绑定
+      label-ipseckey-ipsec-key: IPSECKEY — IPsec 密钥
+      label-key-security-key-obsolete: KEY — 安全密钥（已废弃）
+      label-kx-key-exchanger: KX — 密钥交换
+      label-loc-geographic-location: LOC — 地理坐标
+      label-mx-mail-exchanger: MX — 邮件交换记录
+      label-naptr-regex-based-rewrite: NAPTR — 正则重写规则
+      label-ns-name-server: NS — 域名服务器
+      label-nsec-dnssec-denial-of-existence: NSEC — DNSSEC 不存在证明
+      label-nsec3-hashed-denial-of-existence: NSEC3 — 哈希不存在证明
+      label-nsec3param-nsec3-parameters: NSEC3PARAM — NSEC3 参数
+      label-openpgpkey-openpgp-public-key: OPENPGPKEY — OpenPGP 公钥
+      label-ptr-reverse-lookup-pointer: PTR — 反向解析指针
+      label-rrsig-dnssec-signature: RRSIG — DNSSEC 签名
+      label-rp-responsible-person: RP — 负责人
+      label-sig-signature-obsolete: SIG — 签名（已废弃）
+      label-smimea-s-mime-cert-association: SMIMEA — S/MIME 证书关联
+      label-soa-start-of-authority: SOA — 起始授权记录
+      label-spf-sender-policy-framework-deprecated: SPF — 发送者策略框架（已弃用）
+      label-srv-service-locator: SRV — 服务定位记录
+      label-sshfp-ssh-public-key-fingerprint: SSHFP — SSH 公钥指纹
+      label-svcb-service-binding: SVCB — 服务绑定
+      label-ta-trust-anchor-experimental: TA — 信任锚（实验性）
+      label-tkey-secret-key-agreement: TKEY — 密钥协商
+      label-tlsa-dane-tls-association: TLSA — DANE TLS 关联
+      label-tsig-transaction-signature: TSIG — 事务签名
+      label-txt-text-record: TXT — 文本记录
+      label-uri-uri-template: URI — URI 模板
+      label-zonemd-zone-message-digest: ZONEMD — 区域消息摘要
+      label-system-default: 系统默认
+      label-custom-dns-resolver: 自定义 DNS 服务器
+      label-google-8-8-8-8: Google 8.8.8.8
+      label-google-8-8-4-4: Google 8.8.4.4
+      label-cloudflare-1-1-1-1: Cloudflare 1.1.1.1
+      label-cloudflare-1-0-0-1: Cloudflare 1.0.0.1
+      label-quad9-9-9-9-9: Quad9 9.9.9.9
+      label-quad9-149-112-112-112: Quad9 149.112.112.112
+      label-opendns-208-67-222-222: OpenDNS 208.67.222.222
+      label-opendns-208-67-220-220: OpenDNS 208.67.220.220
+      label-cleanbrowsing-185-228-168-9: CleanBrowsing 185.228.168.9
+      label-cleanbrowsing-185-228-169-9: CleanBrowsing 185.228.169.9
+      label-dns-watch-84-200-69-80: DNS.Watch 84.200.69.80
+      label-dns-watch-84-200-70-40: DNS.Watch 84.200.70.40
+      label-freedns-37-235-1-174: FreeDNS 37.235.1.174
+      label-freedns-37-235-1-177: FreeDNS 37.235.1.177
+      label-fdn-france-80-67-169-12: FDN France 80.67.169.12
+      label-fdn-france-80-67-169-40: FDN France 80.67.169.40
+      label-neustar-eu-156-154-70-1: Neustar EU 156.154.70.1
+      label-neustar-eu-156-154-71-1: Neustar EU 156.154.71.1
+      label-level3-209-244-0-3: Level3 209.244.0.3
+      label-level3-209-244-0-4: Level3 209.244.0.4
+      label-comodo-8-26-56-26: Comodo 8.26.56.26
+      label-comodo-8-20-247-20: Comodo 8.20.247.20
+      label-centurylink-205-171-3-65: CenturyLink 205.171.3.65
+      label-centurylink-205-171-2-65: CenturyLink 205.171.2.65
+      label-dnspod-119-29-29-29: DNSPod 119.29.29.29
+      label-alidns-223-5-5-5: AliDNS 223.5.5.5
+      label-alidns-223-6-6-6: AliDNS 223.6.6.6
+      label-yandex-77-88-8-8: Yandex 77.88.8.8
+      label-yandex-77-88-8-1: Yandex 77.88.8.1
+      label-naver-korea-125-209-222-141: Naver Korea 125.209.222.141
+      label-naver-korea-125-209-249-1: Naver Korea 125.209.249.1
+      label-gigadns-brazil-189-38-95-95: GigaDNS Brazil 189.38.95.95
+      label-gigadns-brazil-189-38-95-96: GigaDNS Brazil 189.38.95.96
+      label-opendns-africa-196-3-132-153: OpenDNS Africa 196.3.132.153
+      label-opendns-africa-196-3-132-154: OpenDNS Africa 196.3.132.154
+      label-network-utilities-service-url: '网络工具服务地址：'
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: '基础认证：'
+      placeholder-username-password: 用户名:密码
+      label-target-dns-resolver-ip: '目标 DNS 服务器IP：'
+      placeholder-system-default: 系统默认
+      placeholder-e-g-10-0-0-53: 例如：10.0.0.53
+      tab-dns-query: DNS 查询
+      label-domain: 域名
+      placeholder-example-com: example.com
+      label-dns-record-type: 'DNS 记录类型：'
+      title-result: 查询结果
+      label-record-type: 记录类型
+      title-answers: 解析结果
+      tab-whois: WHOIS
+      label-raw-whois: 原始 WHOIS
+      label-parsed: 解析结果
+      tab-dnssec-validation: DNSSEC 校验
+      label-validated: 校验通过
+      label-dnskey: DNSKEY
+      label-rrsig: RRSIG
+      tab-reverse-dns-ptr: 反向 DNS（PTR）
+      label-ip-address: 'IP 地址：'
+      placeholder-8-8-8-8: 8.8.8.8
+      label-ip: IP
+      label-ptr: PTR
+      tab-soa-axfr-test: SOA + AXFR 检测
+      label-soa: SOA
+      label-axfr-allowed: 允许 AXFR
+      label-records: 记录数量
+      tag-network-utilities-service-configuration-self-hosted: 网络工具服务配置（自建部署）
+      tag-you-must-self-host-network-utilities-service-see: '你需要自行部署网络工具服务，参考：'
+      tag-network-utilities-service-docker-install: 网络工具服务 Docker 部署教程
+      tag-query-dns: 查询 DNS
+      tag-lookup-whois: 查询 WHOIS
+      tag-validate-dnssec: 校验 DNSSEC
+      tag-reverse-lookup: 反向解析
+      tag-run-soa-axfr: 执行 SOA + AXFR 检测
+  dockerfile-label-generator:
+    title: Dockerfile LABEL 生成器
+    description: 用于生成 Dockerfile 标签的简易工具。
+    externalAccess: 'null'
+    texts:
+      label-title: '标题：'
+      placeholder-my-project: My Project
+      label-description: '描述：'
+      placeholder-short-project-description: 项目简短描述
+      label-repository-url: '代码仓库地址：'
+      placeholder-https-github-com-username-repo: https://github.com/username/repo
+      label-source-url: '源码地址：'
+      label-documentation-url: '文档地址：'
+      placeholder-https-github-com-username-repo-readme: https://github.com/username/repo#readme
+      label-license-spdx: '许可证（SPDX）：'
+      placeholder-mit: MIT
+      label-version: '版本：'
+      placeholder-1-0-0: 1.0.0
+      label-revision-commit-sha: '修订版本（Commit SHA）：'
+      placeholder-abcdef123456: abcdef123456
+      label-created: '构建时间：'
+      placeholder-2024-01-01t12-00-00z: '2024-01-01T12:00:00.000Z'
+      label-authors: '作者：'
+      placeholder-your-name-you-example-com: Your Name <you@example.com>
+      title-generated-label-block: 生成的 LABEL 代码段
+  https-tester:
+    title: HTTPS 检测工具
+    description: 校验 HTTPS 证书、HSTS 以及 302 跳转
+    externalAccess: >-
+      该工具调用自建网络工具服务执行
+      HTTPS/HSTS 相关检测任务。
+    texts:
+      label-network-utilities-service-url: '网络工具服务地址：'
+      placeholder-http-localhost-3000: http://localhost:3000
+      label-basic-authentication: '基础认证：'
+      placeholder-username-password: 用户名:密码
+      tab-certificate: 证书信息
+      label-host: '主机：'
+      placeholder-example-com: example.com
+      label-port: '端口：'
+      placeholder-443: '443'
+      title-result: 结果
+      label-hostname: '主机名：'
+      label-not-before: '生效时间：'
+      label-not-after: '过期时间：'
+      label-days-until-expiry: '剩余有效天数：'
+      label-subject: '主体：'
+      label-issuer: '颁发机构：'
+      label-sub-alt-name: '主题备用名称：'
+      tab-hsts: HSTS
+      label-url: URL
+      placeholder-https-example-com: https://example.com
+      label-hsts-present: 存在 HSTS
+      label-max-age: Max-Age
+      label-inc-subdomains: 包含子域名
+      label-preload: 预加载
+      label-raw-header: 原始响应头
+      tab-http-https-redirect: HTTP → HTTPS 跳转
+      label-domain: '域名：'
+      label-http-url: HTTP 地址
+      label-redirected: 已跳转
+      label-final-url: 最终地址
+      label-status-code: 状态码
+      label-redirect-chain: 跳转链路
+      title-redirect-chain-details: 跳转链路详情
+      tag-network-utilities-service-configuration-self-hosted: 网络工具服务配置（自建部署）
+      tag-you-must-self-host-network-utilities-service-see: '你需要自行部署网络工具服务，参考：'
+      tag-network-utilities-service-docker-install: 网络工具服务 Docker 部署教程
+      tag-check-certificate: 检测证书
+      tag-check-hsts: 检测 HSTS
+      tag-check-redirect: 检测跳转
+  k6-script-generator:
+    title: K6 压测脚本生成器
+    description: 基于常用预设生成 k6 负载测试脚本
+    externalAccess: 'null'
+    texts:
+      label-smoke-test: 冒烟测试
+      label-load-test: 负载测试
+      label-stress-test: 压力测试
+      label-spike-test: 尖峰测试
+      label-soak-test: 稳定性测试
+      label-get: GET
+      label-post: POST
+      label-put: PUT
+      label-patch: PATCH
+      label-delete: DELETE
+      label-scenario-preset: '场景预设：'
+      label-virtual-users-vus: '虚拟用户（VUs）：'
+      label-duration: '持续时长：'
+      label-ramp-up-duration: '递增时长：'
+      label-ramp-down-duration: '递减时长：'
+      label-thresholds-name-expression: '阈值（名称/表达式）：'
+      placeholder-metric: 指标
+      placeholder-rule: 规则
+      label-checks-name-expression: '校验规则（名称/表达式）：'
+      placeholder-check-name: 校验名称
+      placeholder-expression: 表达式
+      label-request-steps: '请求步骤：'
+      placeholder-request-url: 请求地址
+      label-payload: '请求载荷：'
+      placeholder-payload-json-or-text: 请求载荷（JSON或文本）
+      placeholder-headers-json: 请求头（JSON）
+      label-headers: '请求头：'
+      label-sleep-after-this-step-seconds: '步骤后等待（秒）：'
+      title-generated-k6-script: 生成的 K6 脚本
+      tag-apply-preset: 应用预设
+      tag-remove: 删除
+      tag-add-threshold: 添加阈值
+      tag-add-check: 添加校验
+      tag-remove-step: 删除步骤
+      tag-add-step: 添加步骤
+  markdown-diff:
+    title: Markdown 对比
+    description: 对比两份 Markdown 文档并展示差异。
+    externalAccess: 'null'
+    texts:
+      label-code: 代码
+      label-preview: 预览
+      tag-source-markdown: 原始 Markdown
+      tag-modified-markdown: 修改后 Markdown
+  markdown-preview:
+    title: Markdown 实时预览
+    description: 边输入边预览 Markdown 渲染效果
+    externalAccess: 'null'
+    texts:
+      placeholder-your-markdown-content: Markdown 内容……
+      label-your-markdown-to-preview: '待预览 Markdown：'
+      label-rendered-preview: '渲染预览：'
+  markdown-table-generator:
+    title: Markdown 表格生成器
+    description: 通过可视化编辑器创建 GitHub 风格 Markdown 表格。
+    externalAccess: 'null'
+    texts:
+      label-left: 左对齐
+      label-center: 居中
+      label-right: 右对齐
+      label-paste-clipboard-table-data-here: '粘贴剪贴板表格数据：'
+      placeholder-paste-your-table-to-edit: 粘贴表格进行编辑……
+      label-generated-markdown-table: '生成的 Markdown 表格：'
+      tag-import-table-data: 导入表格数据
+      tag-add-row: 新增行
+      tag-add-column: 新增列
+  nmap-command-builder:
+    title: Nmap 命令生成器
+    description: 可视化生成 Nmap 扫描命令。
+    externalAccess: 'null'
+    texts:
+      label-default-scan: 默认扫描
+      label-quick-scan: 快速扫描
+      label-intense-scan: 深度扫描
+      label-full-tcp-scan: 完整TCP扫描
+      label-udp-scan: UDP扫描
+      label-ping-sweep: Ping 网段扫描
+      label-no-ping-stealth-host-discovery: 不发送Ping（隐蔽主机发现）
+      label-top-ports-100: 常用端口（前100）
+      label-top-ports-1000: 常用端口（前1000）
+      label-firewall-evasion: 防火墙绕过
+      label-ipv6-scan: IPv6扫描
+      label-service-version-deep-scan: 服务与版本深度探测
+      label-vulnerability-scan-nse-vuln: 漏洞扫描（NSE vuln）
+      label-http-enumeration: HTTP信息探测
+      label-smb-enumeration: SMB信息探测
+      label-dns-brute-force: DNS暴力枚举
+      label-ftp-audit: FTP审计
+      label-ssh-audit: SSH审计
+      label-full-recon-os-version-scripts: 完整信息收集（操作系统+版本+脚本）
+      label-target: '目标：'
+      placeholder-example-com-or-192-168-1-1: example.com 或 192.168.1.1
+      tab-presets: 预设模板
+      label-preset: '预设：'
+      placeholder-choose-a-preset: 选择预设
+      tab-custom: 自定义
+      title-scan-options: 扫描选项
+      label-os-detection-o: 操作系统探测 (-O)
+      label-version-detection-sv: 版本探测 (-sV)
+      label-default-scripts-sc: 默认脚本 (-sC)
+      label-traceroute-traceroute: 路由追踪 (--traceroute)
+      label-verbose-v: 详细输出 (-v)
+      label-aggressive-a: 激进模式 (-A)
+      title-advanced: 高级选项
+      label-custom-ports-p: 自定义端口 (-p)
+      placeholder-80-443-or-1-65535: 80,443 或 1-65535
+      label-timing-t: 扫描速度 (-T)
+      label-nse-scripts-script: NSE 脚本 (--script)
+      placeholder-vuln-http-title: vuln, http-title, ...
+      label-output-file-on: 输出文件 (-oN)
+      placeholder-scan-txt: scan.txt
+      title-generated-command: 生成命令
+  picomatch-tester:
+    title: Picomatch 匹配测试
+    description: >-
+      用于 glob 通配匹配库 picomatch 的简易测试工具。
+    externalAccess: 'null'
+    texts:
+      label-pattern: '匹配表达式：'
+      placeholder-enter-a-glob-pattern-like-js: 输入 glob 表达式，例如 *.js
+      label-options: '选项：'
+      label-generated-regex: '生成正则表达式：'
+      label-test-lines-one-per-line: '测试文本（一行一条）：'
+      placeholder-enter-one-string-per-line: 每行输入一条待匹配文本
+      tag-case-insensitive: 忽略大小写
+      tag-match-dotfiles: 匹配点开头文件
+      tag-no-nested-directories-with-globstars: ** 不匹配嵌套目录
+      tag-allows-glob-to-match-any-part-of-the-given-string-s: 允许通配符匹配字符串任意片段
+      tag-don-t-match-trailing-slashes-with-single-stars: 单星号不匹配末尾斜杠
+  powershell-memo:
+    title: Powershell 速查表
+    description: >-
+      Powershell 是面向系统管理与自动化的强大脚本语言与命令行终端，
+      提供丰富 cmdlet 与功能，高效管理、自动化 Windows 任务。
+    externalAccess: 'null'
+  running-pace-calculator:
+    title: 跑步配速计算器
+    description: >-
+      计算跑步配速、预估主流赛事完赛时间、拆分分段用时，同时计算训练区间。
+    externalAccess: 'null'
+    texts:
+      label-length: '距离：'
+      placeholder-e-g-10km-or-100m: 例如：10km 或 100m
+      label-time: '用时：'
+      placeholder-e-g-45-00-or-45min-or-1h30m: 例如：45:00、45min 或 1h30m
+      label-pace: '配速：'
+      placeholder-e-g-4-30-km: 例如：4:30/km
+      label-unit: '单位：'
+      label-output-speed-in-instead-of-pace: '输出速度而非配速：'
+      title-result: 计算结果
+      tag-km: 公里
+      tag-mile: 英里
+      tag-calculate: 计算
+  saml-parser:
+    title: SAML 解析工具
+    description: >-
+      自动识别 SAML 输入（Base64、DEFLATE 或 XML），解析并校验签名，
+      结构化展示断言内容：签发方、主体、条件、认证上下文、声明与校验状态。
+    externalAccess: 'null'
+    texts:
+      label-saml-assertion-base64-deflate-or-xml: 'SAML 断言（Base64 / DEFLATE / XML）：'
+      placeholder-paste-saml-assertion-base64-deflate-or-xml: 粘贴 SAML 断言（Base64、DEFLATE 或 XML）
+      title-validation-options: 校验选项
+      label-thumbprint: '证书指纹：'
+      placeholder-thumbprint-optional: 证书指纹（选填）
+      label-public-key: '公钥：'
+      placeholder-public-key-optional: 公钥（选填）
+      label-audience: '受众：'
+      placeholder-audience-optional: 受众（选填）
+      title-parsed-saml-assertion: 解析后的 SAML 断言
+      label-issuer: '签发方：'
+      label-assertion-id: '断言编号：'
+      label-session-index: '会话索引：'
+      label-notbefore: '生效时间：'
+      label-notonorafter: '失效时间：'
+      label-signature-validation-status: '签名校验状态：'
+      title-claims: 声明信息
+      title-raw-assertion: 原始断言
+      tag-bypass-expiration: 忽略有效期
+      tag-don-t-bypass-expiration: 校验有效期
+      tag-detect-parse-and-validate: 识别、解析并校验
+  url-builder:
+    title: URL 构造器
+    description: 可视化编辑并拼接带查询参数的 URL
+    externalAccess: 'null'
+    texts:
+      label-string: 字符串
+      label-number: 数字
+      label-boolean: 布尔值
+      label-date: 日期
+      label-datetime: 日期时间
+      label-array: 数组
+      label-load-url: '载入URL：'
+      placeholder-paste-url-to-parse: 粘贴待解析URL
+      label-base-url: '基础URL：'
+      placeholder-base-url: 基础URL
+      title-url-parameters: URL 参数
+      placeholder-key: 参数名
+      placeholder-value: 参数值
+      title-generated-url: 生成URL
+      tag-parse: 解析
+  json-patch:
+    texts:
+      text-json-paths-copied-to-clipboard: JSON Path 已复制到剪贴板！
+      tab-paths: Path路径
+      label-input-json: 输入 JSON
+      placeholder-paste-json: 粘贴 JSON……
+      tab-generate-patch: 生成补丁
+      label-before-json: 修改前 JSON
+      placeholder-before-json: 修改前 JSON……
+      label-after-json: 修改后 JSON
+      placeholder-after-json: 修改后 JSON……
+      title-generate-json-patch: 生成 JSON Patch
+      tab-apply-patch: 应用补丁
+      label-json-to-patch: 待修改 JSON
+      placeholder-json-to-patch: 待修改 JSON……
+      label-json-patch-array: JSON Patch 数组
+      placeholder-json-patch-array: JSON Patch 数组……
+      title-patched-json: 应用补丁后 JSON
+      tag-generate-paths: 生成路径
+      tag-copy-json-paths: 复制 JSON Path
+      tag-generate-patch: 生成补丁
+      tag-apply-patch: 应用补丁
+  ping:
+    title: Ping 工具
+    description: 批量 Ping 主机名、IP、CIDR 网段或IP区间
+    externalAccess: >-
+      该工具调用自建网络工具服务发送 ICMP
+      Ping 请求。
+    texts:
+      label-targets-ips-cidrs-hostnames-one-per-line-or-or: '目标（IP/CIDR/域名，单行一条，支持逗号/分号分隔）：'
+      placeholder-192-168-1-1-10-google-com-10-10-0-0-0-24: 192.168.1.1&#10;google.com&#10;10.0.0.0/24
+      label-count: '发包次数：'
+      label-timeout-seconds: '超时（秒）：'
+      tag-ping-all: 开始批量 Ping
+      tag-target: 目标
+      tag-ip: IP地址
+      tag-status: 状态
+      tag-avg-rtt-ms: 平均往返时延(ms)
+      tag-packet-loss: 丢包率
+      tag-error: 错误
+      cidr-expands-to-hostcount-ips-exceeding-limit-of-max_cidr_ips: CIDR 将展开为 {0} 个IP，超出最大限制 {1}
+      tag-reachable: 可达
+      tag-unreachable: 不可达
 collapsibleToolMenu:
   text:
     expanding: 展开中...

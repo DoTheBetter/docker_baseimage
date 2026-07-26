@@ -3,7 +3,7 @@ name: Docker baseimage：Caddy2
 on:
   push:
     paths:
-    - 'Dockerfile.caddy2'
+    - 'dockerfiles/Dockerfile.caddy2'
   workflow_dispatch:  # 允许手动触发
   repository_dispatch:  # 允许事件类型为caddy2-on-update时被触发
     types:
@@ -19,7 +19,7 @@ jobs:
 
       - name: 'Set env'
         run: |
-          echo "CADDY_VER=$(cat caddy_ver.txt)" >> $GITHUB_ENV
+          echo "CADDY_VER=$(cat versions/caddy_ver.txt)" >> $GITHUB_ENV
 
       - name: Set up QEMU
         id: qemu
@@ -44,7 +44,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./Dockerfile.caddy2
+          file: ./dockerfiles/Dockerfile.caddy2
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |

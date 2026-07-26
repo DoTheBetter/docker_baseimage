@@ -3,7 +3,7 @@ name: Docker baseimage：It-tools-zh
 on:
   push:
     paths:
-      - 'Dockerfile.it-tools-zh'
+      - 'dockerfiles/Dockerfile.it-tools-zh'
   workflow_dispatch:  # 允许手动触发
   repository_dispatch:  # 允许事件类型为it-tools-zh-on-update时被触发
     types:
@@ -19,7 +19,7 @@ jobs:
 
       - name: 'Set env'
         run: |
-          versions=$(cat it-tools_ver.txt)
+          versions=$(cat versions/it-tools_ver.txt)
           echo "当前镜像版本号: $versions"
           echo "It-tools-zh_VER=$versions" >> $GITHUB_ENV
 
@@ -46,7 +46,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
-          file: ./Dockerfile.it-tools-zh
+          file: ./dockerfiles/Dockerfile.it-tools-zh
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
