@@ -4510,6 +4510,8 @@ tools:
       url-must-have-http-or-https-prefix: URL 必须以 http:// 或 https:// 为前缀
       button-open-url: 打开网址
   keyboard-tester:
+    title: 键盘测试器
+    description: 测试你的键盘按键，确认所有按键是否正常工作。每次按键都有视觉反馈，支持不同键盘布局。
     instructions:
       highlight: 按下的按键将会高亮显示
       press: 按下键盘任意按键进行测试
@@ -9076,6 +9078,8 @@ tools:
       title-generated-url: 生成URL
       tag-parse: 解析
   json-patch:
+    title: JSON Patch 工具
+    description: 一个简单的工具，用于根据RFC 6902创建和测试JSON补丁，并列出JSON对象的路径。
     texts:
       text-json-paths-copied-to-clipboard: JSON Path 已复制到剪贴板！
       tab-paths: Path路径
