@@ -8821,7 +8821,7 @@ tools:
       label-created: '构建时间：'
       placeholder-2024-01-01t12-00-00z: '2024-01-01T12:00:00.000Z'
       label-authors: '作者：'
-      placeholder-your-name-you-example-com: Your Name <you@example.com>
+      placeholder-your-name-you-example-com: Your Name {'<'}you{'@'}example.com{'>'}
       title-generated-label-block: 生成的 LABEL 代码段
   https-tester:
     title: HTTPS 检测工具
