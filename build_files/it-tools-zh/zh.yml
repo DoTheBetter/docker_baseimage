@@ -9000,7 +9000,7 @@ tools:
       placeholder-enter-one-string-per-line: 每行输入一条待匹配文本
       tag-case-insensitive: 忽略大小写
       tag-match-dotfiles: 匹配点开头文件
-      tag-no-nested-directories-with-globstars: ** 不匹配嵌套目录
+      tag-no-nested-directories-with-globstars: 不匹配嵌套目录(**)
       tag-allows-glob-to-match-any-part-of-the-given-string-s: 允许通配符匹配字符串任意片段
       tag-don-t-match-trailing-slashes-with-single-stars: 单星号不匹配末尾斜杠
   powershell-memo:
