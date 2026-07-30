@@ -8,6 +8,8 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai  # 通过环境变量设置时区，避免 sudo timedatectl 权限问题
     strategy:
       fail-fast: false  # 单个矩阵任务失败不影响其他任务
       max-parallel: 1   # 串行执行避免 git push 冲突
@@ -60,9 +62,8 @@ jobs:
           git config --global user.name "DTB"
           git config --global user.email "183888664+DoTheBetter@users.noreply.github.com"
           
-          # 设置时区
-          echo "设置时区为 Asia/Shanghai (UTC+8)"
-          sudo timedatectl set-timezone Asia/Shanghai
+          # 时区已通过 job 级 env: TZ 设置
+          echo "当前时区: $(date +%Z) ($(date))"
           
           # 拉取最新代码
           git config --global pull.rebase false  # 明确合并策略
@@ -70,7 +71,7 @@ jobs:
 
       - name: Setup Node.js
         if: matrix.mode == 'npm-multi'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 'lts/*'
 
