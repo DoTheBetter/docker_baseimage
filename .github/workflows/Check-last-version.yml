@@ -310,8 +310,13 @@ jobs:
       - name: Git Operations
         if: steps.update_flag.outputs.version_updated == 'true'
         run: |
+          # 暂存当前工作区的未提交改动，避免 pull --rebase 因 unstaged changes 失败
+          git add .
+          git stash
           # 拉取最新代码避免并发冲突
           git pull --rebase
+          # 恢复之前暂存的改动
+          git stash pop
           git add .
           # 仅当有文件变更时才提交，避免无变更时 commit 失败
           git diff --cached --quiet || git commit -m "更新 ${{ matrix.name }} Release 版本至 ${{ steps.update_flag.outputs.version_display }}"
