@@ -5088,7 +5088,7 @@ tools:
       tag-png: PNG
       tag-jpeg: JPEG
       title-settings: 设置
-pomodoro-timer:
+  pomodoro-timer:
     title: 番茄计时器
     description: 基础番茄工作法计时器
     texts:
