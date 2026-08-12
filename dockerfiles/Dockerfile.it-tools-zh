@@ -1,5 +1,5 @@
 ARG BUILDPLATFORM=linux/amd64
-FROM --platform=$BUILDPLATFORM node:lts-alpine AS builder
+FROM --platform=$BUILDPLATFORM node:24-alpine AS builder
 
 ENV NPM_CONFIG_LOGLEVEL=warn \
     CI=true \
@@ -13,7 +13,7 @@ RUN apk add --update git python3 make g++ \
    && git clone -b chore/all-my-stuffs https://github.com/sharevb/it-tools.git \
    && cd it-tools \
    && cp /zh.yml ./locales/zh.yml \
-   && npm install -g pnpm \
+   && npm install -g pnpm@11 \
    && pnpm i --ignore-scripts --frozen-lockfile \
    && pnpm build
 
