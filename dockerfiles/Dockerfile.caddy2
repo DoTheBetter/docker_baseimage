@@ -4,7 +4,7 @@
 FROM golang:alpine
 
 # 指定要编译的 Caddy 核心版本
-ENV CADDY_VERSION=v2.11.4
+ENV CADDY_VERSION=v2.11.6
 # 设为 1 自动为编译后的二进制添加 cap_net_bind_service=+ep 权限（Linux 下无需 root 绑定 80/443 端口时必须）。
 # 配合 XCADDY_SUDO=0 可禁用 sudo 执行 setcap。
 ENV XCADDY_SETCAP=1
