@@ -8,4 +8,4 @@
 | IT-Tools | 324a6be | 2026-11-03 11:21:48 | https://github.com/sharevb/it-tools |
 | Composerize | 1.7.6/1.4.4/1.7.5| 2026-05-18 06:56:07| https://github.com/composerize/composerize |
 | ZeroTierOne | 1.16.2| 2026-05-29 07:19:37| https://github.com/zerotier/ZeroTierOne |
-| Caddy | 2.11.7| 2026-10-04 08:23:42| https://github.com/caddyserver/caddy |
+| Caddy | 2.11.8| 2026-11-04 09:59:23| https://github.com/caddyserver/caddy |
