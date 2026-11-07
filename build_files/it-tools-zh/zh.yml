@@ -9702,6 +9702,44 @@ tools:
       tag-300-hop-status-code: = 300 && hop.status_code
       tag-headers-body-preview: 响应头与正文预览
       tag-truncated: 已截断
+  fraction-decimal-converter:
+    texts:
+      label-fraction-decimal: 分数 → 小数
+      label-decimal-fraction: 小数 → 分数
+      label-inches: 英寸
+      label-millimeters: '毫米：'
+      label-mode: '模式：'
+      label-decimal-places: '小数位数：'
+      label-unit: '单位：'
+      label-fraction-resolution: '分数精度：'
+      label-decimal-value: '小数值：'
+      label-fraction: '分数：'
+      placeholder-e-g-3-16-or-2-3-16: 例如：3/16 或 2 3/16
+      title-results: 结果
+      label-decimal-inches: '英寸小数值：'
+      tag-const-mode-ref: const mode = ref
+    title: 分数小数转换器
+    description: '分数与小数互相转换，支持英寸和公制单位换算。'
+    externalAccess: 'null'
+  sound-tester:
+    texts:
+      title-general: 通用
+      title-channel-tests: 声道测试
+      title-bass-tests: 低音测试
+      title-treble-tests: 高音测试
+      title-custom-frequency: 自定义频率
+      label-frequency-hz: '频率（Hz）：'
+      tag-440hz-la: 440Hz / La
+      tag-sweep: 扫频
+      tag-white-noise: 白噪声
+      tag-pink-noise: 粉红噪声
+      tag-stop: 停止
+      tag-left: 左声道
+      tag-right: 右声道
+      tag-play-this-frequency: 播放该频率
+    title: 音频测试器
+    description: '播放测试音频来检测音箱与耳机。调节音量并检查音质清晰度。'
+    externalAccess: 'null'
 collapsibleToolMenu:
   text:
     expanding: 展开中...
