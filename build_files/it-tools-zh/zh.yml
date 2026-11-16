@@ -4140,43 +4140,49 @@ tools:
       title-converted-data: 转换后的数据
       tag-convert: 转换
   firewalld-generator:
-    title: 防火墙命令行生成器
-    description: 生成防火墙命令行
+    title: firewalld 命令生成器
+    description: 生成 firewalld 命令行
     texts:
       label-service: 服务
       label-port: 端口
       label-protocol: 协议
       label-rich-rule: 富规则
       label-add: 添加
-      label-remove: 移除
+      label-remove: 删除
       label-public: 公共
       label-home: 家庭
       label-work: 工作
-      label-yes: '是'
-      label-no: '否'
+      label-yes: 是
+      label-no: 否
       label-zone: '区域：'
       label-action: '操作：'
       label-rule-type: '规则类型：'
       label-value: '值：'
       placeholder-enter-the-service-port-protocol: 输入服务/端口/协议
-      label-permanent: 永久
-      title-generated-fw-command: '生成的防火墙命令：'
+      label-permanent: 永久生效
+      title-generated-fw-command: '生成的fw命令：'
       tag-const-zone-ref: const zone = ref
+      tooltip-remove: 从列表移除
   fortune-wheel:
     title: 幸运转盘
-    description: 可配置的幸运转盘
+    description: 可自定义的幸运转盘
     texts:
-      label-spin-duration-seconds: '旋转时长（秒）：'
+      label-spin-duration-seconds: '转动时长（秒）：'
       placeholder-enter-wheel-option: 输入转盘选项
       title-move-up: 上移
       title-move-down: 下移
-      title-remove: 移除
-      tag-0-recentindex: '= 0 && recentIndex'
+      title-remove: 删除
+      tag-0-recentindex: = 0 && recentIndex
       tag-add-new-option: 添加新选项
       tag-add-option: 添加选项
-      tag-clear-all-options: 清除所有选项
-      tag-no-options-added-yet-add-some-options-to-start-spinning: 尚未添加选项。添加一些选项以开始旋转！
+      tag-clear-all-options: 清空全部选项
+      tag-no-options-added-yet-add-some-options-to-start-spinning: 尚未添加选项，请添加选项后开始转动！
       tag-: ✕
+      wheel-options-wheeloptions-length: 转盘选项（{0}）
+      spinning: 转动中……
+      spin-to-win: 转动抽奖！
+      spin-the-wheel: 转动转盘！
+      checkbox-remove-winner-after-spin: 转动后移除中奖项
   fstab-generator:
     title: FStab 生成器
     description: 生成 /etc/fstab 行
