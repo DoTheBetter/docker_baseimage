@@ -4795,13 +4795,11 @@ tools:
       url-must-have-http-or-https-prefix: URL 必须以 http:// 或 https:// 为前缀
       button-open-url: 打开网址
   keyboard-tester:
-    title: 键盘测试器
-    description: 测试你的键盘按键，确认所有按键是否正常工作。每次按键都有视觉反馈，支持不同键盘布局。
     instructions:
-      highlight: 按下的按键将会高亮显示
-      press: 按下键盘任意按键进行测试
-      reset: 点击「重置」按钮清空测试记录
-      tested: 已测试按键将显示为绿色
+      highlight: 按下的按键会高亮显示
+      press: 在键盘上按下任意按键进行测试
+      reset: 点击“重置”按钮清空测试记录
+      tested: 已测试按键显示为绿色
       title: 使用说明
     keys: 按键
     layout: '键盘布局：'
@@ -4813,7 +4811,7 @@ tools:
     reset: 重置
     size: '键盘尺寸：'
     sizes:
-      '60': 60% 紧凑型
+      '60': 60% 紧凑配列
       full: 全尺寸 (100%)
       tkl: TKL (80%)
     texts:
@@ -4821,6 +4819,9 @@ tools:
       label-azerty: AZERTY
       label-dvorak: DVORAK
       label-colemak: COLEMAK
+    title: 键盘测试器
+    description: 测试键盘按键，检查所有按键是否正常工作。支持不同键盘布局，每次按键提供可视化反馈。
+    externalAccess: 'null'
   text-to-binary:
     title: 文本转 UTF-8 二进制
     description: 将文本转换为其 UTF-8 二进制表示，反之亦然。
@@ -5009,6 +5010,34 @@ tools:
     finance: 金融
     default: Default
     toml: TOML
+  current-loop-4-20ma-converter:
+    title: 4-20毫安转换器
+    description: 在4-20毫安（或0-20毫安）电流与工程值之间双向转换，支持NAMUR NE 43回路诊断。
+    texts:
+      signal-label: 电流
+      label-4-20-ma: 4-20毫安
+      label-0-20-ma: 0-20毫安
+  voltage-0-10v-converter:
+    title: 0-10伏转换器
+    description: 在0-10伏、2-10伏、0-5伏、1-5伏或±10伏电压与工程值之间双向转换。
+    texts:
+      signal-label: 电压
+      label-0-10-v: 0-10伏
+      label-2-10-v: 2-10伏
+      label-0-5-v: 0-5伏
+      label-1-5-v: 1-5伏
+      label-10-v: ±10伏
+  analog-scaling-calculator:
+    title: 模拟量换算计算器
+    description: 将PLC原始模拟量（西门子0-27648、施耐德0-10000、12/15/16位等）和工程值双向换算。
+    texts:
+      signal-label: 原始值
+      preset-siemens-unipolar: 西门子S7单极性（0至27648）
+      preset-siemens-bipolar: 西门子S7双极性（-27648至27648）
+      preset-schneider: 施耐德M340/M580（0至10000）
+      preset-12-bits: 12位（0至4095）
+      preset-15-bits: 15位（0至32767）
+      preset-16-bits: 16位（0至65535）
   websocket-tester:
     title: WebSocket 测试工具
     description: 允许测试 WebSocket 连接
@@ -9405,8 +9434,8 @@ tools:
       tag-don-t-bypass-expiration: 校验有效期
       tag-detect-parse-and-validate: 识别、解析并校验
   url-builder:
-    title: URL 构造器
-    description: 可视化编辑并拼接带查询参数的 URL
+    title: URL构建器
+    description: 用于编辑和构造带查询参数的URL
     externalAccess: 'null'
     texts:
       label-string: 字符串
@@ -9415,39 +9444,40 @@ tools:
       label-date: 日期
       label-datetime: 日期时间
       label-array: 数组
-      label-load-url: '载入URL：'
-      placeholder-paste-url-to-parse: 粘贴待解析URL
+      label-load-url: '加载URL：'
+      placeholder-paste-url-to-parse: 粘贴待解析的URL
       label-base-url: '基础URL：'
       placeholder-base-url: 基础URL
-      title-url-parameters: URL 参数
-      placeholder-key: 参数名
-      placeholder-value: 参数值
-      title-generated-url: 生成URL
+      title-url-parameters: URL参数
+      placeholder-key: 键
+      placeholder-value: 值
+      title-generated-url: 生成的URL
       tag-parse: 解析
   json-patch:
-    title: JSON Patch 工具
-    description: 一个简单的工具，用于根据RFC 6902创建和测试JSON补丁，并列出JSON对象的路径。
     texts:
-      text-json-paths-copied-to-clipboard: JSON Path 已复制到剪贴板！
-      tab-paths: Path路径
-      label-input-json: 输入 JSON
-      placeholder-paste-json: 粘贴 JSON……
+      text-json-paths-copied-to-clipboard: JSON路径已复制到剪贴板！
+      tab-paths: 路径
+      label-input-json: 输入JSON
+      placeholder-paste-json: 粘贴JSON……
       tab-generate-patch: 生成补丁
-      label-before-json: 修改前 JSON
-      placeholder-before-json: 修改前 JSON……
-      label-after-json: 修改后 JSON
-      placeholder-after-json: 修改后 JSON……
-      title-generate-json-patch: 生成 JSON Patch
+      label-before-json: 修改前JSON
+      placeholder-before-json: 修改前JSON……
+      label-after-json: 修改后JSON
+      placeholder-after-json: 修改后JSON……
+      title-generate-json-patch: 生成JSON补丁
       tab-apply-patch: 应用补丁
-      label-json-to-patch: 待修改 JSON
-      placeholder-json-to-patch: 待修改 JSON……
-      label-json-patch-array: JSON Patch 数组
-      placeholder-json-patch-array: JSON Patch 数组……
-      title-patched-json: 应用补丁后 JSON
+      label-json-to-patch: 待打补丁的JSON
+      placeholder-json-to-patch: 待打补丁的JSON……
+      label-json-patch-array: JSON补丁数组
+      placeholder-json-patch-array: JSON补丁数组……
+      title-patched-json: 打补丁后的JSON
       tag-generate-paths: 生成路径
-      tag-copy-json-paths: 复制 JSON Path
+      tag-copy-json-paths: 复制JSON路径
       tag-generate-patch: 生成补丁
       tag-apply-patch: 应用补丁
+    title: JSON补丁测试器
+    description: 依据RFC 6902标准创建和测试JSON补丁的简易工具，同时可列出JSON对象的路径。
+    externalAccess: 'null'
   ping:
     title: Ping 工具
     description: 对主机名、IP地址、CIDR网段或IP范围执行Ping探测
@@ -9740,6 +9770,124 @@ tools:
     title: 音频测试器
     description: '播放测试音频来检测音箱与耳机。调节音量并检查音质清晰度。'
     externalAccess: 'null'
+  paste-image:
+    texts:
+      copy-image: 复制图片
+      copy-as-base64: 复制为Base64
+      getoutputextension-image: .{0}
+      your-browser-cannot-encode-outputformats-image-outputformat-label-the-image-downloads-as-gettypelabel-image-output-type: 你的浏览器不支持编码 {0}，图片将以 {1} 格式下载
+      formatsizedelta-originalsize-image-source-size-outputsize-image-output-size: ({0})
+      output-gettypelabel-image-output-type-formatbytes-image-output-size: '输出：{0}，{1}'
+      original-gettypelabel-image-source-type-formatbytes-image-source-size: '原始：{0}，{1}'
+      image-width-image-height-px: '{0} × {1} 像素'
+      clear-all: 全部清空
+      images-length-images-length-1-image-images-pasted-in-this-session: '本次会话已粘贴 {0} 张图片'
+      quality: '{0}%'
+      paste-from-clipboard: 从剪贴板粘贴
+      the-image-stays-in-your-browser-nothing-is-uploaded: 图片仅保存在本地浏览器，不会上传
+      anywhere-on-this-page-to-paste-an-image: 在页面任意位置粘贴图片
+      press: 按下
+      the-browser-could-not-copy-the-base64-data-url-to-the-clipboard: 浏览器无法将Base64数据链接复制到剪贴板
+      base64-data-url-copied-to-the-clipboard: Base64数据链接已复制到剪贴板
+      the-browser-could-not-copy-the-image-to-the-clipboard: 浏览器无法将图片复制到剪贴板
+      image-copied-to-the-clipboard: 图片已复制到剪贴板
+      the-browser-could-not-read-the-clipboard: 浏览器无法读取剪贴板
+      the-browser-blocked-clipboard-access-allow-it-in-the-site-settings-or-press-pasteshortcut: 浏览器已阻止剪贴板访问，请在网站设置中允许权限，或按下 {0}
+      your-browser-cannot-read-images-from-the-clipboard-with-a-button-press-pasteshortcut-instead: 当前浏览器不支持通过按钮读取剪贴板图片，请直接按下 {0}
+      the-browser-could-not-read-the-pasted-image: 浏览器无法读取粘贴的图片
+      the-browser-could-not-convert-the-image: 浏览器无法转换该图片
+      the-clipboard-has-no-image-copy-an-image-then-try-again: 剪贴板内无图片，请先复制图片再重试
+      ctrl-v: Ctrl + V
+      v: ⌘ + V
+    title: 粘贴图片
+    description: 从剪贴板粘贴图片，转换为PNG、JPEG或WebP格式并下载
+    externalAccess: 'null'
+  whitespace-cleaner:
+    options:
+      texts:
+        convert-crlf-lf: CRLF → LF 转换
+        lf-endings: LF换行符
+        left-trim-lines-and-rejoin-paragraphs-for-reddit-discord-slack: 去除行首空格并合并段落（适配Reddit、Discord、Slack）
+        markdown-reddit: Markdown / Reddit
+        join-soft-wrapped-paragraphs: 合并软换行段落
+        smart-unwrap: 智能折行还原
+        strip-from-patches: 移除补丁标记 + - {'@'}{'@'}
+        diff-markers: Diff标记
+        remove-common-leading-indent: 移除统一前置缩进
+        indent: 缩进
+        collapse-2-blank-lines-into-1: 连续2个及以上空行合并为1个
+        blank-lines: 空行
+        remove-end-of-line-whitespace: 删除行尾空白字符
+        trailing-space: 行尾空格
+        strip-prefixes: 移除 ●、○、⏺ 前缀
+        bullet-markers: 项目符号
+        remove-characters: 移除 ─ │ └ ┐ 等字符
+        box-drawing: 制表框线字符
+        strip-color-escape-sequences: 移除颜色转义序列
+        ansi-codes: ANSI控制码
+        strip-1-2-1-t-prefixes: 移除 1│、2│、1\\t 行号前缀
+        line-numbers: 行号
+    texts:
+      cleaning-options: 清理选项
+      ctrl-a-ctrl-c: ⌘/Ctrl+A · Ctrl+C
+      your-cleaned-output-will-appear-here: 清理后的结果将显示在这里
+      paste-fragmented-claude-code-output-here: 在此粘贴分段的Claude代码输出……
+      sample: 示例
+      paste: 粘贴
+      copy-failed-the-output-is-selected-press-ctrl-c-to-copy-it: 复制失败，内容已选中，请按Ctrl+C手动复制
+      copied-to-the-clipboard: 已复制到剪贴板
+      the-clipboard-api-is-unavailable: 剪贴板API不可用
+      copy-failed: 复制失败
+      copied: 已复制 ✓
+      stats-value-outputlines-lines-stats-value-outputchars-chars-stats-value-savedpercent: '{0} 行 · {1} 字符 · 减少 {2}%'
+      stats-value-inputlines-lines-stats-value-inputchars-chars: '{0} 行 · {1} 字符'
+    title: 空白清理工具
+    description: '清理终端与Claude Code输出：移除行号、ANSI码、制表框线、项目符号、Diff标记以及多余空白'
+    externalAccess: 'null'
+  cli-banner-generator:
+    title: CLI横幅生成器
+    description: 生成ASCII横幅、终端欢迎信息（MOTD），适用于CLI程序、终端或路由器
+    externalAccess: 'null'
+    texts:
+      label-border-char: '边框字符：'
+      placeholder-: '#'
+      label-width-min-20-max-200: '宽度（最小20 – 最大200）：'
+      label-banner-text: '横幅文本：'
+      placeholder-enter-motd-banner-text-here: 在此输入MOTD横幅文本……
+      title-generated-banner: 生成的横幅
+analogSignalConverter:
+  texts:
+    title-input: 输入
+    title-parameters: 参数
+    title-output: 输出
+    swap-direction: 切换转换方向
+    status-ok: 在量程内
+    copy-output: 复制输出值
+    title-reference-points: 参考点
+    label-signal-type: 信号类型
+    preset-custom: 自定义
+    label-engineering-range: 工程值最小值 / 最大值
+    label-engineering-unit: 工程单位
+    placeholder-unit: 单位
+    error-signal-range: 信号最小值必须小于信号最大值
+    error-engineering-range: 工程最小值必须小于工程最大值
+    label-engineering-value: 工程值
+    label-rounded-signal: 取整（整数）
+    status-below-range: 信号低于量程
+    status-above-range: 信号高于量程
+    status-below-live-zero: 信号低于活零点，请检查线路断路或传感器故障
+    engineering-below-range: 数值低于工程量程，信号将越下限
+    engineering-above-range: 数值高于工程量程，信号将越上限
+    loop-status-failure-low: '低故障（≤ 3.6 mA，NAMUR NE 43）：回路断开、无供电或变送器故障'
+    loop-status-uncertain-low: '3.6 ~ 3.8 mA：不确定区间，大概率故障（NAMUR NE 43）'
+    loop-status-under-range: '欠量程（3.8 ~ 4 mA）：测量值低于量程下限饱和'
+    loop-status-over-range: '超量程（20 ~ 20.5 mA）：测量值高于量程上限饱和'
+    loop-status-uncertain-high: '20.5 ~ 21 mA：不确定区间，大概率故障（NAMUR NE 43）'
+    loop-status-failure-high: '高故障（≥ 21 mA，NAMUR NE 43）：变送器故障或线路短路'
+    label-formula: 公式
+    formula-value: 工程值
+    formula-signal: 信号
+    column-percent: 量程占比
 collapsibleToolMenu:
   text:
     expanding: 展开中...
